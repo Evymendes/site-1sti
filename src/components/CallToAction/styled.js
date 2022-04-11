@@ -6,7 +6,7 @@ export const CTAContainer = styled.header`
 
 export const CTAWrapper = styled.section`
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 5rem 0;
   width: 90%;
   min-height: calc(100vh - 4rem);
   height: 100%;
@@ -25,8 +25,8 @@ export const CTATitle = styled.h1`
   text-shadow: 0 0 16px rgba(0,0,0,.5);
 `;
 
-export const CTAAbout = styled.h2`
-  padding: 5rem 0 1rem;
+export const CTAAbout = styled.h3`
+  padding: 3rem 0 1rem;
   font-size: 1.4em;
   font-weight: 400;
   line-height: 1.4;
