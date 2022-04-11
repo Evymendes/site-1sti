@@ -3,7 +3,11 @@ import { Link as GatsbyLink } from "gatsby";
 
 export const NavBar = styled.nav`
   height: 4rem;
+  width: 100%;
   z-index: 1;
+  background-color: #ffffff95;
+  backdrop-filter: blur(30px);
+  position: fixed;
 `;
 
 export const NavWrapper = styled.section`
@@ -26,6 +30,11 @@ export const NavLink = styled(GatsbyLink)`
   color: #222;
   font-weight: 600;
   text-decoration: none;
+  font-size: 1.125rem;
+
+  &:hover {
+      border-bottom: 0.2rem solid ;
+    }
 `;
 
 export const LangBtn = styled.button`
