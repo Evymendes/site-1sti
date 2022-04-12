@@ -20,9 +20,37 @@ export const NavWrapper = styled.section`
   border-bottom: 2px solid #504d50;
 `;
 
-export const NavLogo = styled.img``;
+// export const NavImages = styled.div`
+//   display: flex;
+// `;
+
+
+export const NavImageLogo = styled.div`
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    display: none;
+  }
+`;
+export const NavImageHover = styled.div`
+  display: none;
+
+  &:hover {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const NavLogo = styled.img`
+  margin-bottom: 0;
+`;
+export const NavLogoHover = styled.img`
+  margin-bottom: 0;
+`;
 
 export const NavLinkBox = styled.div``;
+
 
 export const NavLink = styled(GatsbyLink)`
   position: relative;
