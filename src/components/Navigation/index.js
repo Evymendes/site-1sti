@@ -17,7 +17,7 @@ export default function Navigation() {
         <S.NavLinkBox>
           <S.NavLink to="/" activeClassName="active">Home</S.NavLink>
           <S.NavLink to="/services" activeClassName="active">Services</S.NavLink>
-          <S.NavLink to="/blog" activeClassName="active">Blog</S.NavLink>
+          <S.NavLink to="/insights" activeClassName="active">Insights</S.NavLink>
           <S.NavLink to="https://xd.adobe.com/view/ef7c34d8-c47f-45fd-a60a-27070eaeca3e-ba2f/?fullscreen" target="_blank" activeClassName="active">Careers</S.NavLink>
           <S.NavLink to="/contact" activeClassName="active">Contact</S.NavLink>
           <S.LangBtn
