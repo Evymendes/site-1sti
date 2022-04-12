@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import ImageLogo from "../../images/Component-5-37.svg"
+import ImageLogoHover from "../../images/Component-5-37-hover.svg"
+
 
 import * as S from "./styled";
 
@@ -12,9 +15,16 @@ export default function Navigation() {
   return(
     <S.NavBar>
       <S.NavWrapper>
-        <S.NavLogo src="" alt="" />
+        {/* <S.NavImages> */}
+          <S.NavImageLogo>
+            <S.NavLogo src={ImageLogo} alt="Logo-1STi" />
+          </S.NavImageLogo>
+          <S.NavImageHover>
+            <S.NavLogoHover src={ImageLogoHover} alt="" />
+          </S.NavImageHover>
+        {/* </S.NavImages> */}
 
-        <S.NavLinkBox>
+        <S.NavLinkBox>          
           <S.NavLink to="/" activeClassName="active">Home</S.NavLink>
           <S.NavLink to="/services" activeClassName="active">Services</S.NavLink>
           <S.NavLink to="/blog" activeClassName="active">Blog</S.NavLink>

@@ -2,6 +2,7 @@ import React from "react";
 
 import GlobalStyle from "../GlobalStyle";
 import Navigation from "../Navigation";
+import Footer from "../Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Navigation />
       <main>{children}</main>
+      <Footer />
     </>
   )
 };
