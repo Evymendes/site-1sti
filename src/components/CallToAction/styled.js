@@ -4,6 +4,11 @@ export const CTAContainer = styled.header`
   background: #c75681;
 `;
 
+// export const DivVideo = styled.video`
+//   max-width: 100%;
+// `;
+// export const Video = styled.source``;
+
 export const CTAWrapper = styled.section`
   margin: 0 auto;
   padding: 5rem 0;
