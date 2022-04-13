@@ -19,11 +19,9 @@ export const ContentContainer = styled.div`
 export const ContainerImagePacto = styled.div`
   width: 15%;
   display: flex;
-  
-  
 `;
 export const ImagePacto = styled.img`
-
+  width: auto;
 
 `;
 export const Ecosystem = styled.div`
@@ -47,13 +45,15 @@ export const SocialMedia = styled.div`
   
 `;
 export const ImageLogo = styled.img`
+  width: auto;
 `;
 export const Work = styled.div`
-  width: 30%;
+  width: 33%;
   
 `;
 export const WorkTitle = styled.h3`
   font-size: 1.625rem;
+  padding-bottom: .5rem;
 `;
 export const WorkSubtitle = styled.p`
   font-size: 1.125rem;
@@ -66,6 +66,7 @@ export const WorkButton = styled.button`
   border-radius: 5px;
   font-size: 1rem;
   color: #171717;
+  margin-top: 1rem;
 
   &:hover {
     background: #0B1617;
