@@ -6,11 +6,11 @@ export const NavBar = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
+  height: 4.625rem;
   z-index: 2;
   background-color: #ffffff95;
   backdrop-filter: blur(30px);
-  background-color: #ffffff95;
-  z-index: 1;
+  border-top: 10px solid #0B1617;
 `;
 
 export const NavWrapper = styled.section`
