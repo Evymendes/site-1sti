@@ -8,7 +8,7 @@ const BlockImages = () => (
     <S.Wrapper>
       <S.BlockLink to="/">
         <S.Block>
-          <span style={{ position: 'absolute', color: '#000', zIndex: '999' }}>
+          <span style={{ position: 'absolute', color: '#000', zIndex: '1' }}>
             <h2>ARTICLE</h2>
             <p>What is Augmented Agility?</p>
           </span>
@@ -16,7 +16,7 @@ const BlockImages = () => (
             src="../../images/insights-ideia.png"
             alt="Imagem Ideia"
             layout="fixed"
-            style={{ borderRadius: '100%', width: '100%', height: '100%' }}
+            style={{ borderRadius: '50%', width: '100%', height: '100%' }}
           />
         </S.Block>
       </S.BlockLink>

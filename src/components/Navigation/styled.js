@@ -4,7 +4,7 @@ import { Link as GatsbyLink } from "gatsby";
 export const NavBar = styled.nav`
   height: 4rem;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   background-color: #ffffff95;
   backdrop-filter: blur(30px);
   position: fixed;

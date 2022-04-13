@@ -2,13 +2,14 @@ import styled from "styled-components";
 import { Link as GatsbyLink } from "gatsby";
 
 export const Container = styled.div`
-  
+
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: 2rem 0;
 `;
 
 export const BlockLink = styled(GatsbyLink)`
