@@ -38,9 +38,8 @@ export const CTAAbout = styled.h3`
   text-shadow: 0 0 12px rgba(0,0,0,.5);
 `;
 
-export const BtnBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 23rem;
-  width: 100%;
+export const CTAOptions = styled.div`
+  a:first-child {
+    margin-right: 1.5rem;
+  }
 `;

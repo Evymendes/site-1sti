@@ -19,10 +19,10 @@ const CallToAction = () => (
             enabling businesses to generate long-term
             value and embrace future change—now.
           </S.CTAAbout>
-          <S.BtnBox>
+          <S.CTAOptions>
             <Button>Call to Action One</Button>
             <Button>Call to Action Two</Button>
-          </S.BtnBox>
+          </S.CTAOptions>
         </S.CTATextBox>
       </S.CTAWrapper>
     {/* </S.DivVideo> */}
