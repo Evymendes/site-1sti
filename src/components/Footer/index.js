@@ -15,10 +15,9 @@ const Footer = () => (
         </S.ContainerImagePacto>
         <S.Ecosystem>
           <S.EcosystemTitle>DEEP TECH ECOSYSTEM</S.EcosystemTitle>
-            <S.EcosystemItem>Sofya</S.EcosystemItem>
-            <S.EcosystemItem>Vai na Web</S.EcosystemItem>
-            <S.EcosystemItem>Precisa Ser Institute</S.EcosystemItem>
-
+          <S.EcosystemItem>Sofya</S.EcosystemItem>
+          <S.EcosystemItem>Vai na Web</S.EcosystemItem>
+          <S.EcosystemItem>Precisa Ser Institute</S.EcosystemItem>
         </S.Ecosystem>
         <S.SocialMedia>
           <S.ImageLogo src={LinkedIn} alt="" />
