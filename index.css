@@ -1,43 +1,43 @@
 @font-face {
-    font-family: "CabinetGrotesk-Black";
-    src: url("./fonts/CabinetGrotesk-Black.otf");
-  }
-  @font-face {
-    font-family: "CabinetGrotesk-Bold";
-    src: url("./fonts/CabinetGrotesk-Bold.otf");
-  }
-  @font-face {
-    font-family: "CabinetGrotesk-Extrabold";
-    src: url("./fonts/CabinetGrotesk-Extrabold.otf");
-  }
-  @font-face {
-    font-family: "CabinetGrotesk-Extralight";
-    src: url("./fonts/CabinetGrotesk-Extralight.otf");
-  }
-  @font-face {
-    font-family: "CabinetGrotesk-Light";
-    src: url("./fonts/CabinetGrotesk-Light.otf");
-  }
-  @font-face {
-    font-family: "CabinetGrotesk-Medium";
-    src: url("./fonts/CabinetGrotesk-Medium.otf");
-  }
-  @font-face {
-    font-family: "CabinetGrotesk-Regular";
-    src: url("./fonts/CabinetGrotesk-Regular.otf");
-  }
-  @font-face {
-    font-family: "CabinetGrotesk-Thin";
-    src: url("./fonts/CabinetGrotesk-Thin.otf");
-  }
-  @font-face {
-    font-family: "GoshaSans-Bold";
-    src: url("./fonts/GoshaSans-Bold.otf");
-  }
-  @font-face {
-    font-family: "GoshaSans-Regular";
-    src: url("./fonts/GoshaSans-Regular.otf");
-  }
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Black.otf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Extrabold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Bold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Extralight.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("./fonts/CabinetGrotesk-Thin.otf");
+  font-weight: 100;
+}
 
   h1, h2, a {
     font-family: "GoshaSans-Regular";
@@ -45,3 +45,18 @@
   h3, h4, h5, h6, p, ol, ul, button, input {
     font-family: "CabinetGrotesk-Medium";
   }
+  a {
+    color: #00a8ff;
+    text-decoration: underline;
+  }
+@font-face {
+  font-family: "GoshaSans";
+  src: url("./fonts/GoshaSans-Bold.otf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "GoshaSans";
+  src: url("./fonts/GoshaSans-Regular.otf") format("truetype");
+  font-weight: 400;
+}
