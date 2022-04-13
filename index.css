@@ -39,6 +39,16 @@
   font-weight: 100;
 }
 
+  h1, h2, a {
+    font-family: "GoshaSans-Regular";
+  }
+  h3, h4, h5, h6, p, ol, ul, button, input {
+    font-family: "CabinetGrotesk-Medium";
+  }
+  a {
+    color: #00a8ff;
+    text-decoration: underline;
+  }
 @font-face {
   font-family: "GoshaSans";
   src: url("./fonts/GoshaSans-Bold.otf") format("truetype");
