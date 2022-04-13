@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   margin: 2rem 0;
 `;
@@ -16,7 +16,6 @@ export const BlockLink = styled(GatsbyLink)`
   display: flex;
   width: 602px;
   height: 602px;
-  margin: 0 0.5rem;
   text-decoration: none;
 `;
 
@@ -30,21 +29,19 @@ export const Block = styled.div`
   background-color: ${(props) => props.color};
 
   span {
-    position: ${(props) => props.more};
     padding-top: 3.75rem;
     text-align: center;
     color: #fff;
 
-    h2 {
-      font-weight: 300;
-      font-size: 14px;
-      letter-spacing: 1.4px;
-    }
-    p {
+    h1 {
       width: 390px;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.2;
       font-size: 38px;
+    }
+    p {
+      letter-spacing: 1.4px;
+      font-size: 14px;
     }
   }
 `;

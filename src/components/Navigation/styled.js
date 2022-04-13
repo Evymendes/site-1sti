@@ -9,8 +9,6 @@ export const NavBar = styled.nav`
   z-index: 2;
   background-color: #ffffff95;
   backdrop-filter: blur(30px);
-  background-color: #ffffff95;
-  z-index: 1;
 `;
 
 export const NavWrapper = styled.section`
