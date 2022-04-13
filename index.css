@@ -45,3 +45,7 @@
   h3, h4, h5, h6, p, ol, ul, button, input {
     font-family: "CabinetGrotesk-Medium";
   }
+  a {
+    color: #00a8ff;
+    text-decoration: underline;
+  }
