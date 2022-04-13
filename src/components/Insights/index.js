@@ -3,14 +3,14 @@ import React from "react";
 import * as S from "./styled"
 
 import BlockImages from "../BlogInsightsImages";
+import CardsInsigts from "../CardsInsights"
 
 const Insights = () => (
   <S.Container>
     <S.Wrapper>
-      <S.BoxHeader>
         <S.PageTitle>Insights</S.PageTitle>
-      </S.BoxHeader>
-      <BlockImages/>
+      <BlockImages />
+      <CardsInsigts />
     </S.Wrapper>
   </S.Container>
 )
