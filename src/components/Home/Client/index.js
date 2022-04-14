@@ -1,12 +1,12 @@
 import React from "react";
 import * as S from "./styled";
-import Button from "../Button"
-import LogoCogna from "../../images/cogna.png"
-import LogoSomos from "../../images/somos.png" 
-import LogoCruzeiro from "../../images/Cruzeiro-do-Sul-pb-negativo.png"
-import LogoLaureat from "../../images/laureate-logo.svg"
-import LogoSirio from "../../images/sirio.png"
-import LogoSulAmerica from "../../images/sulamerica.png"
+import Button from "../../../components/Button"
+import LogoCogna from "../../../images/cogna.png"
+import LogoSomos from "../../../images/somos.png" 
+import LogoCruzeiro from "../../../images/Cruzeiro-do-Sul-pb-negativo.png"
+import LogoLaureat from "../../../images/laureate-logo.svg"
+import LogoSirio from "../../../images/sirio.png"
+import LogoSulAmerica from "../../../images/sulamerica.png"
 
 
 const Client = () => (
