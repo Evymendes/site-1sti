@@ -1,6 +1,8 @@
 import React from "react";
 
 import BookCover from "../../images/DT-Livro-Capa-2.png";
+import Arrow from "../../images/arrow-icon.png";
+import SubscribeButton from "../SubscribeButton";
 
 import * as S from "./styled.js";
 
@@ -14,7 +16,7 @@ const Content = () => (
     <S.LineBox>
       <S.Boxes>
         <h4>CAREERS</h4>
-        <p>Our positions are for everyone. Explore our current open opportunities and join us!</p>
+        <p>Our positions are for everyone. Explore our current open opportunities and  <a href="#">join us!</a></p>
       </S.Boxes>
       <S.Boxes>
         <h4>BOOK</h4>
@@ -24,7 +26,10 @@ const Content = () => (
       <S.Boxes>
         <h4>NEWSLETTER</h4>
         <p>Subscribe to our newsletter to be the first to hear the latest news about Deep Tech and receive updates, exclusive content, and more.</p>
-        <S.NewsLetter type="email" placeholder="enter your email for updates        →" /> 
+        <S.Label>
+          <S.NewsLetter type="email" placeholder="enter your email for updates" /> 
+          <SubscribeButton><S.Icon src={Arrow} alt="Arrow icon"/></SubscribeButton>
+        </S.Label>
       </S.Boxes>
     </S.LineBox>
     <S.BlueLine></S.BlueLine>
