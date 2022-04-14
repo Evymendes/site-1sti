@@ -17,30 +17,59 @@ export const ContentContainer = styled.div`
 `;
 export const BoxText = styled.div`
     width: 22%;
+    height: 15rem;
 `;
 export const Title = styled.h2`
     font-size: 2.875rem;
+    margin-bottom: 1rem;
 `;
 export const Description = styled.p`
     font-size: 1.5rem;
+    margin-bottom: 3rem;
 `;
-export const BoxCard = styled.div`
-    background: pink;
-    height: 38.625rem;
-    width: 22%;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+export const BoxCardOne = styled.div`
+    width: 23%;
+    height: 37.5rem;
+    
+    
+
+    &:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 `;
-export const NumberCard = styled.h2`
-    font-size: 2.875rem;
+export const BoxCardTwo = styled.div`
+    width: 23%;
+    height: 37.5rem;
+
+    &:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);        
+    }
+`;
+export const BoxCardThree = styled.div`
+    width: 23%;
+    height: 37.5rem;
+    &:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+`;
+export const ImageCard = styled.img`
+    font-size: 1.5rem;
+    width: 100%;
 `;
 export const DescriptionCard = styled.p`
     font-size: 1.5rem;
+    width: 90%;
+    position: relative;
+    left: 2rem;
+    bottom: 15rem;
+    display: flex;
+    &:hover {
+        display: flex;
+    }
 `;
-export const TitleCard = styled.h2`
-    font-size: 2.625rem;
-`;
-

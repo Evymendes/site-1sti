@@ -1,6 +1,9 @@
 import React from "react";
 import * as S from "./styled";
 import Button from "../../../components/Button"
+import ImageOne from "../../../images/Component51.png"
+import ImageTwo from "../../../images/Component52.png"
+import ImageThree from "../../../images/Component53.png"
 
 const Services = () => (
     <S.ContainerServices>
@@ -13,21 +16,18 @@ const Services = () => (
                 <Button>See more</Button>
             </S.BoxText>
 
-            <S.BoxCard>
-                <S.NumberCard>01</S.NumberCard>
+            <S.BoxCardOne>
+                <S.ImageCard src={ImageOne} alt="" />
                 <S.DescriptionCard>The Foundation of Scalable Digital Platforms</S.DescriptionCard>
-                <S.TitleCard>Digital Backbones</S.TitleCard>
-            </S.BoxCard>
-            <S.BoxCard>
-                <S.NumberCard>02</S.NumberCard>
+            </S.BoxCardOne>
+            <S.BoxCardTwo>
+                <S.ImageCard src={ImageTwo} alt="" />
                 <S.DescriptionCard>Elevation, Scaling and Amplification</S.DescriptionCard>
-                <S.TitleCard>Deep Tech Platforms</S.TitleCard>
-            </S.BoxCard>
-            <S.BoxCard>
-                <S.NumberCard>03</S.NumberCard>
+            </S.BoxCardTwo>
+            <S.BoxCardThree>
+                <S.ImageCard src={ImageThree} alt="" />
                 <S.DescriptionCard>Fit for the future, now</S.DescriptionCard>
-                <S.TitleCard>Visionary Technologies</S.TitleCard>
-            </S.BoxCard>
+            </S.BoxCardThree>
 
         </S.ContentContainer>
 
