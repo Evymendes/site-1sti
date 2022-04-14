@@ -1,7 +1,7 @@
 import React from "react";
 
 import * as S from "./styled";
-import Button from "../Button";
+import Button from "../../../components/Button";
 // import VideoHome from "../../images/videos/video-1649703291.mp4"
 
 
