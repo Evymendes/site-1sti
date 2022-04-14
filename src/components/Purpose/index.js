@@ -14,9 +14,7 @@ const Purpose = () => (
             Deep Tech exists to help you build them strong.
         </S.TitlePurpose> */}
         <S.ContainerShapes>
-            <S.BoxSquare>
-                <S.Square></S.Square>
-            </S.BoxSquare>
+            <S.Square></S.Square>
             <S.Circle></S.Circle>
         </S.ContainerShapes>
     </S.ContainerPurpose>
