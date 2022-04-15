@@ -10,11 +10,13 @@ export const ContainerFooter = styled.footer`
 
 `;
 export const ContentContainer = styled.div`
-  height: 70%;
+  height: 100%;
   width: 80%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  border-top: 2px solid #00C8DB;
+  padding-top: 2rem;
 `;
 export const ContainerImagePacto = styled.div`
   width: 15%;
