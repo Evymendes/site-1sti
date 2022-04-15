@@ -6,6 +6,7 @@ import CallToAction from "../components/Home/CallToAction";
 import Purpose from "../components/Home/Purpose";
 import Client from "../components/Home/Client";
 import Services from "../components/Home/Services";
+import Insights from "../components/Home/Insights";
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <Purpose />
     <Client />
     <Services />
+    <Insights />
   </Layout>
 );
 
