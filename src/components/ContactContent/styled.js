@@ -53,17 +53,31 @@ export const NewsLetter = styled.input`
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid #fff;
   color: #fff;
   margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  font-size: 1.25rem;
 
   :placeholder-shown {
     color: #FFF;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    opacity: 1;
   }
 `
 export const Image = styled.img`
 
+`
+export const Icon = styled.img`
+  width: 1.2rem;
+  padding-top: 1rem;
+`
+export const Label = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
 `
 export const BlueLine = styled.div`
   width: 90%;
