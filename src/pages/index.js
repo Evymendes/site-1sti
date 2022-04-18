@@ -7,6 +7,7 @@ import Purpose from "../components/Home/Purpose";
 import Client from "../components/Home/Client";
 import Services from "../components/Home/Services";
 import Insights from "../components/Home/Insights";
+import Attention from "../components/Home/Attention";
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Client />
     <Services />
     <Insights />
+    <Attention />
   </Layout>
 );
 
