@@ -1,22 +1,26 @@
 import React from "react";
 
 import * as S from "./styled";
-// import Button from "../Button";
+import Button from "../../Button";
+import ImgPurpose from "../../../images/Group7998.png";
 // import VideoHome from "../../images/videos/video-1649703291.mp4"
 
 
 const Purpose = () => (
     <S.ContainerPurpose>
-        <S.TitlePurpose>
-            You are the leaders who will build the new systems of the world.<br/><br/>Deep Tech exists to help you build them strong.
-        </S.TitlePurpose>
-        {/* <S.TitlePurpose>
-            Deep Tech exists to help you build them strong.
-        </S.TitlePurpose> */}
-        <S.ContainerShapes>
-            <S.Square></S.Square>
-            <S.Circle></S.Circle>
-        </S.ContainerShapes>
+        <S.ContentContainer>
+
+            <S.BoxText>
+                <S.Title>Título</S.Title>
+                <S.Description>Parágrafo de texto.</S.Description>
+                <Button>CTA</Button>
+            </S.BoxText>
+
+            <S.BoxImage>
+                <S.ImagePurpose src={ImgPurpose} alt="" />
+            </S.BoxImage>
+
+        </S.ContentContainer>
     </S.ContainerPurpose>
 );
 
