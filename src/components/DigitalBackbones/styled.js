@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
-export const DBContainer = styled.section`
+export const DBContainer = styled.div`
+  position: relative;
   padding-top: 4rem;
-  background: #0B1617;
+  background-color: #0B1617;
+  background-image: url(${props => props.bg});
+  background-size: 82vw;
+  background-position: 40vw -22rem;
+  background-repeat: no-repeat;
 `;
 
 export const DBWrapper = styled.div`
@@ -10,7 +15,8 @@ export const DBWrapper = styled.div`
   width: 90%;
 `;
 
-export const DBAbout = styled.div`
+// Text about the service
+export const DBAbout = styled.section`
   margin: 0 auto;
   width: 85%;
   font-weight: 300;
@@ -78,10 +84,11 @@ export const DBValue = styled.span`
   font: 500 4.7em CabinetGrotesk;
 `;
 
-export const DBPartnering = styled.div`
-  margin: 3rem 0;
+// Partnering card
+export const DBPartnering = styled.section`
+  margin: 3rem 0 3rem 2rem;
   padding: 2rem 2.6rem;
-  max-width: 680px;
+  max-width: 600px;
   border: 1px solid #00C8DB;
   border-radius: 8px;
 `;
@@ -91,5 +98,55 @@ export const DBPartneringBox = styled.div`
 
   a:first-child {
     margin-right: 1.5rem;
+  }
+`;
+
+// Other Services
+export const OtherServices = styled.section`
+  padding: 4rem 0 8rem;
+`;
+
+export const Service = styled.div`
+  position: relative;
+  padding: 2.5rem 5rem 3.5rem;
+  transition: .4s;
+  z-index: 1;
+
+  h3 {
+    margin: 0 0 2rem;
+  }
+
+  &:first-child {
+    margin-bottom: 3rem;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #00000070;
+    background-color: #131313;
+    background-image: url(${props => props.bg});
+    background-size: calc(100% + 2rem);
+    background-position: -1rem, 0;
+    transition: .3s;
+    z-index: -1;
+  }
+
+  &:hover {
+    button {
+      color: #fff;
+      background: #0B1617;
+    }
+
+    &:before {
+      border-color: #00C8DB;
+      transform: scale(1.04);
+    }
   }
 `;

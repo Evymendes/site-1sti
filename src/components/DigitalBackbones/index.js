@@ -4,9 +4,13 @@ import * as S from "./styled";
 import Header from "../Header";
 import Button from "../Button";
 
+import BackbonesBG from "../../images/bd_background.png";
+import PlatformsBG from "../../images/platforms.png";
+import TechnologiesBG from "../../images/technologies.png";
+
 export default function DigitalBackbones() {
-  return(
-    <S.DBContainer>
+  return (
+    <S.DBContainer bg={BackbonesBG}>
       <S.DBWrapper>
         <Header title="Our Services" />
 
@@ -40,15 +44,28 @@ export default function DigitalBackbones() {
               <S.DBParagraph>more adaptable compared to <span>companies that do not have backbones</span></S.DBParagraph>
             </S.DBStatistic>
           </S.DBAdvantages>
-
-          <S.DBPartnering>
-            Partnering with 1STI on the path to digital transformation drives results from day 1 as we begin by exploring what's standing between your organization today, and the formation of your digital backbone.
-            <S.DBPartneringBox>
-              <Button>Download One Page</Button>
-              <Button>Read Case Study</Button>
-            </S.DBPartneringBox>
-          </S.DBPartnering>
         </S.DBAbout>
+
+        <S.DBPartnering>
+          Partnering with 1STI on the path to digital transformation drives results from day 1 as we begin by exploring what's standing between your organization today, and the formation of your digital backbone.
+          <S.DBPartneringBox>
+            <Button>Download One Page</Button>
+            <Button>Read Case Study</Button>
+          </S.DBPartneringBox>
+        </S.DBPartnering>
+
+        <S.OtherServices>
+          <S.Service bg={PlatformsBG}>
+            <S.DBTitle>Deep Tech Platforms</S.DBTitle>
+            <S.DBDescription>Elevation, Scaling and Amplification</S.DBDescription>
+            <Button>Read more</Button>
+          </S.Service>
+          <S.Service bg={TechnologiesBG}>
+            <S.DBTitle>Visionary Technologies</S.DBTitle>
+            <S.DBDescription>Fit for the future, now</S.DBDescription>
+            <Button>Read more</Button>
+          </S.Service>
+        </S.OtherServices>
       </S.DBWrapper>
     </S.DBContainer>
   );
