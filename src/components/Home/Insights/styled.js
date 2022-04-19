@@ -14,10 +14,15 @@ export const ContentContainer = styled.div`
     width: 90%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
 export const BoxText = styled.div`
     width: 22%;
-    height: 15rem;
+    margin-bottom: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
 `;
 export const Title = styled.h2`
     font-size: 2.875rem;
@@ -29,7 +34,7 @@ export const Description = styled.p`
 `;
 export const BoxCard = styled.div`
     width: 23%;
-    height: 37.5rem;
+    /* height: 37.5rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
