@@ -1,11 +1,13 @@
 import React from "react";
+
+import * as S from "./styled";
+import Button from "../Button";
+
 import ImagePactoGlobal from "../../images/Logo-Pacto_Global.png";
 import LinkedIn from "../../images/linkedIn.png";
 import Instagram from "../../images/instagram.png";
 import Medium from "../../images/medium.png";
 import Facebook from "../../images/facebook.png";
-
-import * as S from "./styled";
 
 const Footer = () => (
   <S.ContainerFooter>
@@ -13,26 +15,34 @@ const Footer = () => (
         <S.ContainerImagePacto>
           <S.ImagePacto src={ImagePactoGlobal} alt="" />
         </S.ContainerImagePacto>
+        
         <S.Ecosystem>
           <S.EcosystemTitle>DEEP TECH ECOSYSTEM</S.EcosystemTitle>
-          <S.EcosystemItem>Sofya</S.EcosystemItem>
-          <S.EcosystemItem>Vai na Web</S.EcosystemItem>
-          <S.EcosystemItem>Precisa Ser Institute</S.EcosystemItem>
+          <S.EcosystemItem href="">Sofya</S.EcosystemItem>
+          <S.EcosystemItem href="">Vai na Web</S.EcosystemItem>
+          <S.EcosystemItem href="">Precisa Ser Institute</S.EcosystemItem>
         </S.Ecosystem>
         <S.SocialMedia>
-          <S.ImageLogo src={LinkedIn} alt="" />
-          <S.ImageLogo src={Instagram} alt="" />
-          <S.ImageLogo src={Medium} alt="" />
-          <S.ImageLogo src={Facebook} alt="" />
+          <a href="https://www.linkedin.com/company/1sti" target="_blank">
+            <S.ImageLogo src={LinkedIn} alt="" />
+          </a>
+          <a href="https://www.instagram.com/ola_1sti" target="_blank">
+            <S.ImageLogo src={Instagram} alt="" />
+          </a>
+          <a href="https://medium.com/1sti" target="_blank">
+            <S.ImageLogo src={Medium} alt="" />
+          </a>
+          <a href="https://web.facebook.com/ola1STi/" target="_blank">
+            <S.ImageLogo src={Facebook} alt="" />
+          </a>
         </S.SocialMedia>
+
         <S.Work>
           <S.WorkTitle>Come work with us!</S.WorkTitle>
           <S.WorkSubtitle>We are always looking for talent to empower deep tech transformations.</S.WorkSubtitle>
-          <S.WorkButton>See openings</S.WorkButton>
+          <Button to="">See openings</Button>
         </S.Work>
-      </S.ContentContainer>    
-      
-
+      </S.ContentContainer>
   </S.ContainerFooter>
 );
 

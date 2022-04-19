@@ -3,42 +3,44 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.footer`
   background: #0B1617;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 16.125rem;
-
+  min-height: 55vh;
+  height: 100%;
 `;
 export const ContentContainer = styled.div`
   height: 100%;
-  width: 80%;
+  margin: 0 auto;
+  width: 90%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   border-top: 2px solid #00C8DB;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 `;
 export const ContainerImagePacto = styled.div`
-  width: 15%;
+  width: 10%;
   display: flex;
 `;
 export const ImagePacto = styled.img`
   width: auto;
-
 `;
 export const Ecosystem = styled.div`
   width: 20%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
-  
 `;
 export const EcosystemTitle = styled.p`
-  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-size: .95em;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 `;
-export const EcosystemItem = styled.p`
-  font-size: 1.25rem;
+export const EcosystemItem = styled.a`
+  padding-top: 8px;
+  color: #fff;
+  font: 200 1.2em 'CabinetGrotesk';
+  text-decoration: none;
 `;
 export const SocialMedia = styled.div`
   width: 20%;
@@ -48,17 +50,18 @@ export const SocialMedia = styled.div`
 `;
 export const ImageLogo = styled.img`
   width: auto;
+  cursor: pointer;
 `;
 export const Work = styled.div`
   width: 33%;
-  
 `;
 export const WorkTitle = styled.h3`
   font-size: 1.625rem;
-  padding-bottom: .5rem;
 `;
 export const WorkSubtitle = styled.p`
+  padding: .6rem 0 1.5rem;
   font-size: 1.125rem;
+  font-weight: 100;
 `;
 export const WorkButton = styled.button`
   width: 9.25rem;
