@@ -29,7 +29,7 @@ export const Block = styled.div`
   background-color: ${(props) => props.color};
 
   span {
-    padding-top: 3.75rem;
+    padding: 3.75rem 0;
     text-align: center;
     color: #fff;
 

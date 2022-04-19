@@ -26,14 +26,14 @@ const BlockImages = () => (
           />
         </S.Block>
       </S.BlockLink>
-      <S.BlockLink style={styles.hoverStyle} to="/">
+      <S.BlockLink style={styles.hoverStyle} to="/editorial-by-igor">
         <S.Block color="#742698">
           <span>  
             <p>EDITORIAL</p>
             <h1>Deep Tech and the future of education</h1>
           </span>
           <StaticImage 
-            src="../../images/insights-deeptech.png"
+            src="../../images/insights-deeptech.svg"
             alt="Imagem Ideia"
             layout="fixed"
           />
