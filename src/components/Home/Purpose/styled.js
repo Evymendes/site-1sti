@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerPurpose = styled.section`
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     background: #0B1617;
     display: flex;
@@ -26,8 +26,7 @@ export const Description = styled.p`
     margin-bottom: 3rem;
 `;
 export const BoxImage = styled.div`
-    width: 55%;
-    margin-right: 8rem;
+    width: 70%;
 `;
 export const ImagePurpose = styled.img`
 
