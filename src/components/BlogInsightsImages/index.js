@@ -3,16 +3,10 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import * as S from "./styled"
 
-const styles = {
-  hoverStyle: {
-    '&:hover': { borderRadius: '50% !important' },
-  }
-};
-
 const BlockImages = () => (
   <S.Container>
     <S.Wrapper>
-      <S.BlockLink style={styles.hoverStyle} to="/">
+      <S.BlockLink to="/">
         <S.Block>
           <span style={{ position: 'absolute', color: '#000', zIndex: '1' }}>
             <p>ARTICLE</p>
@@ -26,14 +20,14 @@ const BlockImages = () => (
           />
         </S.Block>
       </S.BlockLink>
-      <S.BlockLink style={styles.hoverStyle} to="/">
+      <S.BlockLink to="/editorial-by-igor">
         <S.Block color="#742698">
           <span>  
             <p>EDITORIAL</p>
             <h1>Deep Tech and the future of education</h1>
           </span>
           <StaticImage 
-            src="../../images/insights-deeptech.png"
+            src="../../images/insights-deeptech.svg"
             alt="Imagem Ideia"
             layout="fixed"
           />
