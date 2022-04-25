@@ -10,33 +10,43 @@ export const ContainerServices = styled.section`
 `;
 
 export const ContentContainer = styled.div`
-    width: 90%;
     display: flex;
     justify-content: space-between;
+    width: 90%;
 `;
 
 export const BoxText = styled.div`
-    width: 22%;
-    height: 15rem;
+    padding-top: 4rem;
+    width: 18%;
 `;
 
 export const Title = styled.h2`
     font-size: 2.875rem;
-    margin-bottom: 1rem;
+    line-height: 1.1;
 `;
 
 export const Description = styled.p`
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+`;
+
+export const CardsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 `;
 
 export const Card = styled.div`
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    min-height: 80vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4rem 2.2rem 2.5rem;
+    width: 32%;
+    min-height: 85vh;
     z-index: 1;
 
     &:before {
@@ -52,17 +62,26 @@ export const Card = styled.div`
         background-position: center;
         border-radius: 8px;
         border: 1px solid #000;
-        transition: .5s;
+        transition: .3s;
         z-index: -2;
     }
 
-    &:hover {
+    .card-id {
+        font-weight: 400;
+        text-align: center;
+        transition: .3s;
+    }
 
+    &:hover {
         &:before {
             border-color: #00C8DB;
             -webkit-transform: scale(1.05);
             -ms-transform: scale(1.05);
             transform: scale(1.05);
+        }
+
+        .card-id {
+            color: #00C8DB;
         }
 
         p {
@@ -78,8 +97,9 @@ export const ImageCard = styled.img`
 `;
 
 export const DescriptionCard = styled.p`
-    padding-top: 12rem;
-    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20rem;
     font-size: 1.5rem;
     opacity: 0;
     visibility: hidden;
