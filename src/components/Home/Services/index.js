@@ -40,7 +40,7 @@ export default function Services() {
 
                 <S.CardsContainer>
                     {servicesList.map((service, i) => (
-                        <S.Card bg={service.bg}>
+                        <S.Card key={i} bg={service.bg}>
                             <S.Title className="card-id">0{i + 1}</S.Title>
                             <S.DescriptionCard>{service.description}</S.DescriptionCard>
                             <S.Title>{service.title}</S.Title>

@@ -49,6 +49,14 @@ export const NavLogoHover = styled.img`
 `;
 
 export const NavLinkBox = styled.div`
+  a {
+    margin-left: 2rem;
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.125rem;
+  }
+
   .active {
     border-bottom: 3px solid;
   }
@@ -56,11 +64,6 @@ export const NavLinkBox = styled.div`
 
 export const NavLink = styled(GatsbyLink)`
   position: relative;
-  margin-left: 2rem;
-  color: #222;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.125rem;
 `;
 
 export const LangBtn = styled.button`
