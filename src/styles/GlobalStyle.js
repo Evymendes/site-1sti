@@ -23,7 +23,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -64,10 +63,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, a {
-    font-family: "GoshaSans";
+    font-family: "GoshaSans", sans-serif;
   }
   h3, h4, h5, h6, p, ol, ul, button, input {
-    font-family: "CabinetGrotesk";
+    font-family: "CabinetGrotesk", sans-serif;
   }
 `;
 

@@ -19,9 +19,9 @@ const Btn = styled.button`
   }
 `;
 
-export default function Button({ children, path }) {
+export default function Button({ children, to }) {
   return (
-    <Link to={path || ""}>
+    <Link to={to || ""}>
       <Btn>{children}</Btn>
     </Link>
   );
