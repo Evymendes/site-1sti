@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "./styled";
 import Button from "../../../components/Button"
 import ImageOne from "../../../images/1sti-Instagram4.png"
-import ImageTwo from "../../../images/insights-deeptech.png"
+import ImageTwo from "../../../images/insights-deeptech.svg"
 import ImageThree from "../../../images/DT-Imagem-3-Concha.png"
 
 const Insights = () => (
