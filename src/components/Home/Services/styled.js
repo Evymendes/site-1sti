@@ -29,33 +29,37 @@ export const Description = styled.p`
 `;
 export const BoxCardOne = styled.div`
     width: 23%;
-    height: 37.5rem;
-    
-    
+    height: 35.3rem;
 
     &:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
+        border: 2px solid #00C8DB;
+        border-radius: 10px;
     }
 `;
 export const BoxCardTwo = styled.div`
     width: 23%;
-    height: 37.5rem;
+    height: 35.3rem;
 
     &:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
-        transform: scale(1.1);        
+        transform: scale(1.1);
+        border: 2px solid #00C8DB;
+        border-radius: 10px;     
     }
 `;
 export const BoxCardThree = styled.div`
     width: 23%;
-    height: 37.5rem;
+    height: 35.3rem;
     &:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
+        border: 2px solid #00C8DB;
+        border-radius: 10px;
     }
 `;
 export const ImageCard = styled.img`
@@ -68,8 +72,5 @@ export const DescriptionCard = styled.p`
     position: relative;
     left: 2rem;
     bottom: 15rem;
-    display: flex;
-    &:hover {
-        display: flex;
-    }
+    display: none;
 `;

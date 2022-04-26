@@ -1,5 +1,7 @@
 import React from "react";
 import * as S from "./styled";
+import Arrow from "../../../images/arrow-icon.png";
+import SubscribeButton from "../../SubscribeButton";
 
 
 const Attention = () => (
@@ -11,8 +13,8 @@ const Attention = () => (
                 exclusive content, and more.
             </S.Description>
             <S.Label>
-                <S.Input type="email" placeholder="enter your email for updates" /> 
-                <S.Submit type="submit" value="Enviar" />
+                <S.NewsLetter type="email" placeholder="enter your email for updates" /> 
+                <SubscribeButton><S.Icon src={Arrow} alt="Arrow icon"/></SubscribeButton>
             </S.Label>
             <S.Subtitle>*Selecting this option you authorize 1STi to send you personalized content.</S.Subtitle>
         </S.Box>
