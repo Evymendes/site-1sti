@@ -2,13 +2,14 @@ import React from "react";
 
 import * as S from "./styled";
 import Button from "../../../components/Button";
-// import VideoHome from "../../images/videos/video-1649703291.mp4"
+// import CTABackground from "../../images/videos/cta_video.mp4";
 
 
 const CallToAction = () => (
   <S.CTAContainer>
-    {/* <S.DivVideo autoPlay preload="auto" >
-      <S.Video src={VideoHome} type='video/mp4' /> */}
+    {/* <video autoPlay preload="auto" >
+      <source src={CTABackground} type="video/mp4" />
+    </video> */}
     
       <S.CTAWrapper>
         <S.CTATextBox>
@@ -25,7 +26,6 @@ const CallToAction = () => (
           </S.CTAOptions>
         </S.CTATextBox>
       </S.CTAWrapper>
-    {/* </S.DivVideo> */}
   </S.CTAContainer>
 );
 

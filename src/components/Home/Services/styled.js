@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ContainerServices = styled.section`
     height: 100vh;
     width: 100%;
@@ -8,69 +7,102 @@ export const ContainerServices = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-
 `;
+
 export const ContentContainer = styled.div`
-    width: 90%;
     display: flex;
     justify-content: space-between;
+    width: 90%;
 `;
+
 export const BoxText = styled.div`
-    width: 22%;
-    height: 15rem;
+    padding-top: 4rem;
+    width: 18%;
 `;
+
 export const Title = styled.h2`
     font-size: 2.875rem;
-    margin-bottom: 1rem;
+    line-height: 1.1;
 `;
+
 export const Description = styled.p`
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
 `;
-export const BoxCardOne = styled.div`
-    width: 23%;
-    height: 35.3rem;
+
+export const CardsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+`;
+
+export const Card = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4rem 2.2rem 2.5rem;
+    width: 32%;
+    min-height: 85vh;
+    z-index: 1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(${props => props.bg});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        border: 1px solid #000;
+        transition: .3s;
+        z-index: -2;
+    }
+
+    .card-id {
+        font-weight: 400;
+        text-align: center;
+        transition: .3s;
+    }
 
     &:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        border: 2px solid #00C8DB;
-        border-radius: 10px;
-    }
-`;
-export const BoxCardTwo = styled.div`
-    width: 23%;
-    height: 35.3rem;
+        &:before {
+            border-color: #00C8DB;
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+        }
 
-    &:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        border: 2px solid #00C8DB;
-        border-radius: 10px;     
+        .card-id {
+            color: #00C8DB;
+        }
+
+        p {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 `;
-export const BoxCardThree = styled.div`
-    width: 23%;
-    height: 35.3rem;
-    &:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        border: 2px solid #00C8DB;
-        border-radius: 10px;
-    }
-`;
+
 export const ImageCard = styled.img`
     font-size: 1.5rem;
     width: 100%;
 `;
+
 export const DescriptionCard = styled.p`
+    display: flex;
+    flex-direction: column;
+    padding-top: 20rem;
     font-size: 1.5rem;
-    width: 90%;
-    position: relative;
-    left: 2rem;
-    bottom: 15rem;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    z-index: 1;
 `;

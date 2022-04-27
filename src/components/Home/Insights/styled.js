@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ContainerInsights = styled.section`
     height: 100vh;
     width: 100%;
@@ -8,56 +7,80 @@ export const ContainerInsights = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-
 `;
+
 export const ContentContainer = styled.div`
-    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    height: 100%;
 `;
+
 export const BoxText = styled.div`
-    width: 22%;
-    margin-bottom: 25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    
+    padding-top: 8rem;
+    width: 18%;
+    align-self: start;
 `;
+
 export const Title = styled.h2`
     font-size: 2.875rem;
-    margin-bottom: 1rem;
+    line-height: 1.1;
 `;
+
 export const Description = styled.p`
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-`;
-export const BoxCard = styled.div`
-    width: 23%;
-    /* height: 37.5rem; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 1.5rem 0 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+`;
+
+export const CardsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+`;
+
+export const Card = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32%;
+    
     &:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+        img {
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
     }
 `;
 
 export const ImageCard = styled.img`
     width: 100%;
+    transition: .3s;
 `;
+
 export const DescriptionCard = styled.p`
+    margin: 1rem 0;
     text-align: center;
     text-transform: uppercase;
     font-size: 0.875rem;
     color: #999999;
-    margin-top: .5rem;
 `;
+
 export const TitleCard = styled.h2`
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 4.5rem;
     font-size: 1.75rem;
+    line-height: 1.2;
     text-align: center;
     color: #FFFFFF;
     font-weight: bold;
