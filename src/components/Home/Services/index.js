@@ -7,6 +7,7 @@ import Backbones from "../../../images/ScreenShot2021-09-15at19.29.36.png";
 import Platforms from "../../../images/ScreenShot2021-09-15at18.32.12.png";
 import Technologies from "../../../images/ScreenShot2021-09-15at18.32.21.png";
 
+
 export default function Services() {
     const servicesList = [
         {

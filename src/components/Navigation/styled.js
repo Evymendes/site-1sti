@@ -11,6 +11,7 @@ export const NavBar = styled.nav`
   backdrop-filter: blur(30px);
   border-top: 10px solid #0B1617;
   z-index: 3;
+
 `;
 
 export const NavWrapper = styled.section`
