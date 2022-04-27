@@ -71,6 +71,7 @@ export const Image = styled.img`
 export const Icon = styled.img`
   width: 1.2rem;
   padding-top: 1rem;
+  fill: #FF0070;
 `
 export const Label = styled.div`
   display: flex;

@@ -31,20 +31,27 @@ export const Description = styled.h3`
     font-size: 1.125rem;
 
 `;
-export const Label = styled.label`
-
-
-`;
-export const Input = styled.input`
-    text-align: left;
-    color: #FF0070;
-    font-size: 1rem;
-
-`;
-export const Submit = styled.input`
-
-
-`;
+export const Icon = styled.img`
+  width: 1.2rem;
+  padding-top: 1rem;
+`
+export const NewsLetter = styled.input`
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #FF0070;
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  font-size: 1.25rem;
+`
+export const Label = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #FF0070;
+`
 
 export const Subtitle = styled.p`
     font-size: .875rem;
