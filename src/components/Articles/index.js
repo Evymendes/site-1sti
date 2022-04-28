@@ -14,7 +14,7 @@ const Articles = () => (
             alt="Imagem Ideia"
             layout="fixed"
           />
-          Blog
+          Insights
         </S.BackButton>
         <S.BoxImage>
           <StaticImage 
