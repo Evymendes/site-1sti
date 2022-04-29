@@ -204,7 +204,7 @@ export const SocialBox = styled.figure`
   margin-top: 4rem;
   width: 40%;
 
-  img {
+  a {
     margin-bottom: 2rem;
     width: 35%;
   }
