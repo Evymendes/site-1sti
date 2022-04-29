@@ -46,10 +46,18 @@ export default function Navigation() {
           </S.LangBtn>
 
           <S.SocialBox>
-            <img src={Medium} alt="Ícone do Medium" />
-            <img src={Facebook} alt="Ícone do Facebook" />
-            <img src={LinkedIn} alt="Ícone do LinkedIn" />
-            <img src={Instagram} alt="Ícone do Instagram" />
+            <a href="https://www.linkedin.com/company/1sti" target="_blank" rel="noreferrer">
+              <img src={LinkedIn} alt="Ícone do LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/ola_1sti" target="_blank" rel="noreferrer">
+              <img src={Instagram} alt="Ícone do Instagram" />
+            </a>
+            <a href="https://medium.com/1sti" target="_blank" rel="noreferrer">
+              <img src={Medium} alt="Ícone do Medium" />
+            </a>
+            <a href="https://web.facebook.com/ola1STi/" target="_blank" rel="noreferrer">
+              <img src={Facebook} alt="Ícone do Facebook" />
+            </a>
           </S.SocialBox>
         </S.NavLinkBox>
       </S.NavWrapper>
