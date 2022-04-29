@@ -9,16 +9,12 @@ const Btn = styled.button`
   background: none;
   cursor: pointer;
   user-select: none;
-
-  &:hover {
-    transform: scale(1.2);
-    transition: .3s ease-in-out;
-  }
+  transition: .2s ease-in-out;
 `;
 
-export default function SubscribeButton({ children, path }) {
+export default function SubscribeButton({ children, to }) {
   return (
-    <Link to={path || ""}>
+    <Link to={to || ""}>
       <Btn>{children}</Btn>
     </Link>
   );
