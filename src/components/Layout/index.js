@@ -8,7 +8,7 @@ const Layout = ({ children }) => (
   <>
     <GlobalStyle />
     <Navigation />
-    <main>{children}</main>
+    <main style={{ marginTop: '4.625rem' }}>{children}</main>
     <Footer />
   </>
 );
