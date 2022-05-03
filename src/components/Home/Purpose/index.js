@@ -67,7 +67,7 @@ const Purpose = () => (
                 </S.Card>
             </S.BoxCards>
 
-            <S.BoxCards>
+            <S.BoxCardsTwo>
                 <S.Card>
                     <S.ImageCard src={ImgCardFive} alt="" />
                     <S.TitleCard>MAPAS MULTIDIMENSIONAIS</S.TitleCard>
@@ -99,7 +99,7 @@ const Purpose = () => (
                         Visão em tempo real de uma operação física através de um ambiente digital.
                     </S.TextCard>
                 </S.Card>
-            </S.BoxCards>
+            </S.BoxCardsTwo>
 
 
         </S.ContainerCards>

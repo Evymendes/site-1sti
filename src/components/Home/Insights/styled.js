@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerInsights = styled.section`
-    height: 100vh;
     width: 100%;
     background: #0B1617;
     display: flex;
@@ -13,6 +12,7 @@ export const ContentContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5rem;
     width: 90%;
     height: 100%;
 `;
