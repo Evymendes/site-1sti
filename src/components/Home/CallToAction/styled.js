@@ -2,12 +2,22 @@ import styled from "styled-components";
 
 export const CTAContainer = styled.header`
   background: #c75681;
-`;
+  width: 100%;
 
-export const DivVideo = styled.video`
-  max-width: 100%;
+  @media (max-width:768px) {
+    background: #0B1617;
+  }
+
 `;
-export const Video = styled.source``;
+export const ImgMob = styled.img`
+  display: none;
+
+  @media (max-width:768px) {
+    display: flex;
+    width: 100%;
+  }
+
+`;
 
 export const CTAWrapper = styled.section`
   margin: 0 auto;
@@ -15,7 +25,13 @@ export const CTAWrapper = styled.section`
   width: 90%;
   min-height: calc(100vh - 4rem);
   height: 100%;
+
+  @media (max-width:768px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
+
 
 export const CTATextBox = styled.div`
   display: flex;
@@ -23,6 +39,12 @@ export const CTATextBox = styled.div`
   justify-content: space-between;
   max-width: 40%;
   width: 100%;
+  @media (max-width:768px) {
+    max-width: 60%;
+  }
+  @media (max-width:650px) {
+    max-width: 80%;
+  }
 `;
 
 export const CTATitle = styled.h1`
