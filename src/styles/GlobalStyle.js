@@ -1,11 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  /*
-    http://meyerweb.com/eric/tools/css/reset/
-    v2.0 | 20110126
-    License: none (public domain)
-  */
+  // http://meyerweb.com/eric/tools/css/reset/
+  // v2.0 | 20110126
+  // License: none (public domain)
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -25,29 +24,36 @@ const GlobalStyle = createGlobalStyle`
     font-size: 100%;
     vertical-align: baseline;
   }
-  /* HTML5 display-role reset for older browsers */
+
+  // HTML5 display-role reset for older browsers
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
+
   ol, ul {
     list-style: none;
   }
+
   blockquote, q {
     quotes: none;
   }
+
   blockquote:before, blockquote:after,
   q:before, q:after {
     content: '';
     content: none;
   }
+
     table {
     border-collapse: collapse;
     border-spacing: 0;
   }
+
   * {
     box-sizing: border-box;
   }
+
   body {
     background: #16202c;
     line-height: 1.5;
@@ -56,6 +62,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     letter-spacing: .8px;
   }
+
   img {
     display: block;
     width: 100%;
@@ -65,6 +72,7 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, a {
     font-family: "GoshaSans", sans-serif;
   }
+
   h3, h4, h5, h6, p, ol, ul, button, input {
     font-family: "CabinetGrotesk", sans-serif;
   }
