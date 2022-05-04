@@ -61,13 +61,6 @@ export const CTAWrapper = styled.section`
 export const CTATextBox = styled.div`
   display: flex;
   flex-direction: column;
-
-  // @media (max-width:768px) {
-  //   max-width: 60%;
-  // }
-  // @media (max-width:650px) {
-  //   max-width: 80%;
-  // }
 `;
 
 export const CTATitle = styled.h1`

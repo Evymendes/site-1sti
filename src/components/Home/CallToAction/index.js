@@ -7,10 +7,12 @@ import ImageMobile from "../../../images/Capa-Mobile-Video.jpg";
 import CTAVideo from "../../../images/videos/cta_video.mp4";
 
 export default function CallToAction() {
+  const isDesktop = window.innerWidth > 768;
+
   const playVideo = () => {
     const ctVideo = document.getElementById("ct-video");
 
-    if(ctVideo.paused) {
+    if(ctVideo.paused && isDesktop) {
       ctVideo.play(); 
     } else {
       ctVideo.pause();
@@ -35,8 +37,8 @@ export default function CallToAction() {
             value and embrace future change—now.
           </S.CTAAbout>
           <S.CTAOptions>
-            <Button>Call to Action One</Button>
-            <Button>Call to Action Two</Button>
+            <Button to="/">Call to Action One</Button>
+            <Button to="/">Call to Action Two</Button>
           </S.CTAOptions>
         </S.CTATextBox>
       </S.CTAWrapper>
