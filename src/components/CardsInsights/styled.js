@@ -41,6 +41,7 @@ export const Card = styled(GatsbyLink)`
   }
   @media (max-width: 768px) {
     width: 100%;
+    align-items: center;
     flex-direction: column;
   }
 

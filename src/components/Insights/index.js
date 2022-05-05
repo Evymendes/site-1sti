@@ -11,6 +11,7 @@ const Insights = () => (
         <S.PageTitle>Insights</S.PageTitle>
       <BlockImages />
       <CardsInsigts />
+      <S.MoreButton>Load more</S.MoreButton>
     </S.Wrapper>
   </S.Container>
 )

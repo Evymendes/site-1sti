@@ -13,10 +13,31 @@ export const Wrapper = styled.div`
   min-height: calc(100vh - 4rem);
   height: 100%;
   background-color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 `;
 
 export const PageTitle = styled.h1`
   padding: 2rem 0 4rem;
   font-size: 4em;
   color: #171717;
+`;
+
+export const MoreButton = styled.button`
+  width: 100%;
+  height: 3.6875rem;
+  font-weight: 500;
+  font-size: 17px;
+  color: #0B1617;
+  background-color: transparent;
+  border: 0;
+  border: 1px #742698 solid;
+
+  &:hover{
+    color: #fff;
+    transition: .2s;
+    background-color: #742698
+  }
 `;
