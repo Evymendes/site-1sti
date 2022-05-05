@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.footer`
   background: #0B1617;
-  min-height: 55vh;
-  height: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 export const ContentContainer = styled.div`
   height: 100%;
@@ -14,38 +16,73 @@ export const ContentContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   border-top: 2px solid #00C8DB;
-  padding-top: 2.5rem;
+  padding: 2rem 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 2.5rem 0;
+    gap: 2rem;
+  }
 `;
 export const ContainerImagePacto = styled.div`
   width: 10%;
   display: flex;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
+
+export const SocialMediaMobile = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    width: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+`;
+
 export const ImagePacto = styled.img`
   width: auto;
 `;
 export const Ecosystem = styled.div`
-  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    
+  }
 `;
 export const EcosystemTitle = styled.p`
   margin-bottom: 1rem;
   font-size: .95em;
-  font-weight: 100;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
 `;
 export const EcosystemItem = styled.a`
   padding-top: 8px;
   color: #fff;
-  font: 200 1.2em 'CabinetGrotesk';
+  font: 500 1.2em 'CabinetGrotesk';
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 export const SocialMedia = styled.div`
   width: 20%;
   display: flex;
   justify-content: space-evenly;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
   
 `;
 export const ImageLogo = styled.img`
@@ -54,6 +91,9 @@ export const ImageLogo = styled.img`
 `;
 export const Work = styled.div`
   width: 33%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const WorkTitle = styled.h3`
   font-size: 1.625rem;
@@ -61,7 +101,7 @@ export const WorkTitle = styled.h3`
 export const WorkSubtitle = styled.p`
   padding: .6rem 0 1.5rem;
   font-size: 1.125rem;
-  font-weight: 100;
+  font-weight: 500;
 `;
 export const WorkButton = styled.button`
   width: 9.25rem;
