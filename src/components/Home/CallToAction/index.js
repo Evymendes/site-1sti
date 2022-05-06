@@ -6,9 +6,17 @@ import Button from "../../../components/Button";
 import ImageMobile from "../../../images/Capa-Mobile-Video.jpg";
 import CTAVideo from "../../../images/videos/cta_video.mp4";
 
-export default function CallToAction() {
-  const isDesktop = window.innerWidth > 768;
+const isBrowser = typeof window !== "undefined";
 
+export const isDesktop = () => {
+  if (!isBrowser) {
+    return;
+  }
+
+  return window.innerWidth > 768;
+}
+
+export default function CallToAction() {
   const playVideo = () => {
     const ctVideo = document.getElementById("ct-video");
 
