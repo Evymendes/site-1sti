@@ -8,72 +8,6 @@ export const ContainerServices = styled.section`
     align-items: center;
 `;
 
-export const ContentContainer = styled.div`
-    padding-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-
-    a {
-        margin: 0 auto;
-
-        @media (min-width: 768px) {
-            display: none;
-        }
-    }
-
-    @media (max-width: 900px) {
-        flex-direction: column;
-        width: 80%;
-
-        & > div {
-            width: 100%;
-
-            div {
-                margin-bottom: 2rem;
-                width: 100%;
-            }
-        }
-    }
-`;
-
-export const BoxText = styled.div`
-    padding-top: 4rem;
-    width: 18%;
-
-    @media (max-width: 900px) {
-        padding: 0;
-
-        a {
-            display: none;
-        }
-    }
-`;
-
-export const Title = styled.h2`
-    font-size: 2.7em;
-    line-height: 1.1;
-`;
-
-export const Description = styled.p`
-    display: flex;
-    flex-direction: column;
-    margin: 1.5rem 0 2.5rem;
-    font-size: 1.2em;
-    font-weight: 200;
-`;
-
-export const CardsContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-
-    @media (max-width: 900px) {
-        flex-direction: column;
-        width: 100%;
-    }
-`;
-
 export const Card = styled.div`
     position: relative;
     display: flex;
@@ -137,6 +71,84 @@ export const Card = styled.div`
         p {
             padding: 10rem 0 1rem;
         }
+    }
+`;
+
+export const ContentContainer = styled.div`
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+    a {
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        width: 80%;
+
+        & > div {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        div {
+            width: 100%;
+        }
+
+        ${Card} {
+            margin-bottom: 2rem;
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        ${Card} {
+            width: 100%;
+        }
+    }
+`;
+
+export const BoxText = styled.div`
+    padding-top: 4rem;
+    width: 18%;
+
+    @media (max-width: 900px) {
+        padding: 0;
+
+        a {
+            display: none;
+        }
+    }
+`;
+
+export const Title = styled.h2`
+    font-size: 2.7em;
+    line-height: 1.1;
+`;
+
+export const Description = styled.p`
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 2.5rem;
+    font-size: 1.2em;
+    font-weight: 200;
+`;
+
+export const CardsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
     }
 `;
 
