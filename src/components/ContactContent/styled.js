@@ -120,7 +120,7 @@ export const NewsLetter = styled.input`
   height: auto;
   font-size: 1.25rem;
 
-  :placeholder-shown {
+  ::placeholder {
     color: #FFF;
     font-size: 1rem;
     opacity: 1;
