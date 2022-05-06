@@ -2,6 +2,7 @@ import React from "react";
 
 import * as S from "./styled";
 import Button from "../../Button";
+
 import ImgPurpose from "../../../images/Group7998.png";
 import ImgCardOne from "../../../images/noun-natural-language-processing-2985136.svg";
 import ImgCardTwo from "../../../images/noun-deep-learning-2985132.svg";
@@ -11,27 +12,22 @@ import ImgCardFive from "../../../images/noun-future-textile-4116521.svg";
 import ImgCardSix from "../../../images/noun-ai-training-data-2985134.svg";
 import ImgCardSeven from "../../../images/noun-ai-ethics-2985138.svg";
 import ImgCardEight from "../../../images/noun-computer-vision-2985143.svg";
-// import VideoHome from "../../images/videos/video-1649703291.mp4"
 
 
 const Purpose = () => (
     <S.ContainerPurpose>
         <S.ContentContainer>
-
             <S.BoxText>
                 <S.Title>Título</S.Title>
                 <S.Description>Parágrafo de texto.</S.Description>
-                <Button>CTA</Button>
+                <Button to="">CTA</Button>
             </S.BoxText>
-
             <S.BoxImage>
                 <S.ImagePurpose src={ImgPurpose} alt="" />
             </S.BoxImage>
-
         </S.ContentContainer>
 
         <S.ContainerCards>
-
             <S.BoxCards>
                 <S.Card>
                     <S.ImageCard src={ImgCardOne} alt="" />
@@ -65,9 +61,6 @@ const Purpose = () => (
                         Algoritmos solucionadores baseados em nuvem e princípios de computação quântica.
                     </S.TextCard>
                 </S.Card>
-            </S.BoxCards>
-
-            <S.BoxCardsTwo>
                 <S.Card>
                     <S.ImageCard src={ImgCardFive} alt="" />
                     <S.TitleCard>MAPAS MULTIDIMENSIONAIS</S.TitleCard>
@@ -99,10 +92,10 @@ const Purpose = () => (
                         Visão em tempo real de uma operação física através de um ambiente digital.
                     </S.TextCard>
                 </S.Card>
-            </S.BoxCardsTwo>
-
-
+            </S.BoxCards>
         </S.ContainerCards>
+
+        <Button to="">Let's work</Button>
     </S.ContainerPurpose>
 );
 
