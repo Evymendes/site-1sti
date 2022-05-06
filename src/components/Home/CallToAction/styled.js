@@ -47,8 +47,8 @@ export const CTAWrapper = styled.section`
     width: 100%;
   }
 
-  @media (max-width:768px) {
-    padding: 4rem 0;
+  @media (max-width: 768px) {
+    padding: 4rem 0 3rem;
     width: 80%;
     height: auto;
 
