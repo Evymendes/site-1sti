@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImgCard from "../../../images/Group8008.svg";
+import ImgCard from "../../../images/purpose_card.svg";
 
 export const ContainerPurpose = styled.section`
     width: 100%;
@@ -30,6 +30,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const BoxText = styled.div`
+    margin-right: 1rem;
     width: 30%;
 
     @media (max-width: 768px) {
@@ -116,6 +117,10 @@ export const Card = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    h2 {
+        color: ${props => props.new && '#FF0070'};
+    }
 
     @media (max-width: 900px) {
         width: 12.8rem;

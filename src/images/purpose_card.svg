@@ -1,0 +1,54 @@
+<svg id="Group_8008" data-name="Group 8008" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="228.077" height="320" viewBox="0 0 228.077 320">
+  <defs>
+    <filter id="Rectangle_4355">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-color="#742698" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_4356">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur-2"/>
+      <feFlood flood-color="#ff0070" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_4357">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur-3"/>
+      <feFlood flood-color="#742698" result="color-3"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-3"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <rect id="Rectangle_4355-2" data-name="Rectangle 4355" width="228.077" height="320" rx="20" fill="#0b1617"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_4355)">
+      <rect id="Rectangle_4355-3" data-name="Rectangle 4355" width="228.077" height="320" rx="20" fill="#fff"/>
+    </g>
+    <g id="Rectangle_4355-4" data-name="Rectangle 4355" fill="none" stroke="#742698" stroke-width="1.5">
+      <rect width="228.077" height="320" rx="20" stroke="none"/>
+      <rect x="0.75" y="0.75" width="226.577" height="318.5" rx="19.25" fill="none"/>
+    </g>
+  </g>
+  <g data-type="innerShadowGroup">
+    <rect id="Rectangle_4356-2" data-name="Rectangle 4356" width="228.077" height="320" rx="20" fill="#0b1617" opacity="0.5"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_4356)">
+      <rect id="Rectangle_4356-3" data-name="Rectangle 4356" width="228.077" height="320" rx="20" fill="#fff" opacity="0.5"/>
+    </g>
+    <g id="Rectangle_4356-4" data-name="Rectangle 4356" fill="none" stroke="#ff0070" stroke-width="1.5" opacity="0.5">
+      <rect width="228.077" height="320" rx="20" stroke="none"/>
+      <rect x="0.75" y="0.75" width="226.577" height="318.5" rx="19.25" fill="none"/>
+    </g>
+  </g>
+  <g data-type="innerShadowGroup">
+    <rect id="Rectangle_4357-2" data-name="Rectangle 4357" width="228.077" height="320" rx="20" fill="#742698" opacity="0.5" style="mix-blend-mode: color-dodge;isolation: isolate"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_4357)" style="mix-blend-mode: color-dodge;isolation: isolate">
+      <rect id="Rectangle_4357-3" data-name="Rectangle 4357" width="228.077" height="320" rx="20" fill="#fff" opacity="0.5"/>
+    </g>
+  </g>
+</svg>
