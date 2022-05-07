@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const DBContainer = styled.div`
   position: relative;
-  padding-top: 4rem;
   background-color: #0B1617;
   background-image: url(${props => props.bg});
   background-size: 82vw;

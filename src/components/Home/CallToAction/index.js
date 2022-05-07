@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as S from "./styled";
+import Header from "../../../components/Header";
 import Button from "../../../components/Button";
 
 import ImageMobile from "../../../images/Capa-Mobile-Video.jpg";
@@ -35,7 +36,7 @@ export default function CallToAction() {
       <S.ImgMob src={ImageMobile} alt="" />
   
       <S.CTAWrapper>
-        <S.CTATitle>Purpose, Technology <span>& Impact</span></S.CTATitle>
+        <Header title={['Purpose,', 'Technology', '& Impact']} />
   
         <S.CTATextBox>
           <S.CTAAbout>
