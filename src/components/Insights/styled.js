@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   margin: 0 auto;
-  padding: 4rem 4.6rem;
+  padding: 0 4.6rem 4rem;
   width: 100%;
   min-height: calc(100vh - 4rem);
   height: 100%;

@@ -37,7 +37,7 @@ export const CTAWrapper = styled.section`
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  padding: calc(3rem + 5.25rem) 0 4rem;
+  padding: 0 0 4rem;
   width: 90%;
   height: 100vh;
 
@@ -61,14 +61,6 @@ export const CTAWrapper = styled.section`
 export const CTATextBox = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-export const CTATitle = styled.h1`
-  display: flex;
-  flex-direction: column;
-  font-size: 4em;
-  line-height: 1.2;
-  text-shadow: 0 0 16px rgba(0,0,0,.5);
 `;
 
 export const CTAAbout = styled.h3`
