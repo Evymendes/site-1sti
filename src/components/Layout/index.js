@@ -7,9 +7,9 @@ import Footer from "../Footer";
 
 const Layout = ({ children, seo }) => (
   <>
-    <GlobalStyle />
     <Seo title={seo} />
     
+    <GlobalStyle />
     <Navigation />
     <main>{children}</main>
     <Footer />
