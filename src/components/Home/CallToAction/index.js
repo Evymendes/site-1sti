@@ -4,8 +4,8 @@ import * as S from "./styled";
 import Header from "../../../components/Header";
 import Button from "../../../components/Button";
 
-import ImageMobile from "../../../images/Capa-Mobile-Video.jpg";
-import CTAVideo from "../../../images/videos/cta_video.mp4";
+import ImageMobile from "../../../assets/images/Capa-Mobile-Video.jpg";
+import CTAVideo from "../../../assets/videos/cta_video.mp4";
 
 const isBrowser = typeof window !== "undefined";
 

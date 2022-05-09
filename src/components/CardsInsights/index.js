@@ -9,11 +9,11 @@ const Cards = () => (
       <S.BoxCard>
         <S.Card to="/">
           <StaticImage 
-            src="../../images/insights-leaf.png"
+            src="../../assets/images/insights-leaf.png"
             alt="Imagem Ideia"
             layout="fixed"
             width={293}
-            height={265}
+            height={264}
           />
           <span>
             <p>ARTICLE</p>
@@ -22,11 +22,11 @@ const Cards = () => (
         </S.Card>
         <S.Card to="/">
           <StaticImage 
-            src="../../images/insights-lula.png"
+            src="../../assets/images/insights-lula.png"
             alt="Imagem Ideia"
             layout="fixed"
             width={293}
-            height={265}
+            height={264}
           />
           <span>
             <p>VISUAL ESSAY</p>
@@ -35,11 +35,11 @@ const Cards = () => (
         </S.Card>
         <S.Card to="/">
           <StaticImage 
-            src="../../images/insights-telephone.png"
+            src="../../assets/images/insights-telephone.png"
             alt="Imagem Ideia"
             layout="fixed"
             width={293}
-            height={265}
+            height={264}
           />
           <span>
             <p>ARTICLE</p>
@@ -48,11 +48,11 @@ const Cards = () => (
         </S.Card>
         <S.Card to="/">
           <StaticImage 
-            src="../../images/insights-girl.png"
+            src="../../assets/images/insights-girl.png"
             alt="Imagem Ideia"
             layout="fixed"
             width={293}
-            height={265}
+            height={264}
           />
           <span>
             <p>ARTICLE</p>

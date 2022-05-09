@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 
 import * as S from "./styled";
-import Logo from "../../images/1sti-logo.svg";
-import LogoHover from "../../images/1sti-logo_hover.svg";
-import Medium from "../../images/medium_icon.svg";
-import Facebook from "../../images/facebook_icon.svg";
-import LinkedIn from "../../images/linkedin_icon.svg";
-import Instagram from "../../images/instagram_icon.svg";
+
+import Logo from "../../assets/images/1sti-logo.svg";
+import LogoHover from "../../assets/images/1sti-logo_hover.svg";
+import Medium from "../../assets/images/medium_icon.svg";
+import Facebook from "../../assets/images/facebook_icon.svg";
+import LinkedIn from "../../assets/images/linkedin_icon.svg";
+import Instagram from "../../assets/images/instagram_icon.svg";
 
 export default function Navigation() {
   const [isEN, setIsEN] = useState(false);

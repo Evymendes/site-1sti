@@ -4,8 +4,8 @@ import * as S from "./styled.js";
 import SubscribeButton from "../SubscribeButton";
 import Header from "../Header";
 
-import BookCover from "../../images/DT-Livro-Capa-2.png";
-import Arrow from "../../images/arrow-icon.png";
+import BookCover from "../../assets/images/DT-Livro-Capa-2.png";
+import Arrow from "../../assets/images/arrow-icon.png";
 
 const Content = () => (
   <S.Container>

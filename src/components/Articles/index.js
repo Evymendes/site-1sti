@@ -10,7 +10,7 @@ const Articles = () => (
         <S.BackButton to="/insights">
           <StaticImage 
             style={{ marginRight: '0.5rem' }}
-            src="../../images/icon-return.svg"
+            src="../../assets/images/icon-return.svg"
             alt="Imagem Ideia"
             layout="fixed"
           />
@@ -18,7 +18,7 @@ const Articles = () => (
         </S.BackButton>
         <S.BoxImage>
           <StaticImage 
-            src="../../images/insights-deeptech.svg"
+            src="../../assets/images/insights-deeptech.svg"
             alt="Imagem Ideia"
             layout="fixed"
           />
@@ -36,7 +36,7 @@ const Articles = () => (
         <S.Linkedin>
           POR IGOR COUTO
           <StaticImage 
-            src="../../images/linkedin.svg"
+            src="../../assets/images/linkedin.svg"
             alt="Imagem Ideia"
             layout="fixed"
           />
@@ -49,14 +49,14 @@ const Articles = () => (
         </span>
         <span>
           <StaticImage 
-            src="../../images/insights-menina3.png"
+            src="../../assets/images/insights-menina3.png"
             alt="Imagem Ideia"
             layout="fixed"
             width={300}
             height={192}
           />
           <StaticImage 
-            src="../../images/insights-menina2.png"
+            src="../../assets/images/insights-menina2.png"
             alt="Imagem Ideia"
             layout="fixed"
             width={300}
@@ -74,7 +74,7 @@ const Articles = () => (
           <h1>O termo “Tecnologia com Alma” ganha importância ao traduzir bits e bytes em iniciativas com propósito.</h1>
           <p>Essa forma de desenhar tecnologias de maneira intencional está provocando um espiral ascendente em diversas áreas da sociedade: como na produção de alimentos na África, na qualidade da saúde na Índia e na educação no Brasil.</p>
           <StaticImage
-            src="../../images/insights-menina1.png"
+            src="../../assets/images/insights-menina1.png"
             alt="Imagem Ideia"
             layout="fixed"
           />

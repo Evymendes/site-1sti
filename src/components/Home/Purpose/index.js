@@ -3,15 +3,15 @@ import React from "react";
 import * as S from "./styled";
 import Button from "../../Button";
 
-import ImgPurpose from "../../../images/purpose_img.png";
-import ImgCardOne from "../../../images/noun-natural-language-processing-2985136.svg";
-import ImgCardTwo from "../../../images/noun-deep-learning-2985132.svg";
-import ImgCardThree from "../../../images/noun-artificial-intelligence-2985130.svg";
-import ImgCardFour from "../../../images/noun-quantum-computing-4116531.svg";
-import ImgCardFive from "../../../images/noun-future-textile-4116521.svg";
-import ImgCardSix from "../../../images/noun-ai-training-data-2985134.svg";
-import ImgCardSeven from "../../../images/noun-ai-ethics-2985138.svg";
-import ImgCardEight from "../../../images/noun-computer-vision-2985143.svg";
+import ImgPurpose from "../../../assets/images/purpose_img.png";
+import ImgCardOne from "../../../assets/images/noun-natural-language-processing-2985136.svg";
+import ImgCardTwo from "../../../assets/images/noun-deep-learning-2985132.svg";
+import ImgCardThree from "../../../assets/images/noun-artificial-intelligence-2985130.svg";
+import ImgCardFour from "../../../assets/images/noun-quantum-computing-4116531.svg";
+import ImgCardFive from "../../../assets/images/noun-future-textile-4116521.svg";
+import ImgCardSix from "../../../assets/images/noun-ai-training-data-2985134.svg";
+import ImgCardSeven from "../../../assets/images/noun-ai-ethics-2985138.svg";
+import ImgCardEight from "../../../assets/images/noun-computer-vision-2985143.svg";
 
 
 export default function Purpose () {

@@ -3,11 +3,11 @@ import React from "react";
 import * as S from "./styled";
 import Button from "../Button";
 
-import ImagePactoGlobal from "../../images/Logo-Pacto_Global.png";
-import LinkedIn from "../../images/linkedIn.png";
-import Instagram from "../../images/instagram.png";
-import Medium from "../../images/medium.png";
-import Facebook from "../../images/facebook.png";
+import ImagePactoGlobal from "../../assets/images/Logo-Pacto_Global.png";
+import LinkedIn from "../../assets/images/linkedIn.png";
+import Instagram from "../../assets/images/instagram.png";
+import Medium from "../../assets/images/medium.png";
+import Facebook from "../../assets/images/facebook.png";
 
 const Footer = () => (
   <S.ContainerFooter>
