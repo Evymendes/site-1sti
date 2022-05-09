@@ -80,7 +80,7 @@ export const ContentContainer = styled.div`
     justify-content: space-between;
     width: 90%;
 
-    a {
+    & > a {
         margin: 0 auto;
 
         @media (min-width: 768px) {
