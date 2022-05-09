@@ -4,9 +4,9 @@ import * as S from "./styled";
 import Header from "../Header";
 import Button from "../Button";
 
-import BackbonesBG from "../../images/bd_background.png";
-import PlatformsBG from "../../images/platforms.png";
-import TechnologiesBG from "../../images/technologies.png";
+import BackbonesBG from "../../assets/images/bd_background.png";
+import PlatformsBG from "../../assets/images/platforms.png";
+import TechnologiesBG from "../../assets/images/technologies.png";
 
 export default function DigitalBackbones() {
   return (

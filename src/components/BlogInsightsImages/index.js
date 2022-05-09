@@ -1,7 +1,7 @@
 import React from "react";
 
-import Image1 from '../../images/insights-ideia.png'
-import Image2 from '../../images/insights-deeptech.svg'
+import Image1 from '../../assets/images/insights-ideia.png'
+import Image2 from '../../assets/images/insights-deeptech.svg'
 
 import * as S from "./styled"
 

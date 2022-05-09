@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImgCard from "../../../images/purpose_card.svg";
+import ImgCard from "../../../assets/images/purpose_card.svg";
 
 export const ContainerPurpose = styled.section`
     width: 100%;
