@@ -3,24 +3,27 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.footer`
   background: #0B1617;
-
-  @media (max-width: 768px) {
-    padding: 0 2rem;
-  }
 `;
 export const ContentContainer = styled.div`
   height: 100%;
   margin: 0 auto;
-  width: 90%;
+  max-width: 1440px;
+  width: 100%;
+  height: 40vh;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   border-top: 2px solid #00C8DB;
   padding: 2rem 0;
 
+  @media (max-width: 1440px) {
+    padding: 2rem 4rem;
+  }
+
   @media (max-width: 768px) {
+    height: auto;
     flex-direction: column;
-    padding: 2.5rem 0;
+    padding: 2.5rem 2rem;
     gap: 2rem;
   }
 `;

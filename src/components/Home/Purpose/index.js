@@ -2,108 +2,89 @@ import React from "react";
 
 import * as S from "./styled";
 import Button from "../../Button";
-import ImgPurpose from "../../../images/Group7998.png";
-import ImgCardOne from "../../../images/noun-natural-language-processing-2985136.svg";
-import ImgCardTwo from "../../../images/noun-deep-learning-2985132.svg";
-import ImgCardThree from "../../../images/noun-artificial-intelligence-2985130.svg";
-import ImgCardFour from "../../../images/noun-quantum-computing-4116531.svg";
-import ImgCardFive from "../../../images/noun-future-textile-4116521.svg";
-import ImgCardSix from "../../../images/noun-ai-training-data-2985134.svg";
-import ImgCardSeven from "../../../images/noun-ai-ethics-2985138.svg";
-import ImgCardEight from "../../../images/noun-computer-vision-2985143.svg";
-// import VideoHome from "../../images/videos/video-1649703291.mp4"
+
+import ImgPurpose from "../../../assets/images/purpose_img.png";
+import ImgCardOne from "../../../assets/images/noun-natural-language-processing-2985136.svg";
+import ImgCardTwo from "../../../assets/images/noun-deep-learning-2985132.svg";
+import ImgCardThree from "../../../assets/images/noun-artificial-intelligence-2985130.svg";
+import ImgCardFour from "../../../assets/images/noun-quantum-computing-4116531.svg";
+import ImgCardFive from "../../../assets/images/noun-future-textile-4116521.svg";
+import ImgCardSix from "../../../assets/images/noun-ai-training-data-2985134.svg";
+import ImgCardSeven from "../../../assets/images/noun-ai-ethics-2985138.svg";
+import ImgCardEight from "../../../assets/images/noun-computer-vision-2985143.svg";
 
 
-const Purpose = () => (
-    <S.ContainerPurpose>
-        <S.ContentContainer>
+export default function Purpose () {
+    const cardsList = [
+        {
+            icon: ImgCardOne,
+            title: 'LINGUAGEM NATURAL APLICADA',
+            text: 'Reconhecimento e sintetização de fala, processamento, entendimento e inferência de redes de texto e aplicação em automação, inteligência e ciência.',
+        },
+        {
+            icon: ImgCardTwo,
+            title: 'GRAFOS DE CONHECIMENTO EM BIG DATA',
+            text: 'Hiper associação de conceitos e identificação em grandes massas de dados de comunidades, hierarquias, centralidades e projeções dinâmicas.',
+            new: true,
+        },
+        {
+            icon: ImgCardThree,
+            title: 'RACIOCINADORES DIGITAIS',
+            text: 'Enriquecimento de dados através de ontologias e taxonomias e utilização de motor de cálculos e regras dinâmicas de extrema complexidade.',
+        },
+        {
+            icon: ImgCardFour,
+            title: 'OTIMIZADORES DE NOVA GERAÇÃO',
+            text: 'Algoritmos solucionadores baseados em nuvem e princípios de computação quântica.',
+        },
+        {
+            icon: ImgCardFive,
+            title: 'MAPAS MULTIDIMENSIONAIS',
+            text: 'Localização e analytics com navegação em camadas e sinalização super flexível baseada em geolocalização.',
+        },
+        {
+            icon: ImgCardSix,
+            title: 'MODELOS DE A.I GIGANTES',
+            text: 'Interpretação e geração de texto, modelos conversacionais, geração de imagens ou vídeos baseados em modelos disponíveis de escala extrema.',
+        },
+        {
+            icon: ImgCardSeven,
+            title: 'CARTEIRAS DIGITAIS E NANOCONTRATOS',
+            text: 'Proteção descentralizada de dados e utilização de contratos inteligentes para garantia de integridade transacional.',
+        },
+        {
+            icon: ImgCardEight,
+            title: 'GÊMEOS DIGITAIS',
+            text: 'Visão em tempo real de uma operação física através de um ambiente digital.',
+        },
+    ];
 
-            <S.BoxText>
-                <S.Title>Título</S.Title>
-                <S.Description>Parágrafo de texto.</S.Description>
-                <Button>CTA</Button>
-            </S.BoxText>
+    return (
+        <S.ContainerPurpose>
+            <S.ContentContainer>
+                <S.BoxText>
+                    <S.Title>Título</S.Title>
+                    <S.Description>Parágrafo de texto.</S.Description>
+                    <Button to="">CTA</Button>
+                </S.BoxText>
+                <S.BoxImage>
+                    <S.ImagePurpose src={ImgPurpose} alt="" />
+                </S.BoxImage>
+            </S.ContentContainer>
 
-            <S.BoxImage>
-                <S.ImagePurpose src={ImgPurpose} alt="" />
-            </S.BoxImage>
+            <S.ContainerCards>
+                <S.BoxCards>
+                    {cardsList.map((card, i) => (
+                        <S.Card key={i} new={card.new}>
+                            <S.ImageCard src={card.icon} alt="" />
+                            <S.TitleCard>{card.title}</S.TitleCard>
+                            <S.TextCard>{card.text}</S.TextCard>
+                        </S.Card>
+                    ))}
+                </S.BoxCards>
+            </S.ContainerCards>
 
-        </S.ContentContainer>
-
-        <S.ContainerCards>
-
-            <S.BoxCards>
-                <S.Card>
-                    <S.ImageCard src={ImgCardOne} alt="" />
-                    <S.TitleCard>LINGUAGEM NATURAL APLICADA</S.TitleCard>
-                    <S.TextCard>
-                        Reconhecimento e sintetização de fala, processamento, 
-                        entendimento e inferência de redes de texto e aplicação em automação, 
-                        inteligência e ciência.
-                    </S.TextCard>
-                </S.Card>
-                <S.Card>
-                    <S.ImageCard src={ImgCardTwo} alt="" />
-                    <S.TitleCardPink>GRAFOS DE CONHECIMENTO EM BIG DATA</S.TitleCardPink>
-                    <S.TextCard>
-                        Hiper associação de conceitos e identificação em grandes massas de dados de comunidades, 
-                        hierarquias, centralidades e projeções dinâmicas.
-                    </S.TextCard>
-                </S.Card>
-                <S.Card>
-                    <S.ImageCard src={ImgCardThree} alt="" />
-                    <S.TitleCard>RACIOCINADORES DIGITAIS</S.TitleCard>
-                    <S.TextCard>
-                        Enriquecimento de dados através de ontologias e taxonomias e utilização de motor de cálculos 
-                        e regras dinâmicas de extrema complexidade.
-                    </S.TextCard>
-                </S.Card>
-                <S.Card>
-                    <S.ImageCard src={ImgCardFour} alt="" />
-                    <S.TitleCard>OTIMIZADORES DE NOVA GERAÇÃO</S.TitleCard>
-                    <S.TextCard>
-                        Algoritmos solucionadores baseados em nuvem e princípios de computação quântica.
-                    </S.TextCard>
-                </S.Card>
-            </S.BoxCards>
-
-            <S.BoxCardsTwo>
-                <S.Card>
-                    <S.ImageCard src={ImgCardFive} alt="" />
-                    <S.TitleCard>MAPAS MULTIDIMENSIONAIS</S.TitleCard>
-                    <S.TextCard>
-                        Localização e analytics com navegação em camadas e sinalização super 
-                        flexível baseada em geolocalização.
-                    </S.TextCard>
-                </S.Card>
-                <S.Card>
-                    <S.ImageCard src={ImgCardSix} alt="" />
-                    <S.TitleCard>MODELOS DE A.I GIGANTES</S.TitleCard>
-                    <S.TextCard>
-                        Interpretação e geração de texto, modelos conversacionais, 
-                        geração de imagens ou vídeos baseados em modelos disponíveis de escala extrema.
-                    </S.TextCard>
-                </S.Card>
-                <S.Card>
-                    <S.ImageCard src={ImgCardSeven} alt="" />
-                    <S.TitleCard>CARTEIRAS DIGITAIS E NANOCONTRATOS</S.TitleCard>
-                    <S.TextCard>
-                        Proteção descentralizada de dados e utilização de contratos inteligentes 
-                        para garantia de integridade transacional.
-                    </S.TextCard>
-                </S.Card>
-                <S.Card>
-                    <S.ImageCard src={ImgCardEight} alt="" />
-                    <S.TitleCard>GÊMEOS DIGITAIS</S.TitleCard>
-                    <S.TextCard>
-                        Visão em tempo real de uma operação física através de um ambiente digital.
-                    </S.TextCard>
-                </S.Card>
-            </S.BoxCardsTwo>
-
-
-        </S.ContainerCards>
-    </S.ContainerPurpose>
-);
-
-export default Purpose
+            <Button to="">Let's work</Button>
+        </S.ContainerPurpose>
+    );
+}

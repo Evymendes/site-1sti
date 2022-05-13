@@ -1,14 +1,23 @@
 import React from "react";
 
 import * as S from "./styled";
+import Header from "../../../components/Header";
 import Button from "../../../components/Button";
 
-import ImageMobile from "../../../images/Capa-Mobile-Video.jpg";
-import CTAVideo from "../../../images/videos/cta_video.mp4";
+import ImageMobile from "../../../assets/images/Capa-Mobile-Video.jpg";
+import CTAVideo from "../../../assets/videos/cta_video.mp4";
+
+const isBrowser = typeof window !== "undefined";
+
+export const isDesktop = () => {
+  if (!isBrowser) {
+    return;
+  }
+
+  return window.innerWidth > 768;
+}
 
 export default function CallToAction() {
-  const isDesktop = window.innerWidth > 768;
-
   const playVideo = () => {
     const ctVideo = document.getElementById("ct-video");
 
@@ -27,7 +36,7 @@ export default function CallToAction() {
       <S.ImgMob src={ImageMobile} alt="" />
   
       <S.CTAWrapper>
-        <S.CTATitle>Purpose, Technology <span>& Impact</span></S.CTATitle>
+        <Header title={['Purpose,', 'Technology', '& Impact']} />
   
         <S.CTATextBox>
           <S.CTAAbout>

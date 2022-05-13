@@ -37,9 +37,18 @@ export const CTAWrapper = styled.section`
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  padding: calc(3rem + 5.25rem) 0 4rem;
-  width: 90%;
+  padding: 0 0 4rem;
+  width: 100%;
   height: 100vh;
+  max-width: 1440px;
+
+  @media (max-width: 1440px) {
+    padding: 4rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 
   h1,
   h3 {
@@ -47,8 +56,8 @@ export const CTAWrapper = styled.section`
     width: 100%;
   }
 
-  @media (max-width:768px) {
-    padding: 4rem 0;
+  @media (max-width: 768px) {
+    padding: 4rem 0 3rem;
     width: 80%;
     height: auto;
 
@@ -61,14 +70,6 @@ export const CTAWrapper = styled.section`
 export const CTATextBox = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-export const CTATitle = styled.h1`
-  display: flex;
-  flex-direction: column;
-  font-size: 4em;
-  line-height: 1.2;
-  text-shadow: 0 0 16px rgba(0,0,0,.5);
 `;
 
 export const CTAAbout = styled.h3`

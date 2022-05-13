@@ -11,7 +11,6 @@ export const NavBar = styled.nav`
   backdrop-filter: blur(30px);
   border-top: 10px solid #0B1617;
   z-index: 3;
-
 `;
 
 export const NavWrapper = styled.section`
@@ -20,12 +19,17 @@ export const NavWrapper = styled.section`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 90%;
+  max-width: 1440px;
+  width: 100%;
   height: 100%;
   border-bottom: 2px solid #504d50;
 
+  @media (max-width: 1440px) {
+    padding: 0 4rem;
+  }
+
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 2rem;
     width: 100%;
   }
 `;

@@ -4,15 +4,23 @@ export const Container = styled.div`
   width: 100%;
   border-left: 20px solid #0B1617;
   border-right: 20px solid #0B1617;
+  background-color: #fff;
 `;
 
 export const Wrapper = styled.div`
   margin: 0 auto;
-  padding: 4rem 4.6rem;
+  padding: 4rem 0;
+  max-width: 1440px;
   width: 100%;
   min-height: calc(100vh - 4rem);
   height: 100%;
   background-color: #fff;
+
+  padding: 4rem 0;
+
+  @media (max-width: 1440px) {
+    padding: 4rem 3rem;
+  }
 
   @media (max-width: 768px) {
     padding: 4rem 2rem;

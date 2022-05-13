@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styled";
-import Arrow from "../../../images/arrow-icon.png";
+import Arrow from "../../../assets/images/arrow-icon.png";
 import SubscribeButton from "../../SubscribeButton";
 
 
