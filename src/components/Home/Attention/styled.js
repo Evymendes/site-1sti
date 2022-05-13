@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const ContainerAttention = styled.section`
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     background: #0B1617;
     display: flex;

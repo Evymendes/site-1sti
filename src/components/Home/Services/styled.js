@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerServices = styled.section`
-    height: 100vh;
+    
     width: 100%;
     background: #0B1617;
     display: flex;
@@ -10,6 +10,7 @@ export const ContainerServices = styled.section`
 `;
 
 export const ContentContainer = styled.div`
+    padding-top: 5rem;
     display: flex;
     justify-content: space-between;
     width: 90%;

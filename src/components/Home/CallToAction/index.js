@@ -2,18 +2,34 @@ import React from "react";
 
 import * as S from "./styled";
 import Button from "../../../components/Button";
-// import CTABackground from "../../images/videos/cta_video.mp4";
 
+import ImageMobile from "../../../images/Capa-Mobile-Video.jpg";
+import CTAVideo from "../../../images/videos/cta_video.mp4";
 
-const CallToAction = () => (
-  <S.CTAContainer>
-    {/* <video autoPlay preload="auto" >
-      <source src={CTABackground} type="video/mp4" />
-    </video> */}
-    
+export default function CallToAction() {
+  const isDesktop = window.innerWidth > 768;
+
+  const playVideo = () => {
+    const ctVideo = document.getElementById("ct-video");
+
+    if(ctVideo.paused && isDesktop) {
+      ctVideo.play(); 
+    } else {
+      ctVideo.pause();
+    }
+  };
+
+  return (
+    <S.CTAContainer onClick={() => playVideo()}>
+      <S.BGVideo id="ct-video">
+        <source src={CTAVideo} type="video/mp4" />
+      </S.BGVideo>
+      <S.ImgMob src={ImageMobile} alt="" />
+  
       <S.CTAWrapper>
+        <S.CTATitle>Purpose, Technology <span>& Impact</span></S.CTATitle>
+  
         <S.CTATextBox>
-          <S.CTATitle>Purpose, Technology & Impact</S.CTATitle>
           <S.CTAAbout>
             1STi is a Deep Tech consultancy that builds
             mission-critical digital architectures,
@@ -21,12 +37,11 @@ const CallToAction = () => (
             value and embrace future change—now.
           </S.CTAAbout>
           <S.CTAOptions>
-            <Button>Call to Action One</Button>
-            <Button>Call to Action Two</Button>
+            <Button to="/">Call to Action One</Button>
+            <Button to="/">Call to Action Two</Button>
           </S.CTAOptions>
         </S.CTATextBox>
       </S.CTAWrapper>
-  </S.CTAContainer>
-);
-
-export default CallToAction
+    </S.CTAContainer>
+  );
+};
