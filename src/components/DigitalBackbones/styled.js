@@ -11,7 +11,17 @@ export const DBContainer = styled.div`
 
 export const DBWrapper = styled.div`
   margin: 0 auto;
-  width: 90%;
+  max-width: 1440px;
+  width: 100%;
+  padding: 4rem 0;
+
+  @media (max-width: 1440px) {
+    padding: 4rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 `;
 
 // Text about the service

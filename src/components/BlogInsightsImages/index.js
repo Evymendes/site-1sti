@@ -1,6 +1,6 @@
 import React from "react";
 
-import Image1 from '../../assets/images/insights-ideia.png'
+import Image1 from '../../assets/images/insights-ideia.jpg'
 import Image2 from '../../assets/images/insights-deeptech.svg'
 
 import * as S from "./styled"
@@ -17,7 +17,7 @@ const BlockImages = () => (
         </S.Block>
       </S.BlockLink>
       <S.BlockLink to="/editorial-by-igor">
-        <S.Block style={{ backgroundImage: `url(${Image2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}} color="#742698">
+        <S.Block style={{ backgroundImage: `url(${Image2})`, backgroundRepeat: 'no-repeat', backgroundSize: '70%', backgroundPosition: 'center'}} color="#742698">
           <span>  
             <p>EDITORIAL</p>
             <h1>Deep Tech and the future of education</h1>

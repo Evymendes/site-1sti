@@ -17,10 +17,20 @@ export const ContainerPurpose = styled.section`
 `;
 
 export const ContentContainer = styled.div`
-    width: 90%;
+    width: 100%;
     padding-top: 5rem;
     display: flex;
     justify-content: space-between;
+
+    max-width: 1440px;
+
+    @media (max-width: 1440px) {
+        padding: 4rem 4rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 4rem 2rem;
+    }
 
     @media (max-width: 768px) {
         display: flex;
@@ -75,11 +85,21 @@ export const ImagePurpose = styled.img`
 `;
 
 export const ContainerCards = styled.div`
-    width: 90%;
+    width: 100%;
     height: 45%;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+
+    max-width: 1440px;
+
+    @media (max-width: 1440px) {
+    padding: 4rem 4rem;
+    }
+
+    @media (max-width: 768px) {
+    padding: 4rem 2rem;
+    }
 
     @media (max-width: 768px) {
         display: flex;

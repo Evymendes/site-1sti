@@ -28,8 +28,8 @@ export const Wrapper = styled.div`
 
 export const BlockLink = styled(GatsbyLink)`
   display: flex;
-  width: 602px;
-  height: 602px;
+  width: 702px;
+  height: 702px;
   text-decoration: none;
 
   @media (max-width: 900px) {
