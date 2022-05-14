@@ -38,8 +38,17 @@ export const CTAWrapper = styled.section`
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 0 4rem;
-  width: 90%;
+  width: 100%;
   height: 100vh;
+  max-width: 1440px;
+
+  @media (max-width: 1440px) {
+    padding: 4rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 
   h1,
   h3 {

@@ -9,19 +9,20 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   margin: 0 auto;
-  width: 90%;
+  max-width: 1440px;
+  width: 100%;
+  padding: 4rem 0;
 
+  @media (max-width: 1440px) {
+    padding: 4rem 4rem;
+  }
   @media (max-width: 768px) {
-    width: 75%;
+    padding: 4rem 2rem;
   }
 `;
 
 export const Content = styled.div`
   margin: 0 auto;
-
-  @media (min-width: 768px) {
-    width: 90%;
-  }
 `;
 
 export const UpText = styled.div`

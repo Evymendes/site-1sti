@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerServices = styled.section`
+    
     width: 100%;
     background: #0B1617;
     display: flex;
@@ -78,7 +79,16 @@ export const ContentContainer = styled.div`
     padding-top: 5rem;
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
+    max-width: 1440px;
+
+    @media (max-width: 1440px) {
+        padding: 4rem 4rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 4rem 2rem;
+    }
 
     & > a {
         margin: 0 auto;

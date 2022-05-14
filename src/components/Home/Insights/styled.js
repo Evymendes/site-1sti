@@ -10,9 +10,18 @@ export const ContentContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 8rem 0 2rem;
-    width: 90%;
+    width: 100%;
     height: 100%;
+    padding: 8rem 0 0;
+    max-width: 1440px;
+
+    @media (max-width: 1440px) {
+			padding: 8rem 4rem;
+		}
+
+		@media (max-width: 768px) {
+			padding: 8rem 0 2rem;
+		}
 
     & > a {
         padding-top: 1.5rem;
