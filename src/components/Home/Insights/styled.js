@@ -10,18 +10,10 @@ export const ContentContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
+    max-width: 1440px;
+    width: 90%;
     height: 100%;
     padding: 8rem 0 0;
-    max-width: 1440px;
-
-    @media (max-width: 1440px) {
-			padding: 8rem 4rem;
-		}
-
-		@media (max-width: 768px) {
-			padding: 8rem 0 2rem;
-		}
 
     & > a {
         padding-top: 1.5rem;
@@ -33,12 +25,16 @@ export const ContentContainer = styled.div`
 
     @media (max-width: 1024px) {
         flex-direction: column;
-        width: 80%;
         font-size: .8rem;
 
         div a {
             display: none;
         }
+    }
+
+    @media (max-width: 768px) {
+        padding: 2rem 0;
+        width: 75%;
     }
 `;
 
@@ -110,7 +106,11 @@ export const Card = styled.div`
 
     @media (max-width: 768px) {
         margin-right: 1rem;
-        min-width: 80vw;
+        min-width: 50vw;
+    }
+
+    @media (max-width: 400px) {
+        min-width: 75vw;
     }
 `;
 

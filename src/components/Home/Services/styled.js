@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerServices = styled.section`
-    
     width: 100%;
     background: #0B1617;
     display: flex;
@@ -76,18 +75,14 @@ export const Card = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-    padding-top: 5rem;
+    padding: 5rem 0 3rem;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     max-width: 1440px;
 
-    @media (max-width: 1440px) {
-        padding: 4rem 4rem;
-    }
-
     @media (max-width: 768px) {
-        padding: 4rem 2rem;
+        width: 75%;
     }
 
     & > a {
@@ -100,7 +95,6 @@ export const ContentContainer = styled.div`
 
     @media (max-width: 1024px) {
         flex-direction: column;
-        width: 80%;
 
         & > div {
             width: 100%;

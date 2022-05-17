@@ -17,25 +17,17 @@ export const ContainerPurpose = styled.section`
 `;
 
 export const ContentContainer = styled.div`
-    width: 100%;
     padding-top: 5rem;
     display: flex;
     justify-content: space-between;
-
+    width: 90%;
     max-width: 1440px;
-
-    @media (max-width: 1440px) {
-        padding: 4rem 4rem;
-    }
-
-    @media (max-width: 768px) {
-        padding: 4rem 2rem;
-    }
 
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
         padding-top: 2rem;
+        width: 100%;
     }
 `;
 
@@ -45,8 +37,8 @@ export const BoxText = styled.div`
 
     @media (max-width: 768px) {
         margin: 0 auto;
-        width: 90%;
-        font-size: .9rem;
+        width: 75%;
+        font-size: .9em;
 
         p {
             margin-bottom: 1rem;
@@ -70,9 +62,15 @@ export const Description = styled.p`
 
 export const BoxImage = styled.div`
     padding-right: 3rem;
-    max-width: 58rem;
+    max-width: 55rem;
+
+    @media (min-width: 1440px) {
+        padding-right: 10rem;
+        max-width: 65rem;
+    }
 
     @media (max-width: 768px) {
+        padding-left: 1rem;
         width: 100vw;
         overflow-x: scroll;
     }
@@ -85,21 +83,12 @@ export const ImagePurpose = styled.img`
 `;
 
 export const ContainerCards = styled.div`
-    width: 100%;
-    height: 45%;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-
     max-width: 1440px;
-
-    @media (max-width: 1440px) {
-    padding: 4rem 4rem;
-    }
-
-    @media (max-width: 768px) {
-    padding: 4rem 2rem;
-    }
+    width: 90%;
+    height: 45%;
 
     @media (max-width: 768px) {
         display: flex;
@@ -116,6 +105,10 @@ export const BoxCards = styled.div`
     margin: 2rem 0;
     max-width: 65rem;
 
+    @media (min-width: 1440px) {
+        max-width: 80rem;
+    }
+
     @media (max-width: 768px) {
         flex-wrap: nowrap;
         justify-content: flex-start;
@@ -126,20 +119,29 @@ export const BoxCards = styled.div`
 
 export const Card = styled.div`
     margin: .5rem;
-    padding: 10px 1.5rem;
+    padding: 1.5rem 1.1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     width: 14.25rem;
     height: 20rem;
+    border-radius: 20px;
     background-image: url(${ImgCard});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    h2 {
-        color: ${props => props.new && '#FF0070'};
+    &:hover {
+        box-shadow: inset 0 0 40px #de0dbf;
+
+        h2 {
+            color: #FF0070;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        width: 17rem;
+        height: 25rem;
     }
 
     @media (max-width: 900px) {
@@ -154,32 +156,34 @@ export const Card = styled.div`
     }
 `;
 
+export const CardBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 8.4rem;
+`;
+
 export const ImageCard = styled.img`
-    width: 4rem;
+    margin-bottom: .5rem;
+    width: 3rem;
 `;
 
 export const TitleCard = styled.h2`
+    display: flex;
+    flex-direction: column;
     font-size: 1.2em;
-    line-height: 1.1;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
     text-align: center;
     color: #fff;
-`;
-
-export const TitleCardPink = styled.h2`
-    font-size: 1.2em;
-    line-height: 1.1;
-    text-align: center;
-    color: #FF0070;
-
-    @media (max-width: 768px) {
-        color: #fff;
-    }
+    transition: .2s;
 `;
 
 export const TextCard = styled.p`
     font-size: .9em;
-    font-weight: 300;
-    line-height: 1.3;
+    font-weight: 100;
+    line-height: 1.5;
     text-align: left;
 `;
 
