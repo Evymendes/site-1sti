@@ -20,13 +20,9 @@ export const NavWrapper = styled.section`
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1440px;
-  width: 100%;
+  width: 90%;
   height: 100%;
   border-bottom: 2px solid #504d50;
-
-  @media (max-width: 1440px) {
-    padding: 0 4rem;
-  }
 
   @media (max-width: 768px) {
     padding: 0 2rem;

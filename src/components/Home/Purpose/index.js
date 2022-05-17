@@ -25,7 +25,6 @@ export default function Purpose () {
             icon: ImgCardTwo,
             title: 'GRAFOS DE CONHECIMENTO EM BIG DATA',
             text: 'Hiper associação de conceitos e identificação em grandes massas de dados de comunidades, hierarquias, centralidades e projeções dinâmicas.',
-            new: true,
         },
         {
             icon: ImgCardThree,
@@ -34,7 +33,7 @@ export default function Purpose () {
         },
         {
             icon: ImgCardFour,
-            title: 'OTIMIZADORES DE NOVA GERAÇÃO',
+            title: ['OTIMIZADORES', 'DE NOVA', 'GERAÇÃO'],
             text: 'Algoritmos solucionadores baseados em nuvem e princípios de computação quântica.',
         },
         {
@@ -44,7 +43,7 @@ export default function Purpose () {
         },
         {
             icon: ImgCardSix,
-            title: 'MODELOS DE A.I GIGANTES',
+            title: ['MODELOS DE', 'A.I GIGANTES'],
             text: 'Interpretação e geração de texto, modelos conversacionais, geração de imagens ou vídeos baseados em modelos disponíveis de escala extrema.',
         },
         {
@@ -54,7 +53,7 @@ export default function Purpose () {
         },
         {
             icon: ImgCardEight,
-            title: 'GÊMEOS DIGITAIS',
+            title: ['GÊMEOS', 'DIGITAIS'],
             text: 'Visão em tempo real de uma operação física através de um ambiente digital.',
         },
     ];
@@ -75,9 +74,16 @@ export default function Purpose () {
             <S.ContainerCards>
                 <S.BoxCards>
                     {cardsList.map((card, i) => (
-                        <S.Card key={i} new={card.new}>
-                            <S.ImageCard src={card.icon} alt="" />
-                            <S.TitleCard>{card.title}</S.TitleCard>
+                        <S.Card key={i}>
+                            <S.CardBox>
+                                <S.ImageCard src={card.icon} alt="" />
+                                <S.TitleCard>
+                                    {Array.isArray(card.title) 
+                                        ? card.title.map(line => <span>{line}</span>)
+                                        : card.title
+                                    }
+                                </S.TitleCard>
+                            </S.CardBox>
                             <S.TextCard>{card.text}</S.TextCard>
                         </S.Card>
                     ))}

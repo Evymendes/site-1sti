@@ -42,27 +42,38 @@ export const CTAWrapper = styled.section`
   height: 100vh;
   max-width: 1440px;
 
-  @media (max-width: 1440px) {
-    padding: 4rem 4rem;
-  }
-
-  @media (max-width: 768px) {
-    padding: 4rem 2rem;
-  }
-
   h1,
   h3 {
     max-width: 430px;
     width: 100%;
   }
+  
+  @media (min-width: 1440px) {
+    padding-bottom: 7rem;
+    width: 90%;
+
+    h1,
+    h3 {
+      max-width: 35vw;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    padding: 4rem;
+  }
 
   @media (max-width: 768px) {
-    padding: 4rem 0 3rem;
-    width: 80%;
+    padding: 2rem 0;
+    width: 75%;
     height: auto;
 
+    h1 {
+      padding: 0;
+      font-size: 3.8em;
+    }
+
     h3 {
-      font-size: 1.35em;
+      font-size: 1.3em;
     }
   }
 `;
@@ -73,11 +84,15 @@ export const CTATextBox = styled.div`
 `;
 
 export const CTAAbout = styled.h3`
-  padding: 2rem 0;
-  font-size: 1.375rem;
+  padding: 2rem 0 3rem;
+  font-size: 1.375em;
   font-weight: 400;
   line-height: 1.5;
   text-shadow: 0 0 12px rgba(0,0,0,.5);
+  
+  @media (min-width: 1440px) {
+    padding-bottom: 3rem;
+  }
 `;
 
 export const CTAOptions = styled.div`
