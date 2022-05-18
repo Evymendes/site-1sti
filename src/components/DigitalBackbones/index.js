@@ -4,19 +4,23 @@ import * as S from "./styled";
 import Header from "../Header";
 import Button from "../Button";
 
-import BackbonesBG from "../../assets/images/bd_background.png";
 import PlatformsBG from "../../assets/images/platforms.png";
 import TechnologiesBG from "../../assets/images/technologies.png";
 
 export default function DigitalBackbones() {
   return (
-    <S.DBContainer bg={BackbonesBG}>
+    <S.DBContainer>
       <S.DBWrapper>
-        <Header title="Our Services" />
+        <S.DBHeader>
+          <S.DBBackground />
+          <Header title="Our Services" />
+          <S.DBTitleBox>
+            <S.DBMainTitle>Digital Backbones</S.DBMainTitle>
+            <S.DBDescription>The Foundation of Scalable Digital Platforms</S.DBDescription>
+          </S.DBTitleBox>
+        </S.DBHeader>
 
         <S.DBAbout>
-          <S.DBTitle>Digital Backbones</S.DBTitle>
-          <S.DBDescription>The Foundation of Scalable Digital Platforms</S.DBDescription>
           <S.DBParagraph>Before embarking on a digital transformation, businesses often contend with complexities that stem from:</S.DBParagraph>
 
           <S.DBList>
@@ -26,7 +30,7 @@ export default function DigitalBackbones() {
           </S.DBList>
 
           <S.DBParagraph>To overcome these complexities and achieve a successful digital transformation, businesses need a strong digital backbone.</S.DBParagraph>
-          <S.DBSubtitle>What is a digital backbone?</S.DBSubtitle>
+          <S.DBTitle>What is a digital backbone?</S.DBTitle>
           <S.DBParagraph>A digital backbone is the foundation for operational excellence. It enables the unification of organizational silos, driving enhanced collaboration and innovation. Digital backbones are founded on shared processes, applications and data, allowing business to maximize the extent to which their data can be leveraged, and quickly adapt to changing landscapes. Digital backbones have quality, scalability and integrity sewn into their DNA, paving the way for businesses to develop future-proof digital platforms.</S.DBParagraph>
           <S.DBSubtitle>Companies with digital backbones are:</S.DBSubtitle>
 
@@ -55,13 +59,14 @@ export default function DigitalBackbones() {
         </S.DBPartnering>
 
         <S.OtherServices>
+          <S.ExploreText>Explore other services:</S.ExploreText>
           <S.Service bg={PlatformsBG}>
-            <S.DBTitle>Deep Tech Platforms</S.DBTitle>
+            <S.DBMainTitle>Deep Tech Platforms</S.DBMainTitle>
             <S.DBDescription>Elevation, Scaling and Amplification</S.DBDescription>
             <Button>Read more</Button>
           </S.Service>
           <S.Service bg={TechnologiesBG}>
-            <S.DBTitle>Visionary Technologies</S.DBTitle>
+            <S.DBMainTitle>Visionary Technologies</S.DBMainTitle>
             <S.DBDescription>Fit for the future, now</S.DBDescription>
             <Button>Read more</Button>
           </S.Service>

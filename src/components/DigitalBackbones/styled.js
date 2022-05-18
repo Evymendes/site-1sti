@@ -1,22 +1,19 @@
 import styled from "styled-components";
+import BackbonesBG from "../../assets/images/bd_background.png";
 
 export const DBContainer = styled.div`
   position: relative;
   background-color: #0B1617;
-  background-image: url(${props => props.bg});
-  background-size: 82vw;
-  background-position: 40vw -22rem;
-  background-repeat: no-repeat;
+  z-index: 0;
 `;
 
 export const DBWrapper = styled.div`
   margin: 0 auto;
   max-width: 1440px;
-  width: 100%;
-  padding: 4rem 0;
+  width: 90%;
 
   @media (max-width: 1440px) {
-    padding: 4rem 4rem;
+    // padding: 4rem 4rem;
   }
 
   @media (max-width: 768px) {
@@ -24,9 +21,29 @@ export const DBWrapper = styled.div`
   }
 `;
 
+export const DBHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+`;
+
+// Header's background
+export const DBBackground = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(${BackbonesBG});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+`;
+
 // Text about the service
 export const DBAbout = styled.section`
-  margin: 0 auto;
+  margin: 3rem auto 5rem;
   width: 85%;
   font-weight: 300;
 
@@ -35,26 +52,37 @@ export const DBAbout = styled.section`
     max-width: 480px;
   }
 `;
+
+export const DBTitleBox = styled.div`
+  margin: 0 auto;
+  width: 86%;
+
+  & > h3 {
+    color: #00C8DB;
+  }
+`;
   
-export const DBTitle = styled.h2`
+export const DBMainTitle = styled.h2`
   font-size: 3.5em;
   font-weight: 600;
 `;
   
+export const DBTitle = styled.h2`
+  margin: 2.5rem 0 1rem;
+  font-size: 1.5em;
+  font-weight: 600;
+`;
+  
 export const DBDescription = styled.h3`
-  margin: .5rem 0 5rem;
+  margin: .5rem 0 3rem;
   font-size: 1.8em;
   font-weight: 400;
 `;
   
-export const DBSubtitle = styled.h4`
-  margin: 3rem 0 2rem;
-  font-size: 1.7em;
-  font-weight: 600;
-
-  &:last-child {
-    font-size: 1.25em;
-  }
+export const DBSubtitle = styled.h3`
+  margin: 1rem 0 2rem;
+  font-size: 1em;
+  font-weight: 400;
 `;
 
 export const DBParagraph = styled.p`
@@ -70,12 +98,13 @@ export const DBList = styled.ul`
 
 export const DBListItem = styled.li`
   position: relative;
+  font-size: .8em;
 
   &:before {
     content: '∙';
     position: absolute;
     left: -10px;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 `;
 
@@ -96,8 +125,9 @@ export const DBValue = styled.span`
 // Partnering card
 export const DBPartnering = styled.section`
   margin: 3rem 0 3rem 2rem;
-  padding: 2rem 2.6rem;
-  max-width: 600px;
+  padding: 2.2rem 2.8rem;
+  max-width: 700px;
+  font-size: 1.1em;
   border: 1px solid #00C8DB;
   border-radius: 8px;
 `;
@@ -112,21 +142,31 @@ export const DBPartneringBox = styled.div`
 
 // Other Services
 export const OtherServices = styled.section`
-  padding: 4rem 0 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 0;
+
+  & > :not(p) {
+    margin: 2rem 0;
+  }
+`;
+
+export const ExploreText = styled.p`
+  margin: 0 auto;
+  width: 85%;
+  font-size: 1.6em;
 `;
 
 export const Service = styled.div`
   position: relative;
   padding: 2.5rem 5rem 3.5rem;
+  width: 98%;
   transition: .4s;
   z-index: 1;
 
   h3 {
-    margin: 0 0 2rem;
-  }
-
-  &:first-child {
-    margin-bottom: 3rem;
+    margin: 0 0 1.8rem;
   }
 
   &:before {
