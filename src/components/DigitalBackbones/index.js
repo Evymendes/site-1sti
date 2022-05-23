@@ -5,7 +5,9 @@ import Header from "../Header";
 import Button from "../Button";
 
 import PlatformsBG from "../../assets/images/platforms.png";
+import PlatformsBGMobile from "../../assets/images/ScreenShot2021-09-15at18.32.12.png";
 import TechnologiesBG from "../../assets/images/technologies.png";
+import TechnologiesBGMobile from "../../assets/images/ScreenShot2021-09-15at18.32.21.png";
 
 export default function DigitalBackbones() {
   return (
@@ -51,25 +53,30 @@ export default function DigitalBackbones() {
         </S.DBAbout>
 
         <S.DBPartnering>
-          Partnering with 1STI on the path to digital transformation drives results from day 1 as we begin by exploring what's standing between your organization today, and the formation of your digital backbone.
-          <S.DBPartneringBox>
-            <Button>Download One Page</Button>
-            <Button>Read Case Study</Button>
-          </S.DBPartneringBox>
+          <S.DBPartneringWrapper>
+            Partnering with 1STI on the path to digital transformation drives results from day 1 as we begin by exploring what's standing between your organization today, and the formation of your digital backbone.
+            <S.DBPartneringBox>
+              <Button>Download One Page</Button>
+              <Button>Read Case Study</Button>
+            </S.DBPartneringBox>
+          </S.DBPartneringWrapper>
         </S.DBPartnering>
 
         <S.OtherServices>
           <S.ExploreText>Explore other services:</S.ExploreText>
-          <S.Service bg={PlatformsBG}>
+          <S.Service bg={PlatformsBG} mobileBg={PlatformsBGMobile}>
             <S.DBMainTitle>Deep Tech Platforms</S.DBMainTitle>
             <S.DBDescription>Elevation, Scaling and Amplification</S.DBDescription>
-            <Button>Read more</Button>
+            <Button to="/services">Read more</Button>
           </S.Service>
-          <S.Service bg={TechnologiesBG}>
+          <Button to="/services">Read more</Button>
+
+          <S.Service bg={TechnologiesBG} mobileBg={TechnologiesBGMobile}>
             <S.DBMainTitle>Visionary Technologies</S.DBMainTitle>
             <S.DBDescription>Fit for the future, now</S.DBDescription>
-            <Button>Read more</Button>
+            <Button to="/services">Read more</Button>
           </S.Service>
+          <Button to="/services">Read more</Button>
         </S.OtherServices>
       </S.DBWrapper>
     </S.DBContainer>

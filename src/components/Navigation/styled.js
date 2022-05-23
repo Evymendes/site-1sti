@@ -86,7 +86,7 @@ export const NavLogoBox = styled.div`
 
   @media (max-width: 768px) {
     justify-content: end;
-    width: 50vw;
+    width: calc(50vw - 3rem + 2.5rem);
   }
 `;
 

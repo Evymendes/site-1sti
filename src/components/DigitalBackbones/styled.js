@@ -4,6 +4,7 @@ import BackbonesBG from "../../assets/images/bd_background.png";
 export const DBContainer = styled.div`
   position: relative;
   background-color: #0B1617;
+  overflow: hidden;
   z-index: 0;
 `;
 
@@ -23,6 +24,10 @@ export const DBHeader = styled.header`
   @media (max-width: 768px) {
     padding: 0 2.5rem;
     min-height: auto;
+    
+    h1 {
+      padding: 9rem 0 1rem;
+    }
   }
 `;
 
@@ -38,16 +43,26 @@ export const DBBackground = styled.div`
   background-repeat: no-repeat;
   z-index: -1;
 
+  @media (min-width: 1440px) {
+    width: 100vw;
+  }
+
+  @media (min-width: 768px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   @media (max-width: 768px) {
     bottom: 6rem;
-    height: 35%;
+    height: 38%;
   }
 `;
 
 // Text about the service
 export const DBAbout = styled.section`
   margin: 3rem auto 5rem;
-  width: 85%;
+  width: 75%;
   font-weight: 300;
 
   p,
@@ -58,13 +73,14 @@ export const DBAbout = styled.section`
 
 export const DBTitleBox = styled.div`
   margin: 0 auto;
-  width: 86%;
+  width: 85%;
 
   & > h3 {
     color: #00C8DB;
   }
 
   @media (max-width: 768px) {
+    margin: 7rem auto 0;
     width: 100%;
   }
 `;
@@ -74,35 +90,33 @@ export const DBMainTitle = styled.h2`
   font-weight: 600;
 
   @media (max-width: 768px) {
-    padding: 5rem 0 1.5rem;
     max-width: 250px;
-    font-size: 3em;
+    font-size: 2.4em;
     line-height: 1;
   }
 `;
   
 export const DBTitle = styled.h2`
   margin: 2.5rem 0 1rem;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 600;
+  letter-spacing: .3px;
 `;
   
 export const DBDescription = styled.h3`
-  margin: .5rem 0 3rem;
+  margin: 2.5rem 0 1rem;
   font-size: 1.8em;
   font-weight: 400;
 
   @media (max-width: 768px) {
-    margin: 1rem 0;
     max-width: 240px;
     font-size: 1.2em;
-    font-weight: 600;
   }
 `;
   
 export const DBSubtitle = styled.h3`
-  margin: 1rem 0 2rem;
-  font-size: 1em;
+  margin: 1.5rem 0 2rem;
+  font-size: 1.3em;
   font-weight: 400;
 
   @media (max-width: 768px) {
@@ -147,7 +161,10 @@ export const DBAdvantages = styled.div`
 export const DBStatistic = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 3rem;
+
+  &:not(:last-child) {
+    margin-right: 3rem;
+  }
 
   @media (max-width: 768px) {
     margin: 0 0 1.5rem;
@@ -160,7 +177,15 @@ export const DBValue = styled.span`
 
 // Partnering card
 export const DBPartnering = styled.section`
-  margin: 3rem 0 3rem 2rem;
+  margin: 0 auto;
+  max-width: 82%;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+`;
+
+export const DBPartneringWrapper = styled.div`
   padding: 2.2rem 2.8rem;
   max-width: 700px;
   font-size: 1.1em;
@@ -168,13 +193,12 @@ export const DBPartnering = styled.section`
   border-radius: 8px;
 
   @media (max-width: 768px) {
-    margin: 0 1.5rem;
-    padding: 4rem 1.5rem 3rem;
+    padding: 3rem 1.5rem 2.5rem;
   }
 `;
 
 export const DBPartneringBox = styled.div`
-  margin-top: 3rem;
+  margin-top: 2rem;
 
   a:first-child {
     margin-right: 1.5rem;
@@ -191,24 +215,48 @@ export const OtherServices = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 0;
+  padding: 5rem 0 3rem;
 
   & > :not(p) {
     margin: 2rem 0;
+  }
+
+  & > a {
+    margin: 0 0 3rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 8rem 0;
+
+    & > a {
+      display: none;
+    }
   }
 `;
 
 export const ExploreText = styled.p`
   margin: 0 auto;
-  width: 85%;
+  width: 75%;
   font-size: 1.6em;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 export const Service = styled.div`
   position: relative;
-  padding: 2.5rem 5rem 3.5rem;
-  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 5.5rem 4rem;
+  max-width: 89%;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #00000070;
   transition: .4s;
+  overflow: hidden;
   z-index: 1;
 
   h3 {
@@ -222,14 +270,12 @@ export const Service = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px solid #000;
-    border-radius: 8px;
-    box-shadow: 0 0 4px #00000070;
     background-color: #131313;
     background-image: url(${props => props.bg});
     background-repeat: no-repeat;
-    background-size: calc(100% + 2rem);
-    background-position: -1rem, 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.07);
     transition: .3s;
     z-index: -1;
   }
@@ -243,6 +289,25 @@ export const Service = styled.div`
     &:before {
       border-color: #00C8DB;
       transform: scale(1.04);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    width: auto;
+    min-height: 55vh;
+
+    &:before {
+      background-image: url(${props => props.mobileBg});
+      transform: none;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    a {
+      display: none;
     }
   }
 `;
