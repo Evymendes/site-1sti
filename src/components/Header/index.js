@@ -12,7 +12,7 @@ const Title = styled.h1`
   color: ${props => props.color};
 
   @media (max-width: 768px) {
-    padding: 9rem 0 2rem;
+    padding-bottom: 1rem;
     max-width: 250px;
     font-size: 3em;
     line-height: 1;
