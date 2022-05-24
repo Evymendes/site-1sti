@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   background-color: #0B1617;
+  
+  a {
+    color: #38EEFF;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -77,10 +81,6 @@ export const Boxes = styled.div`
     letter-spacing: 0.125rem;
     font-weight: 500;
   }
-  
-  a {
-    color: #fff;
-  }
 `;
 
 export const BookLink = styled.div`
@@ -89,7 +89,6 @@ export const BookLink = styled.div`
   a,
   span {
     margin-left: 5px;
-    color: #38EEFF;
     font-weight: 300;
     transition: .3s;
   }
