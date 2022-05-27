@@ -88,17 +88,25 @@ export const BookLink = styled.div`
   margin: 1rem 0 2rem;
   display: flex;
   align-items: center;
+
+  img {
+    width: 1.5rem;
+  }
   
   a {
-    margin: 0 5px;
+    margin: 0 10px;
     font-weight: 300;
   }
 
   span {
-    margin-top: 5px;
     color: #38EEFF;
-    font-size: 1.2em;
+    font-size: 1.3em;
     transition: .3s;
+  }
+
+  img,
+  span {
+    margin-top: 5px;
   }
 
   @media (min-width: 768px) {

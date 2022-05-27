@@ -4,6 +4,7 @@ import * as S from "./styled.js";
 import SubscribeButton from "../SubscribeButton";
 import Header from "../Header";
 
+import GlobeIcon from "../../assets/images/globe_icon.svg";
 import BookCover from "../../assets/images/deeptech_book.png";
 import Arrow from "../../assets/images/arrow-icon.png";
 
@@ -23,7 +24,7 @@ const Content = () => (
             <h4>BOOK</h4>
             <p>How to elevate, scale and amplify your business through the New 4Ps of platforms, purpose, people and planet.</p>
             <S.BookLink>
-              &#x1F310; 
+              <img src={GlobeIcon} alt="" />
               <a href="deeptechamplified.com" target="_blank" rel="noreferrer">deeptechamplified.com</a> <span>&#129109;</span>
             </S.BookLink>
             <S.Image src={BookCover} alt="Book cover - 'Deep Tech and the amplified organization, by Simon Robinson, Igor Couto and Maria Moraes Robinson'"/>

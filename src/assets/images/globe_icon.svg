@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="Group_8052" data-name="Group 8052" transform="translate(-136.367 -860.367)">
+    <g id="Ellipse_2156" data-name="Ellipse 2156" transform="translate(136.367 860.367)" fill="none" stroke="#38eeff" stroke-width="1">
+      <circle cx="11" cy="11" r="11" stroke="none"/>
+      <circle cx="11" cy="11" r="10.5" fill="none"/>
+    </g>
+    <line id="Line_701" data-name="Line 701" x2="21.859" transform="translate(136.437 871.367)" fill="none" stroke="#38eeff" stroke-width="1"/>
+    <line id="Line_702" data-name="Line 702" x2="21.859" transform="translate(147.367 860.437) rotate(90)" fill="none" stroke="#38eeff" stroke-width="1"/>
+    <path id="Path_9051" data-name="Path 9051" d="M-2822.244-6312.523a13.958,13.958,0,0,0,8.025,2.946,13.011,13.011,0,0,0,7.823-2.946" transform="translate(2961.727 7176.438)" fill="none" stroke="#38eeff" stroke-width="1"/>
+    <path id="Path_9052" data-name="Path 9052" d="M-2822.244-6309.576a13.958,13.958,0,0,1,8.025-2.946,13.011,13.011,0,0,1,7.823,2.946" transform="translate(2961.727 7188.261)" fill="none" stroke="#38eeff" stroke-width="1"/>
+    <path id="Path_9053" data-name="Path 9053" d="M0,0A20.529,20.529,0,0,0,10.195,2.946,19.035,19.035,0,0,0,20.134,0" transform="translate(144.201 861.233) rotate(90)" fill="none" stroke="#38eeff" stroke-width="1"/>
+    <path id="Path_9054" data-name="Path 9054" d="M0,2.946A20.529,20.529,0,0,1,10.195,0a19.035,19.035,0,0,1,9.939,2.946" transform="translate(153.362 861.233) rotate(90)" fill="none" stroke="#38eeff" stroke-width="1"/>
+  </g>
+</svg>
