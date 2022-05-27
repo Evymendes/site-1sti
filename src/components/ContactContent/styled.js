@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
   @media (max-width: 1440px) {
     padding: 4rem 4rem;
   }
+
   @media (max-width: 768px) {
     padding: 4rem 2rem;
   }
@@ -66,7 +67,7 @@ export const LineBox = styled.section`
 export const Boxes = styled.div`
   display: flex;
   flex-direction: column;
-  width: 19rem;
+  width: 20rem;
   font-size: 1.25rem;
   font-weight: 200;
   line-height: 1.5;
@@ -84,12 +85,19 @@ export const Boxes = styled.div`
 `;
 
 export const BookLink = styled.div`
-  margin-top: 1rem;
+  margin: 1rem 0 2rem;
+  display: flex;
+  align-items: center;
   
-  a,
-  span {
-    margin-left: 5px;
+  a {
+    margin: 0 5px;
     font-weight: 300;
+  }
+
+  span {
+    margin-top: 5px;
+    color: #38EEFF;
+    font-size: 1.2em;
     transition: .3s;
   }
 
@@ -127,7 +135,9 @@ export const NewsLetter = styled.input`
   }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  box-shadow: 0 0 25px #38EEFF;
+`;
 
 export const Icon = styled.img`
   width: 1.2rem;

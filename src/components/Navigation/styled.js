@@ -7,6 +7,7 @@ export const NavBar = styled.nav`
   left: 0;
   width: 100%;
   height: 4.625rem;
+  font-size: 1em;
   background-color: #ffffff95;
   backdrop-filter: blur(30px);
   border-top: 10px solid #0B1617;
@@ -146,7 +147,7 @@ export const NavLinkBox = styled.div`
     color: #222;
     font-weight: 600;
     text-decoration: none;
-    font-size: 1.125rem;
+    font-size: 1.125em;
   }
 
   @media (min-width: 768px) {
