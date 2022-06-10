@@ -14,21 +14,20 @@ const Footer = () => (
       <S.ContentContainer>
         <S.ContainerImagePacto>
           <S.ImagePacto src={ImagePactoGlobal} alt="" />
-
           <S.SocialMediaMobile>
-          <a href="https://www.linkedin.com/company/1sti" target="_blank" rel="noreferrer">
-            <S.ImageLogo src={LinkedIn} alt="" />
-          </a>
-          <a href="https://www.instagram.com/ola_1sti" target="_blank" rel="noreferrer">
-            <S.ImageLogo src={Instagram} alt="" />
-          </a>
-          <a href="https://medium.com/1sti" target="_blank" rel="noreferrer">
-            <S.ImageLogo src={Medium} alt="" />
-          </a>
-          <a href="https://web.facebook.com/ola1STi/" target="_blank" rel="noreferrer">
-            <S.ImageLogo src={Facebook} alt="" />
-          </a>
-        </S.SocialMediaMobile>
+            <a href="https://www.linkedin.com/company/1sti" target="_blank" rel="noreferrer">
+              <S.ImageLogo src={LinkedIn} alt="" />
+            </a>
+            <a href="https://www.instagram.com/ola_1sti" target="_blank" rel="noreferrer">
+              <S.ImageLogo src={Instagram} alt="" />
+            </a>
+            <a href="https://medium.com/1sti" target="_blank" rel="noreferrer">
+              <S.ImageLogo src={Medium} alt="" />
+            </a>
+            <a href="https://web.facebook.com/ola1STi/" target="_blank" rel="noreferrer">
+              <S.ImageLogo src={Facebook} alt="" />
+            </a>
+          </S.SocialMediaMobile>
         </S.ContainerImagePacto>
         
         <S.Ecosystem>
@@ -37,6 +36,7 @@ const Footer = () => (
           <S.EcosystemItem href="">Vai na Web</S.EcosystemItem>
           <S.EcosystemItem href="">Precisa Ser Institute</S.EcosystemItem>
         </S.Ecosystem>
+        
         <S.SocialMedia>
           <a href="https://www.linkedin.com/company/1sti" target="_blank" rel="noreferrer">
             <S.ImageLogo src={LinkedIn} alt="" />
