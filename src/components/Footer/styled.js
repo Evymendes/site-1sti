@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-
 export const ContainerFooter = styled.footer`
   background: #0B1617;
 `;
+
 export const ContentContainer = styled.div`
   height: 100%;
   margin: 0 auto;
@@ -17,7 +17,13 @@ export const ContentContainer = styled.div`
   padding: 2rem 0;
 
   @media (max-width: 1440px) {
-    padding: 2rem 4rem;
+    padding: 2.5rem 4rem;
+  }
+
+  @media (min-width: 768px) {
+    & > :not(:last-child) {
+      width: 20%;
+    }
   }
 
   @media (max-width: 768px) {
@@ -27,13 +33,17 @@ export const ContentContainer = styled.div`
     gap: 2rem;
   }
 `;
+
 export const ContainerImagePacto = styled.div`
-  width: 10%;
   display: flex;
 
   @media (max-width: 768px) {
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
+    
+    & > div {
+      width: 50%;
+    }
   }
 `;
 
@@ -45,22 +55,20 @@ export const SocialMediaMobile = styled.div`
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem 2rem;
   }
 `;
 
 export const ImagePacto = styled.img`
   width: auto;
 `;
+
 export const Ecosystem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  @media (max-width: 768px) {
-    
-  }
 `;
+
 export const EcosystemTitle = styled.p`
   margin-bottom: 1rem;
   font-size: .95em;
@@ -68,7 +76,10 @@ export const EcosystemTitle = styled.p`
   text-transform: uppercase;
   letter-spacing: 2px;
 `;
+
 export const EcosystemItem = styled.a`
+  display: flex;
+  align-items: center;
   padding-top: 8px;
   color: #fff;
   font: 500 1.2em 'CabinetGrotesk';
@@ -78,34 +89,40 @@ export const EcosystemItem = styled.a`
     text-decoration: underline;
   }
 `;
+
 export const SocialMedia = styled.div`
-  width: 20%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 5rem;
 
   @media (max-width: 768px) {
     display: none;
   }
-  
 `;
+
 export const ImageLogo = styled.img`
-  width: auto;
+  margin: 0 5px;
   cursor: pointer;
 `;
+
 export const Work = styled.div`
-  width: 33%;
+  width: 30%;
+
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
+
 export const WorkTitle = styled.h3`
   font-size: 1.625rem;
 `;
+
 export const WorkSubtitle = styled.p`
   padding: .6rem 0 1.5rem;
   font-size: 1.125rem;
   font-weight: 500;
 `;
+
 export const WorkButton = styled.button`
   width: 9.25rem;
   height: 3.75rem;
