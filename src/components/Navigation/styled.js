@@ -12,6 +12,11 @@ export const NavBar = styled.nav`
   backdrop-filter: blur(30px);
   border-top: 10px solid #0B1617;
   z-index: 3;
+
+  @media (min-width: 1440px) {
+    height: 5.5rem;
+    font-size: 1.2rem;
+  }
 `;
 
 export const NavWrapper = styled.section`
