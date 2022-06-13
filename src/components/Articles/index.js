@@ -41,7 +41,7 @@ const Articles = () => (
             />
             <StaticImage 
               src="../../assets/images/arrow-up-right.svg"
-              alt="Imagem Ideia"
+              alt="Seta para link"
               layout="fixed"
             />
           </S.Linkedin>

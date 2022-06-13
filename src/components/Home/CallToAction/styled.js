@@ -14,8 +14,12 @@ export const CTAContainer = styled.header`
 `;
 
 export const BGVideo = styled.video`
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
   z-index: -1;
 
   @media (max-width: 768px) {
