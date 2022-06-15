@@ -5,7 +5,6 @@ import Header from "../../../components/Header";
 import Button from "../../../components/Button";
 
 import ImageMobile from "../../../assets/images/Capa-Mobile-Video.jpg";
-import CTAVideo from "../../../assets/videos/cta_video.mp4";
 
 const isBrowser = typeof window !== "undefined";
 
@@ -17,7 +16,7 @@ export const isDesktop = () => {
   return window.innerWidth > 768;
 }
 
-export default function CallToAction() {
+export default function CallToAction({ data }) {
   const playVideo = () => {
     const ctVideo = document.getElementById("ct-video");
 
@@ -31,20 +30,15 @@ export default function CallToAction() {
   return (
     <S.CTAContainer onClick={() => playVideo()}>
       <S.BGVideo id="ct-video">
-        <source src={CTAVideo} type="video/mp4" />
+        <source src={data.video.url} type="video/mp4" />
       </S.BGVideo>
       <S.ImgMob src={ImageMobile} alt="" />
   
       <S.CTAWrapper>
-        <Header title={['Purpose,', 'Technology', '& Impact']} />
+        <Header title={data.title} />
   
         <S.CTATextBox>
-          <S.CTAAbout>
-            1STi is a Deep Tech consultancy that builds
-            mission-critical digital architectures,
-            enabling businesses to generate long-term
-            value and embrace future change—now.
-          </S.CTAAbout>
+          <S.CTAAbout>{data.about}</S.CTAAbout>
           <S.CTAOptions>
             <Button to="/">Call to Action One</Button>
             <Button to="/">Call to Action Two</Button>

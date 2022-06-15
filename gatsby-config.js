@@ -16,10 +16,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-graphcms',
+      resolve: "gatsby-source-graphql",
       options: {
-        endpoint: `https://api-us-west-2.graphcms.com/v2/ckaimzl7406vh01ut3wc68cw6/master`,
-      },
+        typeName: "firsti",
+        fieldName: "firsti",
+        url: "https://api-us-west-2.graphcms.com/v2/ckaimzl7406vh01ut3wc68cw6/master"
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
