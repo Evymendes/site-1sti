@@ -14,7 +14,7 @@ import ImgCardSeven from "../../../assets/images/noun-ai-ethics-2985138.svg";
 import ImgCardEight from "../../../assets/images/noun-computer-vision-2985143.svg";
 
 
-export default function Purpose () {
+export default function Purpose ({ data }) {
     const cardsList = [
         {
             icon: ImgCardOne,
@@ -62,8 +62,8 @@ export default function Purpose () {
         <S.ContainerPurpose>
             <S.ContentContainer>
                 <S.BoxText>
-                    <S.Title>Título</S.Title>
-                    <S.Description>Parágrafo de texto.</S.Description>
+                    <S.Title>{data.title}</S.Title>
+                    <S.Description>{data.paragraph}</S.Description>
                     <Button to="">CTA</Button>
                 </S.BoxText>
                 <S.BoxImage>
@@ -79,7 +79,7 @@ export default function Purpose () {
                                 <S.ImageCard src={card.icon} alt="" />
                                 <S.TitleCard>
                                     {Array.isArray(card.title) 
-                                        ? card.title.map(line => <span>{line}</span>)
+                                        ? card.title.map((line, i) => <span key={i}>{line}</span>)
                                         : card.title
                                     }
                                 </S.TitleCard>

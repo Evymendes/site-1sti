@@ -22,7 +22,7 @@ const Title = styled.h1`
 const Header = ({ title, color }) => (
   <Title color={color}>
     {Array.isArray(title) 
-      ? title.map(title => <span>{title}</span>)
+      ? title.map((title, i) => <span key={i}>{title}</span>)
       : title
     }
   </Title>

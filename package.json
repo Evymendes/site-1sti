@@ -20,7 +20,7 @@
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^4.11.1",
     "gatsby-source-graphcms": "^2.8.0",
-    "gatsby-transformer-remark": "^5.16.0",
+    "gatsby-source-graphql": "^4.16.0",
     "gatsby-transformer-sharp": "^4.11.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.1",
