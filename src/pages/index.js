@@ -10,9 +10,9 @@ import Attention from "../components/Home/Attention";
 const IndexPage = () => (
   <Layout seo="Home">
     <CallToAction />
-    <Purpose />
-    <Services />
     <Insights />
+    <Services />
+    <Purpose />
     <Attention />
   </Layout>
 );

@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `1STI`,
@@ -18,7 +19,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphcms',
       options: {
-        endpoint: `https://api-us-west-2.graphcms.com/v2/ckaimzl7406vh01ut3wc68cw6/master`,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        token: process.env.GRAPHCMS_TOKEN,
+        buildMarkdownNodes: true,
+        downloadLocalImages: true,
       },
     },
     `gatsby-transformer-sharp`,
