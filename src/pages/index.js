@@ -19,6 +19,14 @@ export default function IndexPage() {
             url
           }
         }
+        insights {
+          title
+          paragraph
+        }
+        services {
+          title
+          paragraph
+        }
         purposes {
           title
           paragraph
@@ -36,10 +44,10 @@ export default function IndexPage() {
   return (
     <Layout seo="Home">
       <CallToAction data={firsti.callToActions[0]} />
+      <Insights data={firsti.insights[0]} />
+      <Services data={firsti.services[0]} />
       <Purpose data={firsti.purposes[0]} />
-      <Services />
-      <Insights />
       <Attention data={firsti.newsletters[0]} />
     </Layout>
-  )
+  );
 };

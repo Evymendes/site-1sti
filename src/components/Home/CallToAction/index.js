@@ -14,7 +14,7 @@ export const isDesktop = () => {
   }
 
   return window.innerWidth > 768;
-}
+};
 
 export default function CallToAction({ data }) {
   const playVideo = () => {
