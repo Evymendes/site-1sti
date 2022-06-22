@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
 import styled from "styled-components";
 import GlobalStyle from "../../styles/GlobalStyle";
@@ -12,15 +13,32 @@ const Main = styled.main`
   }
 `;
 
-const Layout = ({ children, seo }) => (
-  <>
-    <Seo title={seo} />
-    
-    <GlobalStyle />
-    <Navigation />
-    <Main>{children}</Main>
-    <Footer />
-  </>
-);
+export default function Layout({ children, seo }) {
+  const query = useStaticQuery(graphql`
+    {
+      firsti {
+        footers {
+          globalLogo {
+            url
+          }
+          links
+          socialLinks
+          title
+          paragraph
+        }
+      }
+    }
+  `);
+  const { firsti } = query;
 
-export default Layout
+  return (
+    <>
+      <Seo title={seo} />
+      
+      <GlobalStyle />
+      <Navigation />
+      <Main>{children}</Main>
+      <Footer data={firsti.footers[0]} />
+    </>
+  );
+};
