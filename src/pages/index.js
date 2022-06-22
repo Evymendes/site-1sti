@@ -30,6 +30,10 @@ export default function IndexPage() {
         purposes {
           title
           paragraph
+          graphic {
+            url
+          }
+          cards
         }
         newsletters {
           title
