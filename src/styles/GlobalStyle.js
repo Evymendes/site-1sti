@@ -33,6 +33,11 @@ const GlobalStyle = createGlobalStyle`
     display: block;
   }
 
+  ::selection {
+    color: #16202c;
+    background: #00C8DB;
+  }
+
   ol, ul {
     list-style: none;
   }
