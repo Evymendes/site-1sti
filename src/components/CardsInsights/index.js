@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 import * as S from './styled'
-
+ 
 const Cards = () => {
   const {
     firsti: {
