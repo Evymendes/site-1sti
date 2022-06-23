@@ -10,29 +10,28 @@ const Articles = () => {
       articles: [{ linkExterno, textOne, textTwo, subTitle, textTree, textFor, imageDeeptech, editorial, deepTechTitle }],
     },
   } = useStaticQuery(graphql`
-  query MyIgorArticle{
-    firsti {
-      articles{
-        imageDeeptech {
-          url
-        }
-        editorial
-        deepTechTitle
-        linkExterno
-        textOne {
-          html
-        }
-        textTwo
-        subTitle
-        textTree
-        textFor {
-          html
+    {
+      firsti {
+        articles{
+          imageDeeptech {
+            url
+          }
+          editorial
+          deepTechTitle
+          linkExterno
+          textOne {
+            html
+          }
+          textTwo
+          subTitle
+          textTree
+          textFor {
+            html
+          }
         }
       }
     }
-  }
-`)
-
+  `);
 
   return (
     <>
