@@ -118,8 +118,8 @@ export const ColorTwo = styled.div`
       font-weight: bold;
       line-height: 1.2;
       font-size: 38px;
-      @media (max-width: 390px) {
-        font-size: 28px;
+      @media (max-width: 450px) {
+        font-size: 30px;
       }
     }
     p {
@@ -173,15 +173,17 @@ export const SectionOne = styled.section`
 
   span {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     gap: 1rem;
+    padding: 4rem 0;
 
     p {
-      max-width: 622px;
-      font-size: 21px;
+      max-width: 700px;
+      font-size: 22px;
       line-height: 1.8;
-      padding: 4rem 0;
+      padding: 1rem 0;
       font-weight: 500;
     }
   }
@@ -231,15 +233,19 @@ export const SectionTwo = styled.section`
     }
 
     h1 {
-      max-width: 800px;
-      font-size: 28px;
+      max-width: 900px;
+      font-size: 32px;
       line-height: 1.4;
       font-weight: bold;
       padding: 1rem 0;
+
+      @media (max-width: 1024px) {
+        font-size: 28px;
+      }
     }
     p {
-      max-width: 602px;
-      font-size: 21px;
+      max-width: 700px;
+      font-size: 22px;
       line-height: 1.8;
       padding: 4rem 0;
       font-weight: 500;

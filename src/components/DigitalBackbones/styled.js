@@ -2,6 +2,7 @@ import styled from "styled-components";
 import BackbonesBG from "../../assets/images/bd_background.png";
 
 export const DBContainer = styled.div`
+  width: 100%;
   position: relative;
   background-color: #0B1617;
   overflow: hidden;
@@ -10,19 +11,57 @@ export const DBContainer = styled.div`
 
 export const DBWrapper = styled.div`
   margin: 0 auto;
+  padding: 4rem 0;
   max-width: 1440px;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  height: 100%;
+
+  @media (max-width: 1440px) {
+    padding: 4rem 3rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 `;
 
 export const DBHeader = styled.header`
   position: relative;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 4.3rem;
+  width: 100%;
   min-height: 100vh;
 
   @media (max-width: 768px) {
     padding: 0 2.5rem;
+    min-height: auto;
+    
+    h1 {
+      padding: 9rem 0 1rem;
+    }
+  }
+`;
+
+export const Space = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 4rem;
+  max-width: 1440px;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+
+  @media (max-width: 1440px) {
+    padding: 4rem 4rem 0 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
     min-height: auto;
     
     h1 {
@@ -44,7 +83,7 @@ export const DBBackground = styled.div`
   z-index: -1;
 
   @media (min-width: 1440px) {
-    width: 100vw;
+    width: 100%;
   }
 
   @media (min-width: 768px) {
@@ -61,8 +100,8 @@ export const DBBackground = styled.div`
 
 // Text about the service
 export const DBAbout = styled.section`
-  margin: 3rem auto 5rem;
-  width: 75%;
+  margin: 0 auto;
+  width: 85%;
   font-weight: 300;
 
   p,
@@ -178,7 +217,7 @@ export const DBValue = styled.span`
 // Partnering card
 export const DBPartnering = styled.section`
   margin: 0 auto;
-  max-width: 82%;
+  max-width: 100%;
 
   @media (max-width: 768px) {
     max-width: 90%;
@@ -187,10 +226,11 @@ export const DBPartnering = styled.section`
 
 export const DBPartneringWrapper = styled.div`
   padding: 2.2rem 2.8rem;
-  max-width: 700px;
+  max-width: 860px;
   font-size: 1.1em;
   border: 1px solid #00C8DB;
   border-radius: 8px;
+  margin-top: 4rem;
 
   @media (max-width: 768px) {
     padding: 3rem 1.5rem 2.5rem;
@@ -250,7 +290,6 @@ export const Service = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem 5.5rem 4rem;
-  max-width: 89%;
   width: 100%;
   border: 1px solid #000;
   border-radius: 8px;
