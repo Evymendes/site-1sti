@@ -12,15 +12,17 @@ import TechnologiesBGMobile from "../../assets/images/ScreenShot2021-09-15at18.3
 export default function DigitalBackbones() {
   return (
     <S.DBContainer>
-      <S.DBWrapper>
         <S.DBHeader>
           <S.DBBackground />
+        <S.Space>
           <Header title="Our Services" />
           <S.DBTitleBox>
             <S.DBMainTitle>Digital Backbones</S.DBMainTitle>
             <S.DBDescription>The Foundation of Scalable Digital Platforms</S.DBDescription>
           </S.DBTitleBox>
+        </S.Space>
         </S.DBHeader>
+      <S.DBWrapper>
 
         <S.DBAbout>
           <S.DBParagraph>Before embarking on a digital transformation, businesses often contend with complexities that stem from:</S.DBParagraph>
