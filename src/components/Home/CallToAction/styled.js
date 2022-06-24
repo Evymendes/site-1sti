@@ -41,10 +41,18 @@ export const CTAWrapper = styled.section`
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 0 4rem;
+  padding: 4rem 0;
   width: 100%;
-  height: 100vh;
+  height: auto;
   max-width: 1440px;
+
+  @media (max-width:1440px) {
+    padding: 4rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
 
   h1,
   h3 {
@@ -53,17 +61,10 @@ export const CTAWrapper = styled.section`
   }
   
   @media (min-width: 1440px) {
-    padding-bottom: 7rem;
-    width: 90%;
-
     h1,
     h3 {
       max-width: 35vw;
     }
-  }
-
-  @media (max-width: 1440px) {
-    padding: 4rem;
   }
 
   @media (max-width: 768px) {
