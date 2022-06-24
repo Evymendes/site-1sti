@@ -29,7 +29,7 @@ const Content = () => {
   } = useStaticQuery(graphql`
   query MyQueryContact {
     firsti {
-      contentContacts {
+      contentContacts{
         descriptionContact
         contactUs
         emailLink
