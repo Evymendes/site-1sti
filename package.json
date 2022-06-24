@@ -15,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^5.17.0",
     "gatsby-plugin-remote-images": "^3.4.0",
     "gatsby-plugin-sharp": "^4.17.0",
+    "gatsby-plugin-styled-components": "^5.17.0",
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-remark-prismjs": "^6.16.0",
     "gatsby-remark-relative-images": "^2.0.2",
@@ -54,4 +55,3 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
- 
