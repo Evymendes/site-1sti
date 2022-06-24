@@ -1,15 +1,77 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
 import * as S from "./styled";
 import Header from "../Header";
 import Button from "../Button";
 
-import PlatformsBG from "../../assets/images/platforms.png";
-import PlatformsBGMobile from "../../assets/images/ScreenShot2021-09-15at18.32.12.png";
-import TechnologiesBG from "../../assets/images/technologies.png";
-import TechnologiesBGMobile from "../../assets/images/ScreenShot2021-09-15at18.32.21.png";
-
 export default function DigitalBackbones() {
+  const {
+    firsti: {
+      contentServices: [{ 
+        digitalBlackbones, 
+        companieOne, 
+        companieTwo, 
+        companieTree, 
+        companies, 
+        subCompanieOne, 
+        subCompanieTwo, 
+        subCompanieTree, 
+        subTitle, 
+        textWhatIs, 
+        partneringText, 
+        whatIs,
+        deepTitle,
+        deepSub,
+        visionaryTitle,
+        visionarySub,
+        imageCubo,
+        imageEstrela,
+        imageCuboMobile,
+        imageEstrelaMobile,
+        explorer
+      }],
+    },
+  } = useStaticQuery(graphql`
+  query MyQueryServices {
+    firsti {
+      contentServices {
+        digitalBlackbones
+        companieOne
+        companieTwo
+        companieTree
+        companies
+        subCompanieOne
+        subCompanieTwo
+        subCompanieTree
+        subTitle
+        textWhatIs
+        partneringText
+        whatIs
+        deepTitle
+        deepSub
+        visionaryTitle
+        visionarySub
+        imageCubo {
+          url
+        }
+        imageEstrela {
+          url
+        }
+        imageCuboMobile {
+          url
+        }
+        imageEstrelaMobile {
+          url
+        }
+        explorer
+      }
+    }
+  }
+`)
+  
+
+    
   return (
     <S.DBContainer>
         <S.DBHeader>
@@ -17,8 +79,12 @@ export default function DigitalBackbones() {
         <S.Space>
           <Header title="Our Services" />
           <S.DBTitleBox>
-            <S.DBMainTitle>Digital Backbones</S.DBMainTitle>
-            <S.DBDescription>The Foundation of Scalable Digital Platforms</S.DBDescription>
+            <S.DBMainTitle>
+              {digitalBlackbones}
+            </S.DBMainTitle>
+            <S.DBDescription>
+              {subTitle}
+            </S.DBDescription>
           </S.DBTitleBox>
         </S.Space>
         </S.DBHeader>
@@ -34,29 +100,29 @@ export default function DigitalBackbones() {
           </S.DBList>
 
           <S.DBParagraph>To overcome these complexities and achieve a successful digital transformation, businesses need a strong digital backbone.</S.DBParagraph>
-          <S.DBTitle>What is a digital backbone?</S.DBTitle>
-          <S.DBParagraph>A digital backbone is the foundation for operational excellence. It enables the unification of organizational silos, driving enhanced collaboration and innovation. Digital backbones are founded on shared processes, applications and data, allowing business to maximize the extent to which their data can be leveraged, and quickly adapt to changing landscapes. Digital backbones have quality, scalability and integrity sewn into their DNA, paving the way for businesses to develop future-proof digital platforms.</S.DBParagraph>
-          <S.DBSubtitle>Companies with digital backbones are:</S.DBSubtitle>
+          <S.DBTitle>{whatIs}</S.DBTitle>
+          <S.DBParagraph>{textWhatIs}</S.DBParagraph>
+          <S.DBSubtitle>{companies}</S.DBSubtitle>
 
           <S.DBAdvantages>
             <S.DBStatistic>
-              <S.DBValue>300%</S.DBValue>
-              <S.DBParagraph>more efficient in its <span>operational improvement</span></S.DBParagraph>
+              <S.DBValue>{companieOne}</S.DBValue>
+              <S.DBParagraph>{subCompanieOne}</S.DBParagraph>
             </S.DBStatistic>
             <S.DBStatistic>
-              <S.DBValue>150%</S.DBValue>
-              <S.DBParagraph>innovation capability, budget and <span>cost of ownership of innovation</span></S.DBParagraph>
+              <S.DBValue>{companieTwo}</S.DBValue>
+              <S.DBParagraph>{subCompanieTwo}</S.DBParagraph>
             </S.DBStatistic>
             <S.DBStatistic>
-              <S.DBValue>3x</S.DBValue>
-              <S.DBParagraph>more adaptable compared to <span>companies that do not have backbones</span></S.DBParagraph>
+              <S.DBValue>{companieTree}</S.DBValue>
+              <S.DBParagraph>{subCompanieTree}</S.DBParagraph>
             </S.DBStatistic>
           </S.DBAdvantages>
         </S.DBAbout>
 
         <S.DBPartnering>
           <S.DBPartneringWrapper>
-            Partnering with 1STI on the path to digital transformation drives results from day 1 as we begin by exploring what's standing between your organization today, and the formation of your digital backbone.
+            {partneringText}
             <S.DBPartneringBox>
               <Button>Download One Page</Button>
               <Button>Read Case Study</Button>
@@ -65,17 +131,19 @@ export default function DigitalBackbones() {
         </S.DBPartnering>
 
         <S.OtherServices>
-          <S.ExploreText>Explore other services:</S.ExploreText>
-          <S.Service bg={PlatformsBG} mobileBg={PlatformsBGMobile}>
-            <S.DBMainTitle>Deep Tech Platforms</S.DBMainTitle>
-            <S.DBDescription>Elevation, Scaling and Amplification</S.DBDescription>
+          <S.ExploreText>
+            {explorer}
+          </S.ExploreText>
+          <S.Service bg={imageEstrela.url} mobileBg={imageEstrelaMobile.url}>
+            <S.DBMainTitle>{deepTitle}</S.DBMainTitle>
+            <S.DBDescription>{deepSub}</S.DBDescription>
             <Button to="/services">Read more</Button>
           </S.Service>
           <Button to="/services">Read more</Button>
 
-          <S.Service bg={TechnologiesBG} mobileBg={TechnologiesBGMobile}>
-            <S.DBMainTitle>Visionary Technologies</S.DBMainTitle>
-            <S.DBDescription>Fit for the future, now</S.DBDescription>
+          <S.Service bg={imageCubo.url} mobileBg={imageCuboMobile.url}>
+            <S.DBMainTitle>{visionaryTitle}</S.DBMainTitle>
+            <S.DBDescription>{visionarySub}</S.DBDescription>
             <Button to="/services">Read more</Button>
           </S.Service>
           <Button to="/services">Read more</Button>

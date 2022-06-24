@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 import * as S from './styled'
-
+ 
 const Cards = () => {
   const {
     firsti: {
@@ -23,7 +23,7 @@ const Cards = () => {
     }
   }
 `)
-
+   
   return (
 
     <S.Container>
@@ -31,7 +31,7 @@ const Cards = () => {
         <S.BoxCard>
           <S.Card to="/">
             <StaticImage 
-              src="../../assets/images/insights-leaf.png"
+              src={"https://media.graphassets.com/O2nvA8MQRMS0ghKPgIoy"}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
@@ -44,7 +44,7 @@ const Cards = () => {
           </S.Card>
           <S.Card to="/">
             <StaticImage 
-              src="../../assets/images/insights-lula.png"
+              src={"https://media.graphassets.com/9ffhV6BJQnSGKqDqMZno"}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
@@ -57,7 +57,7 @@ const Cards = () => {
           </S.Card>
           <S.Card to="/">
             <StaticImage 
-              src="../../assets/images/insights-telephone.png"
+              src={"https://media.graphassets.com/R67n5C2SSMCiX5mZnm2f"}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
@@ -70,7 +70,7 @@ const Cards = () => {
           </S.Card>
           <S.Card to="/">
             <StaticImage 
-              src="../../assets/images/insights-girl.png"
+              src={"https://media.graphassets.com/hyw8uayDSsGvrQMQQeW8"}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
