@@ -11,19 +11,24 @@ export default function Services({ data }) {
 	const servicesList = [
 		{
 			bg: Backbones,
-			description: 'The Foundation of Scalable Digital Platforms',
 			title: 'Digital Backbones',
+			description: 'The Foundation of Scalable Digital Platforms',
 		},
 		{
 			bg: Platforms,
-			description: 'Elevation, Scaling and Amplification',
 			title: 'Deep Tech Platforms',
+			description: 'Elevation, Scaling and Amplification',
 		},
 		{
 			bg: Technologies,
-			description: 'Fit for the future, now',
 			title: 'Visionary Technologies',
+			description: 'Fit for the future, now',
 		},
+		{
+			bg: Technologies,
+			title: 'Digital Intelligence',
+			description: 'Tagline here',
+		}
 	];
 
 	return (
@@ -38,9 +43,9 @@ export default function Services({ data }) {
 				<S.CardsContainer>
 					{servicesList.map((service, i) => (
 						<S.Card key={i} bg={service.bg}>
-							<S.Title className="card-id">0{i + 1}</S.Title>
-							<S.DescriptionCard>{service.description}</S.DescriptionCard>
 							<S.Title>{service.title}</S.Title>
+							<S.DescriptionCard>{service.description}</S.DescriptionCard>
+							<S.Title id="card-id">0{i + 1}</S.Title>
 						</S.Card>
 					))}
 				</S.CardsContainer>
