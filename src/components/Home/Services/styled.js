@@ -13,9 +13,9 @@ export const Card = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 1.4rem 2.2rem 2.5rem;
-	width: 32%;
-	min-height: 85vh;
+	padding: 1.4rem 2rem;
+	width: 100%;
+	min-height: 35vh;
 	z-index: 1;
 
 	&:before {
@@ -35,12 +35,6 @@ export const Card = styled.div`
 		z-index: -2;
 	}
 
-	.card-id {
-		font-weight: 400;
-		text-align: center;
-		transition: .3s;
-	}
-
 	&:hover {
 		&:before {
 			border-color: #00C8DB;
@@ -48,15 +42,11 @@ export const Card = styled.div`
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
 		}
+	}
 
-		.card-id {
-			color: #00C8DB;
-		}
-
-		p {
-			visibility: visible;
-			opacity: 1;
-		}
+	#card-id {
+		display: none;
+		text-align: center;
 	}
 
 	@media (max-width: 1200px) {
@@ -65,11 +55,16 @@ export const Card = styled.div`
 		font-size: .7em;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
+		flex-direction: column-reverse;
 		font-size: .9em;
 
 		p {
 			padding: 10rem 0 1rem;
+		}
+
+		#card-id {
+			display: block;
 		}
 	}
 `;
@@ -86,55 +81,31 @@ export const ContentContainer = styled.div`
 	}
 
 	& > a {
-		margin: 0 auto;
+		margin: 3rem auto 0;
 
-		@media (min-width: 768px) {
+		@media (min-width: 1024px) {
 			display: none;
 		}
 	}
 
 	@media (max-width: 1024px) {
 		flex-direction: column;
-
-		& > div {
-			width: 100%;
-		}
-	}
-
-	@media (max-width: 768px) {
-		div {
-			width: 100%;
-		}
-
-		${Card} {
-			margin-bottom: 2rem;
-			width: 70%;
-		}
-	}
-
-	@media (max-width: 480px) {
-		${Card} {
-			width: 100%;
-		}
 	}
 `;
 
 export const BoxText = styled.div`
-	padding-top: 4rem;
-	width: 18%;
+	a {
+		display: none;
+	}
 
-	@media (max-width: 900px) {
-		padding: 0;
+	@media (min-width: 1024px) {
+		padding-top: 4rem;
+		width: 18%;
 
 		a {
-			display: none;
+			display: block;
 		}
 	}
-`;
-
-export const Title = styled.h2`
-	font-size: 2.7em;
-	line-height: 1.1;
 `;
 
 export const Description = styled.p`
@@ -146,12 +117,16 @@ export const Description = styled.p`
 `;
 
 export const CardsContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
-	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1rem;
+	width: 75%;
 
 	@media (max-width: 768px) {
-		flex-direction: column;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-gap: 2rem;
 		width: 100%;
 	}
 `;
@@ -161,13 +136,16 @@ export const ImageCard = styled.img`
 	width: 100%;
 `;
 
+export const Title = styled.h2`
+	max-width: 80%;
+	font-size: 2.5em;
+	line-height: 1.2;
+`;
+
 export const DescriptionCard = styled.p`
 	display: flex;
 	flex-direction: column;
-	padding-top: 20rem;
-	font-size: 1.4em;
-	opacity: 0;
-	visibility: hidden;
-	transition: .5s;
+	font-size: 1.1em;
+	font-weight: 200;
 	z-index: 1;
 `;
