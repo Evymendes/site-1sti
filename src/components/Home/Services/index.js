@@ -3,6 +3,8 @@ import React from "react";
 import * as S from "./styled";
 import Button from "../../../components/Button";
 
+//images
+import IconPlus from '../../../assets/images/plus_icon.svg'
 
 export default function Services({ data }) {
 	const servicesList = [
@@ -40,7 +42,10 @@ export default function Services({ data }) {
 					<S.Card key={i} bg={service.bg}>
 						<S.Title>{service.title}</S.Title>
 						<S.DescriptionCard>{service.description}</S.DescriptionCard>
-						<a href="#">Saiba mais +</a>
+						<S.LinkKnowMore>
+							<a href="#">Know more</a>
+							<img src={IconPlus} alt="Ícone de um +"/>
+						</S.LinkKnowMore>
 					</S.Card>
 				))}
 				<S.DivBlack></S.DivBlack>

@@ -16,22 +16,13 @@ export const Card = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	padding: 3.813rem 4.5rem;
-	width: 33%;
-	height: 470px;
+	width: 33.22%;
+	height: 455px;
 	transition: 0.4s;
-	a{
-		margin-top: 7rem;
-		color: #AF39E6;
-		font-size: 1.25rem;
-		font-weight: 100;
-		font-family: Cabinet Grotesk;
-		text-decoration: none;
-		position: absolute;
-		top: 16rem;
-	}
 	h2{
-		font-size: 2rem;
+		font-size: 1.875rem;
 		font-weight: 500;
 		@media(max-width: 768px){
 			font-size: 1.5rem;
@@ -51,11 +42,17 @@ export const Card = styled.div`
 		padding: 4rem 2rem;
 	}
 	@media(max-width: 1024px){
-		width: 49.7%;
-		height: 440px;
-		border-bottom: solid 3px #0B1617;
+		width: 49.9%;
+		height: 445px;
+		border-bottom: solid 2px #0B1617;
 	}
-	
+	@media(max-width: 600px){
+		height: 400px;
+		padding: 2rem 1rem;
+	}
+	@media(max-width: 375px){
+		width: 49.7%;
+	}
 `;
 
 export const ContentContainer = styled.div`
@@ -63,7 +60,7 @@ export const ContentContainer = styled.div`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 100%;
-	height: 955px;
+	height: 914px;
 
 `;
 
@@ -77,17 +74,17 @@ export const BoxText = styled.div`
 	}
 	@media(max-width: 768px){
 		margin-top: 4rem;
-		width: 100%;
+		width: 90%;
 		height: auto;
-		padding-left: 4.5rem;
+		padding-left: 2.063rem;
 	}
 `;
 
 export const Description = styled.p`
 	display: flex;
 	flex-direction: column;
-	margin: 1.5rem 0 2.5rem;
-	font-size: 1.2em;
+	margin: 1.625rem 0 2.5rem;
+	font-size: 1.125rem;
 	font-weight: 200;
 	font-family: CabinetGrotesk;
 	width: 80%;
@@ -102,13 +99,16 @@ export const Title = styled.h2`
 `;
 
 export const DescriptionCard = styled.p`
-	margin-top: 3rem;
+	margin-bottom: 8rem;
 	font-family: Cabinet Grotesk;
 	font-size: 1.375rem;
 	color: #7E7E7E;
 	z-index: 1;
 	@media(max-width: 768px){
 		font-size: 1.2rem;
+	}
+	@media(max-width: 600px){
+		margin-bottom: 6rem;
 	}
 `;
 export const DivBlack = styled.div`
@@ -119,5 +119,36 @@ export const DivBlack = styled.div`
 	border-bottom: solid 3px #0B1617;
 	@media(max-width: 768px){
 		display: block;
+	}
+	@media(max-width: 600px){
+		height: 400px;
+	}
+`
+export const LinkKnowMore = styled.div`
+	display: flex;
+	
+	img{
+		margin-left: 1rem;
+		width: 19px;
+		cursor: pointer;
+		@media(max-width: 768px){
+			width: 15px;
+		}
+	}
+	a{
+		color: #AF39E6;
+		font-size: 1.25rem;
+		font-weight: 100;
+		font-family: Cabinet Grotesk;
+		text-decoration: none;
+		@media(max-width: 768px){
+			font-size: 1rem;
+		}
+	}
+	@media(max-width: 600px){
+		margin-bottom: 3.125rem;
+	}
+	@media(max-width: 490px){
+		margin-bottom: 4rem;
 	}
 `
