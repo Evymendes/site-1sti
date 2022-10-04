@@ -6,105 +6,80 @@ export const ContainerServices = styled.section`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media(max-width: 768px){
+		flex-wrap: wrap;
+	}
 `;
 
 export const Card = styled.div`
+	background-color: #000000;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	padding: 1.4rem 2rem;
-	width: 100%;
-	min-height: 35vh;
-	z-index: 1;
-
-	&:before {
-		content: '';
+	padding: 3.813rem 4.5rem;
+	width: 33%;
+	height: 470px;
+	transition: 0.4s;
+	a{
+		margin-top: 7rem;
+		color: #AF39E6;
+		font-size: 1.25rem;
+		font-weight: 100;
+		font-family: Cabinet Grotesk;
+		text-decoration: none;
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url(${props => props.bg});
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		border-radius: 8px;
-		border: 1px solid #000;
-		transition: .3s;
-		z-index: -2;
+		top: 16rem;
 	}
-
-	&:hover {
-		&:before {
-			border-color: #00C8DB;
-			-webkit-transform: scale(1.05);
-			-ms-transform: scale(1.05);
-			transform: scale(1.05);
+	h2{
+		font-size: 2rem;
+		font-weight: 500;
+		@media(max-width: 768px){
+			font-size: 1.5rem;
+			width: 100px;
 		}
 	}
-
-	#card-id {
-		display: none;
-		text-align: center;
-	}
-
-	@media (max-width: 1200px) {
-		padding: 1.2rem 1.5rem 2rem;
-		min-height: 50vh;
-		font-size: .7em;
-	}
-
-	@media (max-width: 1024px) {
-		flex-direction: column-reverse;
-		font-size: .9em;
-
-		p {
-			padding: 10rem 0 1rem;
+	&:hover{
+		box-shadow: inset 0px 0px 70px #AF39E6;
+		p{
+			color: #38EEFF;
 		}
-
-		#card-id {
-			display: block;
+		h2{
+			font-weight: bold;
 		}
 	}
+	@media(max-width: 768px){
+		padding: 4rem 2rem;
+	}
+	@media(max-width: 1024px){
+		width: 49.7%;
+		height: 440px;
+		border-bottom: solid 3px #0B1617;
+	}
+	
 `;
 
 export const ContentContainer = styled.div`
-	padding: 5rem 0 3rem;
 	display: flex;
 	justify-content: space-between;
-	width: 90%;
-	max-width: 1440px;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 955px;
 
-	@media (max-width: 768px) {
-		width: 75%;
-	}
-
-	& > a {
-		margin: 3rem auto 0;
-
-		@media (min-width: 1024px) {
-			display: none;
-		}
-	}
-
-	@media (max-width: 1024px) {
-		flex-direction: column;
-	}
 `;
 
 export const BoxText = styled.div`
-	a {
-		display: none;
+	padding-left: 4.563rem;
+	width: 33%;
+	height: 455px;
+	padding-top: 4rem;
+	@media(max-width: 900px){
+		width: 50%;
 	}
-
-	@media (min-width: 1024px) {
-		padding-top: 4rem;
-		width: 18%;
-
-		a {
-			display: block;
-		}
+	@media(max-width: 768px){
+		margin-top: 4rem;
+		width: 100%;
+		height: auto;
+		padding-left: 4.5rem;
 	}
 `;
 
@@ -114,38 +89,35 @@ export const Description = styled.p`
 	margin: 1.5rem 0 2.5rem;
 	font-size: 1.2em;
 	font-weight: 200;
-`;
-
-export const CardsContainer = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-gap: 1rem;
-	width: 75%;
-
-	@media (max-width: 768px) {
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
-		grid-gap: 2rem;
-		width: 100%;
-	}
-`;
-
-export const ImageCard = styled.img`
-	font-size: 1.5rem;
-	width: 100%;
+	font-family: CabinetGrotesk;
+	width: 80%;
 `;
 
 export const Title = styled.h2`
 	max-width: 80%;
-	font-size: 2.5em;
+	font-family: GoshaSans;
+	font-size: 2.875rem;
+	font-weight: bold;
 	line-height: 1.2;
 `;
 
 export const DescriptionCard = styled.p`
-	display: flex;
-	flex-direction: column;
-	font-size: 1.1em;
-	font-weight: 200;
+	margin-top: 3rem;
+	font-family: Cabinet Grotesk;
+	font-size: 1.375rem;
+	color: #7E7E7E;
 	z-index: 1;
+	@media(max-width: 768px){
+		font-size: 1.2rem;
+	}
 `;
+export const DivBlack = styled.div`
+	display: none;
+	width: 49.7%;
+	height: 440px;
+	background-color: black;
+	border-bottom: solid 3px #0B1617;
+	@media(max-width: 768px){
+		display: block;
+	}
+`
