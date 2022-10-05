@@ -7,6 +7,7 @@ import Purpose from "../components/Home/Purpose";
 import Services from "../components/Home/Services";
 import Insights from "../components/Home/Insights";
 import Attention from "../components/Home/Attention";
+import Pioneering from "../components/Pioneering";
 
 export default function IndexPage() {
   const query = useStaticQuery(graphql`
@@ -52,6 +53,7 @@ export default function IndexPage() {
       {/* <Insights data={firsti.insights[0]} />
       <Purpose data={firsti.purposes[0]} />
       <Attention data={firsti.newsletters[0]} /> */}
+      <Pioneering/>
     </Layout>
   );
 };
