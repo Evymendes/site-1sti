@@ -50,7 +50,7 @@ export const Card = styled.div`
 		border-bottom: solid 2px #0B1617;
 	}
 	@media(max-width: 600px){
-		height: 400px;
+		height: 319px;
 		padding: 2rem 1rem;
 	}
 	@media(max-width: 375px){
@@ -128,12 +128,13 @@ export const DivBlack = styled.div`
 		display: block;
 	}
 	@media(max-width: 600px){
-		height: 400px;
+		height: 319px;
 	}
 `
 export const LinkKnowMore = styled.div`
 	display: flex;
 	margin-top: 6.125rem;
+	gap: 16px;
 	img{
 		width: 19px;
 		cursor: pointer;
