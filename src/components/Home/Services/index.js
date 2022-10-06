@@ -3,32 +3,31 @@ import React from "react";
 import * as S from "./styled";
 import Button from "../../../components/Button";
 
-import Backbones from "../../../assets/images/ScreenShot2021-09-15at19.29.36.png";
-import Platforms from "../../../assets/images/ScreenShot2021-09-15at18.32.12.png";
-import Technologies from "../../../assets/images/ScreenShot2021-09-15at18.32.21.png";
+//images
+import IconPlus from '../../../assets/images/plus_icon.svg'
 
 export default function Services({ data }) {
 	const servicesList = [
 		{
-			bg: Backbones,
-			title: 'Digital Backbones',
-			description: 'The Foundation of Scalable Digital Platforms',
+			title: 'Digital Strategy',
+			description: 'Technology as a means for profound transformations',
 		},
 		{
-			bg: Platforms,
-			title: 'Deep Tech Platforms',
-			description: 'Elevation, Scaling and Amplification',
+			title: 'Backbones Digitais',
+			description: 'Accelerating innovations with increased agility',
 		},
 		{
-			bg: Technologies,
-			title: 'Visionary Technologies',
-			description: 'Fit for the future, now',
+			title: 'Digital Platforms',
+			description: 'The path to the present and future of business',
 		},
 		{
-			bg: Technologies,
-			title: 'Digital Intelligence',
-			description: 'Tagline here',
-		}
+			title: 'Deep Tech Innovation',
+			description: 'Visionary technologies for high-impact innovation',
+		},
+		{
+			title: 'Deep Analytics',
+			description: 'Amplifying data analytics to multiply opportunities',
+		},
 	];
 
 	return (
@@ -37,20 +36,19 @@ export default function Services({ data }) {
 				<S.BoxText>
 					<S.Title>{data.title}</S.Title>
 					<S.Description>{data.paragraph}</S.Description>
-					<Button to=''>See more</Button>
 				</S.BoxText>
 
-				<S.CardsContainer>
-					{servicesList.map((service, i) => (
-						<S.Card key={i} bg={service.bg}>
-							<S.Title>{service.title}</S.Title>
-							<S.DescriptionCard>{service.description}</S.DescriptionCard>
-							<S.Title id="card-id">0{i + 1}</S.Title>
-						</S.Card>
-					))}
-				</S.CardsContainer>
-					
-				<Button to=''>See more</Button>
+				{servicesList.map((service, i) => (
+					<S.Card key={i} bg={service.bg}>
+						<S.Title>{service.title}</S.Title>
+						<S.DescriptionCard>{service.description}</S.DescriptionCard>
+						<S.LinkKnowMore>
+							<a href="#">Know more</a>
+							<img src={IconPlus} alt="Ícone de um +"/>
+						</S.LinkKnowMore>
+					</S.Card>
+				))}
+				<S.DivBlack></S.DivBlack>
 			</S.ContentContainer>
 		</S.ContainerServices>
 	);
