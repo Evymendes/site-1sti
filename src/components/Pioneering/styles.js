@@ -12,6 +12,7 @@ export const Container = styled.section`
 export const PioneeringSection = styled.section`
     margin: 0 4.563rem 0 4.563rem;
     display: flex;
+    justify-content: space-between;
     @media(max-width: 1024px){
         flex-direction: column;
     }
@@ -53,8 +54,8 @@ export const Text = styled.p`
     }
 `
 export const ImageBook = styled.img`
-    width: 35vw;
-    height: 90vh;
+    width: 333px;
+    height: 499px;
     margin-left: 9.063rem;
     box-shadow: 0px 0px 99px #00C8DBCC;
     border-radius: 5px;
@@ -72,6 +73,8 @@ export const ImageBook = styled.img`
     }
 `
 export const Right = styled.div`
+    display: flex;
+
     @media(max-width: 1024px){
         margin-top: 5.625rem;
         background-color: #1B211B;
@@ -86,6 +89,7 @@ export const Right = styled.div`
     }
 `
 export const Slider = styled.div`
+    border: solid hotpink;
     display: flex;
     margin: 6rem 3.125rem;
     width: 18.9rem;
@@ -125,14 +129,6 @@ export const Slider = styled.div`
 `
 export const ButtonSlide = styled.div`
     display: flex;
-    margin: -5rem 2.125rem;
-    @media(max-width: 1266px){
-        margin: -2rem 1rem;
-    }
-    @media(max-width: 1024px){
-        margin: 0 1rem;
-    }
-
     img{
         margin-left: 1rem;
         width: 31px;
@@ -141,33 +137,7 @@ export const ButtonSlide = styled.div`
             cursor: pointer;
         }
     }
-    @media(max-width: 350px){
-        margin: 0;
-    }
 `
 export const SlideOne = styled.div`
     transition: 0.4s;
-`
-export const SlideTwo = styled.div`
-`
-export const Input1 = styled.input`
-    display: none;
-    &:checked ~ ${SlideOne} {
-        margin-left: 0;
-    }
-`
-export const Input2 = styled.input`
-    display: none;
-    &:checked ~ ${SlideOne} {
-        margin-left: -18.9rem;
-        @media(max-width: 1266px){
-            margin-left: -13rem;
-        }
-        @media(max-width: 1024px){
-            margin-left: -17.8rem;
-        }
-        @media(max-width: 350px){
-            margin-left: -15.8rem;
-        }
-    }
 `
