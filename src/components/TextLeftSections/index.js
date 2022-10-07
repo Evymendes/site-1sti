@@ -16,7 +16,6 @@ const Text = styled.p`
     @media(max-width: 1266px){
         font-size: 1rem;
     }
-    
 `
 
 export default function SectionLeftHome(props){    
