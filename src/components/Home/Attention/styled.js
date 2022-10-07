@@ -26,14 +26,11 @@ export const Box = styled.div`
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
-  width: 60%;
-  height: 70%;
+  width: 40.813rem;
+  height: 26.5rem;
   text-align: center;
   border: 2px solid #00C8DB;
-
-  &:hover {
     box-shadow: inset 0 0 40px #00C8DB;
-  }
 
   @media (max-width: 768px) {
     width: 90%;

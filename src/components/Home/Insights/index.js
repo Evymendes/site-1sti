@@ -32,10 +32,11 @@ export default function Insights({ data }) {
 					<S.BoxText>
 						<S.Title>{data.title}</S.Title>
 						<S.Description>{data.paragraph}</S.Description>
-						<Button to=''>Go to Index</Button>
+						<Button to=''>Access our archive</Button>
 					</S.BoxText>
 
 					<S.CardsContainer>
+					<S.Shadow></S.Shadow>
 						<S.CardsBox>
 							{insightsList.map((insight, i) => (
 								<S.Card key={i}>
@@ -46,8 +47,6 @@ export default function Insights({ data }) {
 							))}
 						</S.CardsBox>
 					</S.CardsContainer>
-
-					<Button to=''>Go to Index</Button>
 				</S.ContentContainer>
 		</S.ContainerInsights>
 	);

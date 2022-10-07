@@ -4,7 +4,10 @@ export const ContainerInsights = styled.section`
 	width: 100%;
 	background: #0B1617;
 	@media(max-width: 1024px){
-		margin-top: 10rem;
+		margin-top: 26.8rem;
+	}
+	@media(max-width: 768px){
+		margin-top: 46.5rem;
 	}
 `;
 
@@ -12,7 +15,7 @@ export const ContentContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto;
+	margin-left: 4.563rem;
 	max-width: 1440px;
 	width: 90%;
 	height: 100%;
@@ -36,8 +39,9 @@ export const ContentContainer = styled.div`
 	}
 
 	@media (max-width: 768px) {
+		margin-left: 1.5rem;
 		padding: 2rem 0;
-		width: 75%;
+		width: 85%;
 	}
 `;
 
@@ -65,14 +69,18 @@ export const Description = styled.p`
 
 export const CardsContainer = styled.div`
 	width: 80%;
-
+	position: relative;
+	border: solid green;
 	@media (max-width: 1024px) {
 		width: 100%;
 	}
 
 	@media (max-width: 768px) {
-		min-width: 100vw;
+		min-width: 105vw;
 		overflow-x: scroll;
+	}
+	@media (max-width: 400px){
+		min-width: 103vw;
 	}
 `;
 
@@ -89,7 +97,7 @@ export const CardsBox = styled.div`
 `;
 
 export const Card = styled.div`
-	position: relative;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -109,7 +117,7 @@ export const Card = styled.div`
 
 	@media (max-width: 768px) {
 		margin-right: 1rem;
-		min-width: 50vw;
+		min-width: 48vw;
 	}
 
 	@media (max-width: 400px) {
@@ -140,4 +148,11 @@ export const TitleCard = styled.h2`
 	color: #FFFFFF;
 	font-weight: bold;
 `;
-
+export const Shadow = styled.div`
+	border: solid red;
+	position: absolute;
+	box-shadow: inset -110px -28px 138px -21px rgba(0,0,0,0.73);
+	width: 100%;
+	margin: auto;
+	height: 100%;
+`
