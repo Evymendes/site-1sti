@@ -18,6 +18,10 @@ export const AttentionWrapper = styled.div`
   max-width: 1440px;
   width: 90%;
   height: 90vh;
+  @media(max-width: 768px){
+    margin: 0 1.313rem;
+    justify-content: left;
+  }
 `;
 
 export const Box = styled.div`
@@ -30,10 +34,13 @@ export const Box = styled.div`
   height: 26.5rem;
   text-align: center;
   border: 2px solid #00C8DB;
-    box-shadow: inset 0 0 40px #00C8DB;
+  box-shadow: inset 0 0 40px #00C8DB;
 
   @media (max-width: 768px) {
+    padding-left: 1.7rem;
     width: 90%;
+    text-align: left;
+    align-items: start;
   }
 `;
 
@@ -61,6 +68,7 @@ export const NewsLetter = styled.input`
   width: 100%;
   height: auto;
   font-size: 1em;
+  font-weight: 600;
   
   ::placeholder {
     color: #FF0070;
