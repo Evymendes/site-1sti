@@ -8,6 +8,7 @@ import Services from "../components/Home/Services";
 import Insights from "../components/Home/Insights";
 import Attention from "../components/Home/Attention";
 import Pioneering from "../components/Pioneering";
+import JourneysActive from "../components/Home/JourneyActive";
 
 export default function IndexPage() {
   const query = useStaticQuery(graphql`
@@ -50,10 +51,11 @@ export default function IndexPage() {
     <Layout seo="Home">
       <CallToAction data={firsti.callToActions[0]} />
       <Services data={firsti.services[0]} />
-      {/* <Insights data={firsti.insights[0]} />
-      <Purpose data={firsti.purposes[0]} />
-      <Attention data={firsti.newsletters[0]} /> */}
-      <Pioneering/>
+      {/* <Insights data={firsti.insights[0]} /> */}
+      {/* <Purpose data={firsti.purposes[0]} /> */}
+      {/* <Attention data={firsti.newsletters[0]} /> */}
+      {/* <Pioneering/> */}
+      <JourneysActive/>
     </Layout>
   );
 };
