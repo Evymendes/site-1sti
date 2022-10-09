@@ -41,7 +41,7 @@ export default function Layout({ children, seo }) {
       <GlobalStyle />
       <Navigation />
       <Main>{children}</Main>
-      {/* <Footer data={firsti.footers[0]} /> */}
+      <Footer data={firsti.footers[0]} />
     </Container>
   );
 };

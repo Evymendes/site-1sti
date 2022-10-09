@@ -7,9 +7,7 @@ export const ContainerFooter = styled.footer`
 export const ContentContainer = styled.div`
   height: 100%;
   margin: 0 auto;
-  max-width: 1440px;
-  width: 100%;
-  height: 40vh;
+  margin: 0 4.563rem 0 4.563rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -20,10 +18,8 @@ export const ContentContainer = styled.div`
     padding: 2.5rem 4rem;
   }
 
-  @media (min-width: 768px) {
-    & > :not(:last-child) {
-      width: 20%;
-    }
+  @media (max-width: 768px) {
+    margin: 0 1rem 0 1rem;
   }
 
   @media (max-width: 768px) {
@@ -61,6 +57,10 @@ export const SocialMediaMobile = styled.div`
 
 export const ImagePacto = styled.img`
   width: auto;
+  @media(max-width: 500px){
+    width: 7rem;
+    height: 7rem;
+  }
 `;
 
 export const Ecosystem = styled.div`
@@ -94,7 +94,7 @@ export const SocialMedia = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 5rem;
-
+  width: 20%;
   @media (max-width: 768px) {
     display: none;
   }
