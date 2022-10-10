@@ -55,9 +55,12 @@ export const Description = styled.h3`
 `;
 
 export const Icon = styled.img`
-  padding-top: 2px;
+  transition: 0.4s;
   width: 1.2rem;
   filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(325deg);
+  &:hover{
+    margin-right: -7px;
+  }
 `;
 
 export const NewsLetter = styled.input`
@@ -69,7 +72,6 @@ export const NewsLetter = styled.input`
   height: auto;
   font-size: 1em;
   font-weight: 600;
-  
   ::placeholder {
     color: #FF0070;
   }
@@ -80,11 +82,13 @@ export const NewsLetter = styled.input`
 `;
 
 export const Label = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #FF0070;
+  width: 350px;
   height: 2rem;
 `;
 
