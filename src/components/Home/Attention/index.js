@@ -12,10 +12,9 @@ const Attention = ({ data }) => (
 				<S.Title>{data.title}</S.Title>
 				<S.Description>{data.paragraph}</S.Description>
 				<S.Label>
-					<S.NewsLetter type="email" placeholder="enter your email for updates" /> 
+					<S.NewsLetter type="email" placeholder="Register" /> 
 					<SubscribeButton><S.Icon src={Arrow} alt="Arrow icon"/></SubscribeButton>
 				</S.Label>
-				<S.Subtitle>{data.observation}</S.Subtitle>
 			</S.Box>
 		</S.AttentionWrapper>
 	</S.ContainerAttention>

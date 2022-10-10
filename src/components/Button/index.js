@@ -9,7 +9,7 @@ const Btn = styled.button`
   border: 1px solid #fff;
   border-radius: 6px;
   background: #fff;
-  transition: .1s;
+  transition: .4s;
   cursor: pointer;
   user-select: none;
 
