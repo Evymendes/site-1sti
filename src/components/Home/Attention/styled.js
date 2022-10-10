@@ -16,7 +16,7 @@ export const AttentionWrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   max-width: 1440px;
-  width: 90%;
+  width: 100%;
   height: 90vh;
   @media(max-width: 768px){
     margin: 0 1.313rem;
@@ -40,7 +40,7 @@ export const Box = styled.div`
     padding-left: 1.7rem;
     width: 90%;
     text-align: left;
-    align-items: start;
+    /* align-items: start; */
   }
 `;
 
