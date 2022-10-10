@@ -61,6 +61,9 @@ export const Icon = styled.img`
   &:hover{
     margin-right: -7px;
   }
+  @media(max-width: 500px){
+    width: 1.1rem;
+  }
 `;
 
 export const NewsLetter = styled.input`
@@ -76,7 +79,7 @@ export const NewsLetter = styled.input`
     color: #FF0070;
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: 500px) {
     min-width: 20rem;
   }
 `;
@@ -90,6 +93,9 @@ export const Label = styled.div`
   border-bottom: 1px solid #FF0070;
   width: 350px;
   height: 2rem;
+  @media(max-width: 500px){
+    width: 80%;
+  }
 `;
 
 export const Subtitle = styled.p`
