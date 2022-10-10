@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React from 'react'
 import * as S from './styles'
 import Button from '../../components/Button/index'
 
@@ -9,26 +9,13 @@ import ArrowR from '../../assets/images/seta_dir.svg'
 
 export default function Pioneering({}){
 
-    const elementRef = useRef(null);
+    const goToRight = ()=>{
+        document.getElementById('Slider').scrollLeft += 302.4;
+    }
 
-    const [arrowDisable, setArrowDisable] = useState(true);
-    const unsplashed = "https://source.unsplash.com/200x200/";
-
-    const handleHorizantalScroll = (element, speed, distance, step) => {
-    let scrollAmount = 0;
-    const slideTimer = setInterval(() => {
-      element.scrollLeft += step;
-      scrollAmount += Math.abs(step);
-      if (scrollAmount >= distance) {
-        clearInterval(slideTimer);
-      }
-      if (element.scrollLeft === 0) {
-        setArrowDisable(true);
-      } else {
-        setArrowDisable(false);
-      }
-    }, speed);
-  };
+    const goToLeft = ()=>{
+        document.getElementById('Slider').scrollLeft -= 302.4;
+    }
 
 
     const slideTexts = [
@@ -42,8 +29,6 @@ export default function Pioneering({}){
         },
     ];
 
-
-
     return(
         <S.Container>
             <S.PioneeringSection>
@@ -56,30 +41,30 @@ export default function Pioneering({}){
                 <S.Right>
                     <S.ImageBook src={Book} alt="capa de um livro"/>
 
-                    <S.Slider>
+                    <S.Slider id="Slider">
                         {slideTexts.map((item) =>(
                             <S.SlideOne>
                                 <p>{item.text}</p>
                                 <p><span>{item.author}</span></p>
 
-                                <img
-                        src={ArrowL}
-                        alt="Setinha do slide"
-                        onClick={() => {
-                            handleHorizantalScroll(S.Slider.current, 25, 100, -100);
-                        }}
-                        />
-                            </S.SlideOne>
-                        ))}
-                    <button>a</button>
-                    
-                    </S.Slider>
-                    
-                    <S.ButtonSlide>
-                        
-                        <img src={ArrowR} alt="Setinha do slide"/>
-                    </S.ButtonSlide>
+                                <S.ButtonSlide>
+                                    <img
+                                        src={ArrowL}
+                                        alt="Setinha do slide"
+                                        onClick={() => {
+                                        goToLeft();
+                                    }}/>
 
+                                    <img
+                                        src={ArrowR}
+                                        alt="Setinha do slide"
+                                        onClick={() => {
+                                            goToRight();
+                                        }}/>
+                                    </S.ButtonSlide>
+                            </S.SlideOne>
+                        ))}                    
+                    </S.Slider>
                 </S.Right> 
             </S.PioneeringSection>
         

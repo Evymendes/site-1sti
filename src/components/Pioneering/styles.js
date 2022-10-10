@@ -54,8 +54,8 @@ export const Text = styled.p`
     }
 `
 export const ImageBook = styled.img`
-    width: 333px;
-    height: 499px;
+    width: 500px;
+    height: 700px;
     margin-left: 9.063rem;
     box-shadow: 0px 0px 99px #00C8DBCC;
     border-radius: 5px;
@@ -89,11 +89,15 @@ export const Right = styled.div`
     }
 `
 export const Slider = styled.div`
-    border: solid hotpink;
     display: flex;
     margin: 6rem 3.125rem;
     width: 18.9rem;
     overflow: hidden;
+    overflow-x: scroll;
+    transition: 0.4;
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
     p{
         font-size: 1rem;
         font-family: CabinetGrotesk;
@@ -104,7 +108,7 @@ export const Slider = styled.div`
         }
         @media(max-width: 1266px){
             font-size: 0.9rem;
-            width: 13rem;
+            width: 14rem;
         }
         @media(max-width: 1024px){
             font-size: 1rem;
@@ -128,6 +132,7 @@ export const Slider = styled.div`
     }
 `
 export const ButtonSlide = styled.div`
+    margin: 25px 0;
     display: flex;
     img{
         margin-left: 1rem;
@@ -140,4 +145,7 @@ export const ButtonSlide = styled.div`
 `
 export const SlideOne = styled.div`
     transition: 0.4s;
+    p{
+        19rem;
+    }
 `
