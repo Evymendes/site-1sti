@@ -12,6 +12,9 @@ const Main = styled.main`
       font-size: 1.3rem;
   }
 `;
+const Container = styled.section`
+  background-color: #0B1617;
+`
 
 export default function Layout({ children, seo }) {
   const query = useStaticQuery(graphql`
@@ -32,13 +35,13 @@ export default function Layout({ children, seo }) {
   const { firsti } = query;
 
   return (
-    <>
+    <Container>
       <Seo title={seo} />
       
       <GlobalStyle />
       <Navigation />
       <Main>{children}</Main>
-      {/* <Footer data={firsti.footers[0]} /> */}
-    </>
+      <Footer data={firsti.footers[0]} />
+    </Container>
   );
 };

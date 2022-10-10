@@ -16,7 +16,6 @@ export const Card = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	padding: 3.813rem 4.5rem;
 	width: 33.22%;
 	height: 455px;
@@ -26,7 +25,11 @@ export const Card = styled.div`
 		font-weight: 500;
 		@media(max-width: 768px){
 			font-size: 1.5rem;
-			width: 100px;
+			width: 100%;
+			height: 3.813rem;
+		}
+		@media(max-width: 452px){
+			height: 5.719rem;
 		}
 	}
 	&:hover{
@@ -39,7 +42,7 @@ export const Card = styled.div`
 		}
 	}
 	@media(max-width: 768px){
-		padding: 4rem 2rem;
+		padding: 3rem 2rem;
 	}
 	@media(max-width: 1024px){
 		width: 49.9%;
@@ -47,7 +50,7 @@ export const Card = styled.div`
 		border-bottom: solid 2px #0B1617;
 	}
 	@media(max-width: 600px){
-		height: 400px;
+		height: 319px;
 		padding: 2rem 1rem;
 	}
 	@media(max-width: 375px){
@@ -61,7 +64,6 @@ export const ContentContainer = styled.div`
 	flex-wrap: wrap;
 	width: 100%;
 	height: 914px;
-
 `;
 
 export const BoxText = styled.div`
@@ -77,6 +79,9 @@ export const BoxText = styled.div`
 		width: 90%;
 		height: auto;
 		padding-left: 2.063rem;
+	}
+	@media(max-width: 600px){
+		padding-left: 1rem;
 	}
 `;
 
@@ -99,16 +104,18 @@ export const Title = styled.h2`
 `;
 
 export const DescriptionCard = styled.p`
-	margin-bottom: 8rem;
+	height: 6.5rem;
+	margin-top: 2.25rem;
 	font-family: Cabinet Grotesk;
 	font-size: 1.375rem;
 	color: #7E7E7E;
 	z-index: 1;
 	@media(max-width: 768px){
+		margin-top: 0.625rem;
 		font-size: 1.2rem;
 	}
-	@media(max-width: 600px){
-		margin-bottom: 6rem;
+	@media(max-width: 452px){
+		height: 8.75rem;
 	}
 `;
 export const DivBlack = styled.div`
@@ -121,14 +128,14 @@ export const DivBlack = styled.div`
 		display: block;
 	}
 	@media(max-width: 600px){
-		height: 400px;
+		height: 319px;
 	}
 `
 export const LinkKnowMore = styled.div`
 	display: flex;
-	
+	margin-top: 6.125rem;
+	gap: 16px;
 	img{
-		margin-left: 1rem;
 		width: 19px;
 		cursor: pointer;
 		@media(max-width: 768px){
@@ -145,10 +152,7 @@ export const LinkKnowMore = styled.div`
 			font-size: 1rem;
 		}
 	}
-	@media(max-width: 600px){
-		margin-bottom: 3.125rem;
-	}
-	@media(max-width: 490px){
-		margin-bottom: 4rem;
+	@media(max-width: 768px){
+		margin-top: 1.75rem;
 	}
 `
