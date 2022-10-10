@@ -58,9 +58,7 @@ export const Icon = styled.img`
   transition: 0.4s;
   width: 1.2rem;
   filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(325deg);
-  &:hover{
-    margin-right: -7px;
-  }
+  
   @media(max-width: 500px){
     width: 1.1rem;
   }
@@ -75,8 +73,13 @@ export const NewsLetter = styled.input`
   height: auto;
   font-size: 1em;
   font-weight: 600;
+  cursor: pointer;
   ::placeholder {
     color: #FF0070;
+  }
+
+  :focus::placeholder {
+    opacity: 0;
   }
 
   @media (min-width: 500px) {
@@ -93,6 +96,10 @@ export const Label = styled.div`
   border-bottom: 1px solid #FF0070;
   width: 350px;
   height: 2rem;
+
+  &:hover img{
+    margin-right: -7px;
+  }
   @media(max-width: 500px){
     width: 80%;
   }
