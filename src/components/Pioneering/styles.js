@@ -12,7 +12,13 @@ export const Container = styled.section`
 export const PioneeringSection = styled.section`
     margin: 0 4.563rem 0 4.563rem;
     display: flex;
-    justify-content: space-between;
+    gap: 145px;
+    @media(min-width: 1920px){
+        gap: 500px;
+    }
+    @media(max-width: 1570px){
+        gap: 0;
+    }
     @media(max-width: 1024px){
         flex-direction: column;
     }
@@ -132,10 +138,10 @@ export const Slider = styled.div`
     }
 `
 export const ButtonSlide = styled.div`
-    margin: 25px 0;
     display: flex;
+    justify-content: space-between;
+    width: 78px;
     img{
-        margin-left: 1rem;
         width: 31px;
         height: 26px;
         &:hover{
@@ -145,6 +151,9 @@ export const ButtonSlide = styled.div`
 `
 export const SlideOne = styled.div`
     transition: 0.4s;
+    section{
+        height: 300px;
+    }
     p{
         19rem;
     }

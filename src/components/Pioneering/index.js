@@ -44,8 +44,10 @@ export default function Pioneering({}){
                     <S.Slider id="Slider">
                         {slideTexts.map((item) =>(
                             <S.SlideOne>
-                                <p>{item.text}</p>
-                                <p><span>{item.author}</span></p>
+                                <section>
+                                    <p>{item.text}</p>
+                                    <p><span>{item.author}</span></p>
+                                </section>
 
                                 <S.ButtonSlide>
                                     <img
