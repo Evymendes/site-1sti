@@ -13,11 +13,6 @@ export const ContentContainer = styled.div`
   justify-content: space-between;
   border-top: 2px solid #00C8DB;
   padding: 2rem 0;
-
-  @media (max-width: 1440px) {
-    padding: 2.5rem 4rem;
-  }
-
   @media (max-width: 768px) {
     margin: 0 1rem 0 1rem;
   }
@@ -56,7 +51,8 @@ export const SocialMediaMobile = styled.div`
 `;
 
 export const ImagePacto = styled.img`
-  width: auto;
+  width: 110px;
+  height: 130px;
   @media(max-width: 500px){
     width: 7rem;
     height: 7rem;
@@ -67,12 +63,16 @@ export const Ecosystem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media (max-width: 1200px) {
+    margin: 0 1rem;
+  }
 `;
 
 export const EcosystemTitle = styled.p`
   margin-bottom: 1rem;
-  font-size: .95em;
-  font-weight: 500;
+  font-family: CabinetGrotesk;
+  font-weight: 400;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 2px;
 `;
@@ -82,7 +82,9 @@ export const EcosystemItem = styled.a`
   align-items: center;
   padding-top: 8px;
   color: #fff;
-  font: 500 1.2em 'CabinetGrotesk';
+  font-family: CabinetGrotesk;
+  font-weight: 400;
+  font-size: 20px;
   text-decoration: none;
 
   &:hover {
@@ -94,13 +96,15 @@ export const SocialMedia = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 5rem;
-  width: 20%;
+  width: 190px;
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
 export const ImageLogo = styled.img`
+  width: 28px;
+  height: 28px;
   margin: 0 5px;
   cursor: pointer;
 `;
@@ -114,13 +118,16 @@ export const Work = styled.div`
 `;
 
 export const WorkTitle = styled.h3`
-  font-size: 1.625rem;
+  font-family: CabinetGrotesk;
+  font-size: 30px;
+  font-weight: 400;
 `;
 
 export const WorkSubtitle = styled.p`
   padding: .6rem 0 1.5rem;
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 18px;
+  font-family: CabinetGrotesk;
+  font-weight: 300;
 `;
 
 export const WorkButton = styled.button`
@@ -129,7 +136,9 @@ export const WorkButton = styled.button`
   background: #FFFFFF;
   border: 1px solid #FFFFFF;
   border-radius: 5px;
-  font-size: 1rem;
+  font-family: CabinetGrotesk;
+  font-size: 17px;
+  font-weight: 500;
   color: #171717;
   margin-top: 1rem;
 

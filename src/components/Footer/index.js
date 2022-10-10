@@ -35,7 +35,7 @@ const Footer = ({ data }) => (
         <S.Work>
           <S.WorkTitle>{data.title}</S.WorkTitle>
           <S.WorkSubtitle>{data.paragraph}</S.WorkSubtitle>
-          <Button to="">See openings</Button>
+          <S.WorkButton to="">See openings</S.WorkButton>
         </S.Work>
       </S.ContentContainer>
   </S.ContainerFooter>
