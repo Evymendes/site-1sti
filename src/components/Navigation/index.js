@@ -38,6 +38,7 @@ export default function Navigation() {
           <S.NavLink to="/services" activeClassName="active">Services</S.NavLink>
           <S.NavLink to="/insights" activeClassName="active">Insights</S.NavLink>
           <a href="http://1sti.sistemapeoplenet.com.br/rh/vagas/triagem/e5f02f31ab6b4430acb17055751007d6" target="_blank" rel="noreferrer">Careers</a>
+          <S.NavLink to="/ecosystem" activeClassName="active">Ecosystem</S.NavLink>
           <S.NavLink to="/contact" activeClassName="active">Contact</S.NavLink>
           <S.LangBtn
             onClick={() => handleLang()}
