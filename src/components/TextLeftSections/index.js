@@ -10,7 +10,7 @@ const Title = styled.h2`
     }
 `
 const Text = styled.p`
-    margin-top: 2.25rem;
+    margin: 2.25rem 0 1.5rem 0;
     font-size: 1.125rem;
     font-family: CabinetGrotesk;
     @media(max-width: 1266px){

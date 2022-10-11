@@ -3,21 +3,13 @@ import styled from "styled-components";
 export const ContainerInsights = styled.section`
 	width: 100%;
 	background: #0B1617;
-	@media(max-width: 1024px){
-		margin-top: 26.8rem;
-	}
-	@media(max-width: 768px){
-		margin-top: 46.5rem;
-	}
 `;
 
 export const ContentContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-left: 4.563rem;
-	max-width: 1440px;
-	width: 90%;
+	margin: 0 5rem 0 4.563rem;
 	height: 100%;
 	padding: 7rem 0;
 	& > a {
@@ -68,12 +60,11 @@ export const Description = styled.p`
 `;
 
 export const CardsContainer = styled.div`
-	width: 80%;
+	width: 100%;
 	position: relative;
 	@media (max-width: 1024px) {
 		width: 100%;
 	}
-
 	@media (max-width: 768px) {
 		min-width: 105vw;
 		overflow-x: scroll;
@@ -84,6 +75,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const CardsBox = styled.div`
+	over-flow: hidden;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 5rem;
@@ -96,7 +88,6 @@ export const CardsBox = styled.div`
 `;
 
 export const Card = styled.div`
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
