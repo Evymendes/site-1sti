@@ -32,7 +32,6 @@ export const PioneeringSection = styled.section`
 export const Left = styled.div`
     max-width: 18.688rem;
     min-width: 18rem;
-
     button{
         margin-top: 3.375rem;
         @media(max-width: 1024px){
@@ -80,13 +79,11 @@ export const ImageBook = styled.img`
 `
 export const Right = styled.div`
     display: flex;
-
     @media(max-width: 1024px){
         margin-top: 5.625rem;
         background-color: #1B211B;
         border-radius: 5px;
         box-shadow: 0px 0px 99px #00C8DBCC;
-
         width: 322px;
         height: 484px;
     }
@@ -99,11 +96,7 @@ export const Slider = styled.div`
     margin: 6rem 3.125rem;
     width: 18.9rem;
     overflow: hidden;
-    overflow-x: scroll;
     transition: 0.4;
-    ::-webkit-scrollbar {
-        width: 0px;
-    }
     p{
         font-size: 1rem;
         font-family: CabinetGrotesk;
