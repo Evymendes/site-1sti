@@ -20,7 +20,6 @@ export const ContentContainer = styled.div`
 	width: 90%;
 	height: 100%;
 	padding: 7rem 0;
-
 	& > a {
 		padding-top: 1.5rem;
 
@@ -28,7 +27,6 @@ export const ContentContainer = styled.div`
 			display: none;
 		}
 	}
-
 	@media (max-width: 1024px) {
 		flex-direction: column;
 		font-size: .8rem;
@@ -37,11 +35,13 @@ export const ContentContainer = styled.div`
 			display: none;
 		}
 	}
-
 	@media (max-width: 768px) {
 		margin-left: 1.5rem;
 		padding: 2rem 0;
 		width: 85%;
+	}
+	@media(min-width: 1600px){
+		max-width: 100vw;
 	}
 `;
 
@@ -70,7 +70,6 @@ export const Description = styled.p`
 export const CardsContainer = styled.div`
 	width: 80%;
 	position: relative;
-	border: solid green;
 	@media (max-width: 1024px) {
 		width: 100%;
 	}
@@ -148,11 +147,3 @@ export const TitleCard = styled.h2`
 	color: #FFFFFF;
 	font-weight: bold;
 `;
-export const Shadow = styled.div`
-	border: solid red;
-	position: absolute;
-	box-shadow: inset -110px -28px 138px -21px rgba(0,0,0,0.73);
-	width: 100%;
-	margin: auto;
-	height: 100%;
-`
