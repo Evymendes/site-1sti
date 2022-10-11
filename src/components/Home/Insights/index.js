@@ -36,6 +36,7 @@ export default function Insights({ data }) {
 					</S.BoxText>
 
 					<S.CardsContainer>
+					<S.Shadow></S.Shadow>
 						<S.CardsBox>
 							{insightsList.map((insight, i) => (
 								<S.Card key={i}>
