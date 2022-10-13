@@ -33,7 +33,7 @@ export const ContentContainer = styled.div`
 		width: 85%;
 	}
 	@media(min-width: 1600px){
-		max-width: 100vw;
+		max-width: 100%;
 	}
 `;
 
@@ -66,11 +66,11 @@ export const CardsContainer = styled.div`
 		width: 100%;
 	}
 	@media (max-width: 768px) {
-		min-width: 105vw;
+		min-width: 128%;
 		overflow-x: scroll;
 	}
 	@media (max-width: 400px){
-		min-width: 103vw;
+		min-width: 118%;
 	}
 `;
 
@@ -107,11 +107,11 @@ export const Card = styled.div`
 
 	@media (max-width: 768px) {
 		margin-right: 1rem;
-		min-width: 48vw;
+		min-width: 55%;
 	}
 
 	@media (max-width: 400px) {
-		min-width: 75vw;
+		min-width: 98%;
 	}
 `;
 
