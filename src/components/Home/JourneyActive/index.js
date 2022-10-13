@@ -11,6 +11,7 @@ import CruzeiroImg from '../../../assets/images/cruzeiro.png'
 import LaureateImg from '../../../assets/images/Laureate-Logo.png'
 import SirioImg from '../../../assets/images/sirio.png'
 import SulamericaImg from '../../../assets/images/sulamerica.png'
+import MarisaImg from '../../../assets/images/marisa.svg'
 
 export default function JourneysActive(){
 
@@ -53,7 +54,7 @@ export default function JourneysActive(){
                         <S.Retail>
                             <S.Title>Retail</S.Title>
                             <S.LineCyan></S.LineCyan>
-                            <S.Sulamerica src={SulamericaImg}/>
+                            <S.Marisa src={MarisaImg}/>
                         </S.Retail>
                     </S.InstitutionsTwo>
                 </S.Right>

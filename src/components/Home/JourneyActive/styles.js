@@ -13,12 +13,14 @@ export const Journeys = styled.section`
     @media(max-width: 768px){
         margin: 47rem 1.5rem;
     }
+
 `
 export const Left = styled.div`
     max-width: 15rem;
     min-width: 13.563rem;
 `
 export const Right = styled.div`
+    margin-top: 9rem;
     max-width: 55rem;
     min-width: 52rem;
     @media(max-width: 1250px){
@@ -28,8 +30,18 @@ export const Right = styled.div`
     @media(max-width: 375px){
         min-width: 18rem;
     }
+    @media(min-width: 1600px){
+        max-width: 100rem;
+        min-width: 70rem;
+    }
+    @media(min-width: 1800px){
+        min-width: 80rem;
+    }
 `
 export const Education = styled.div`
+    @media(max-width: 768px){
+        margin-top: 1rem;
+    }
 `
 export const Title = styled.p`
     text-transform: uppercase;
@@ -56,7 +68,7 @@ export const Institutions = styled.div`
     justify-content: space-between;
     height: 50px;
     @media(max-width: 1250px){
-        gap: 30px;
+        gap: 40px;
         flex-wrap: wrap;
         justify-content: start;
     }
@@ -111,6 +123,11 @@ export const Sulamerica = styled.img`
     width: 162px;
     margin-top: 40px;
 `
+export const Marisa = styled.img`
+    height: 30px;
+    width: 140px;
+    margin-top: 50px;
+`
 export const InstitutionsTwo = styled.div`
     display: flex;
     justify-content: space-between;
@@ -122,11 +139,17 @@ export const InstitutionsTwo = styled.div`
     }
 `
 export const Health = styled.div`
-    
+    @media(max-width: 768px){
+        margin-top: 2.8rem;
+    }
 `
 export const Insurance = styled.div`
-
+    @media(max-width: 768px){
+        margin-top: 2.8rem;
+    }
 `
 export const Retail = styled.div`
-
+    @media(max-width: 768px){
+        margin-top: 2.8rem;
+    }
 `
