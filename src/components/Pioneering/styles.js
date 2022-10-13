@@ -74,18 +74,14 @@ export const ImageBook = styled.img`
         height: 27rem;
     }
     @media(max-width: 1024px){
-        display: none;
+        width: 300px;
+        margin: 60px 0;
     }
 `
 export const Right = styled.div`
     display: flex;
     @media(max-width: 1024px){
-        margin-top: 5.625rem;
-        background-color: #1B211B;
-        border-radius: 5px;
-        box-shadow: 0px 0px 99px #00C8DBCC;
-        width: 322px;
-        height: 484px;
+        flex-direction: column;
     }
     @media(max-width: 350px){
         width: 290px;
@@ -119,11 +115,14 @@ export const Slider = styled.div`
     }
     @media(max-width: 1266px){
         margin: 2rem 2rem;
-        width: 13rem;
+        width: 14rem;
     }
     @media(max-width: 1024px){
         width: 17.8rem;
-        margin: 4.5rem 1.25rem 0 1.25rem;
+        margin: 5.625rem 0;
+        border-radius: 5px;
+        width: 285px;
+        height: 484px;
     }
     @media(max-width: 350px){
         width: 15.8rem;
@@ -140,6 +139,9 @@ export const ButtonSlide = styled.div`
         &:hover{
             cursor: pointer;
         }
+    }
+    @media(max-width: 1266px){
+        margin-top: 3rem;
     }
 `
 export const SlideOne = styled.div`
