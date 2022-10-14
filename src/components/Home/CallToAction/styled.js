@@ -6,6 +6,7 @@ export const CTAContainer = styled.header`
   justify-content: center;
   width: 100%;
   cursor: pointer;
+  border: solid red;
 
   @media (max-width:768px) {
     font-size: .85rem;
@@ -14,6 +15,7 @@ export const CTAContainer = styled.header`
 `;
 
 export const BGVideo = styled.video`
+  z-index: 10;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -40,7 +42,7 @@ export const CTAWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 4.313rem;
   padding: 4rem 0;
   width: 100%;
   height: auto;

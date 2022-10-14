@@ -42,11 +42,32 @@ export const ButtonTwo = styled.button`
     }
 `
 
+const isBrowser = typeof window !== "undefined";
+
+export const isDesktop = () => {
+    if (!isBrowser) {
+      return;
+    }
+  
+    return window.innerWidth > 768;
+  };
+
 export default function Button2State(color){
+
+    const playVideo = () => {
+        const ctVideo = document.getElementById("ct-video");
+    
+        if(ctVideo.paused && isDesktop) {
+          ctVideo.play(); 
+        } else {
+          ctVideo.pause();
+        }
+      };
+
 
     return(
         <>
-            <ButtonOne>Understand Deep Tech</ButtonOne>
+            <ButtonOne onClick={() => playVideo()}>Understand Deep Tech</ButtonOne>
             <ButtonTwo>Our clients</ButtonTwo>
         </>
     )
