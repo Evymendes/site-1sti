@@ -12,7 +12,6 @@ export const ContentContainer = styled.div`
 	margin: 0 5rem 0 4.563rem;
 	height: 100%;
 	padding: 7rem 0;
-
 	& > a {
 		padding-top: 1.5rem;
 
@@ -20,7 +19,6 @@ export const ContentContainer = styled.div`
 			display: none;
 		}
 	}
-
 	@media (max-width: 1024px) {
 		flex-direction: column;
 		font-size: .8rem;
@@ -29,11 +27,13 @@ export const ContentContainer = styled.div`
 			display: none;
 		}
 	}
-
 	@media (max-width: 768px) {
 		margin-left: 1.5rem;
 		padding: 2rem 0;
 		width: 85%;
+	}
+	@media(min-width: 1600px){
+		max-width: 100vw;
 	}
 `;
 

@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React from 'react'
 import * as S from './styles'
 import Button from '../../components/Button/index'
 
@@ -9,40 +9,25 @@ import ArrowR from '../../assets/images/seta_dir.svg'
 
 export default function Pioneering({}){
 
-    const elementRef = useRef(null);
+    const goToRight = ()=>{
+        document.getElementById('Slider').scrollLeft += 302.4;
+    }
 
-    const [arrowDisable, setArrowDisable] = useState(true);
-    const unsplashed = "https://source.unsplash.com/200x200/";
-
-    const handleHorizantalScroll = (element, speed, distance, step) => {
-    let scrollAmount = 0;
-    const slideTimer = setInterval(() => {
-      element.scrollLeft += step;
-      scrollAmount += Math.abs(step);
-      if (scrollAmount >= distance) {
-        clearInterval(slideTimer);
-      }
-      if (element.scrollLeft === 0) {
-        setArrowDisable(true);
-      } else {
-        setArrowDisable(false);
-      }
-    }, speed);
-  };
+    const goToLeft = ()=>{
+        document.getElementById('Slider').scrollLeft -= 302.4;
+    }
 
 
     const slideTexts = [
         {
             text: '"A powerful blueprint for developing a 21st-century purposeful organisation. CEOs, designers and technologists alike will all take inspiration from this transdisciplinary approach to Deep Tech."',
-            author: '— Dave Gray, Founder of XPLANE and author of The Connected Company, Gamestorming and Liminal Thinking',
+            author: '— Dave Gray, Founder of XPLANE and author of The Connected Company, Gamestorming and Liminal Thinking',
         },
         {
             text: '"At a time when the adoption of advanced technologies is accelerating, Deep Tech and the Amplified Organisation and its authors show how a systemic view and the relationships between these new technologies, humanity and the environment are of fundamental importance, since moments of true evolution never have technology as an end in itself."',
             author: '— Giuliano Michel Fernandes, Head of Marketing and Communications, CBMM',
         },
     ];
-
-
 
     return(
         <S.Container>
@@ -56,30 +41,32 @@ export default function Pioneering({}){
                 <S.Right>
                     <S.ImageBook src={Book} alt="capa de um livro"/>
 
-                    <S.Slider>
+                    <S.Slider id="Slider">
                         {slideTexts.map((item) =>(
                             <S.SlideOne>
-                                <p>{item.text}</p>
-                                <p><span>{item.author}</span></p>
+                                <section>
+                                    <p>{item.text}</p>
+                                    <p><span>{item.author}</span></p>
+                                </section>
 
-                                <img
-                        src={ArrowL}
-                        alt="Setinha do slide"
-                        onClick={() => {
-                            handleHorizantalScroll(S.Slider.current, 25, 100, -100);
-                        }}
-                        />
+                                <S.ButtonSlide>
+                                    <img
+                                        src={ArrowL}
+                                        alt="Setinha do slide"
+                                        onClick={() => {
+                                        goToLeft();
+                                    }}/>
+
+                                    <img
+                                        src={ArrowR}
+                                        alt="Setinha do slide"
+                                        onClick={() => {
+                                            goToRight();
+                                        }}/>
+                                    </S.ButtonSlide>
                             </S.SlideOne>
-                        ))}
-                    <button>a</button>
-                    
+                        ))}                    
                     </S.Slider>
-                    
-                    <S.ButtonSlide>
-                        
-                        <img src={ArrowR} alt="Setinha do slide"/>
-                    </S.ButtonSlide>
-
                 </S.Right> 
             </S.PioneeringSection>
         
