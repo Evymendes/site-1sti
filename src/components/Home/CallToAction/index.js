@@ -3,6 +3,7 @@ import React from "react";
 import * as S from "./styled";
 import Header from "../../../components/Header";
 import Button from "../../../components/Button";
+import Buttons2States from '../../../components/Buttons2States';
 
 import ImageMobile from "../../../assets/images/Capa-Mobile-Video.jpg";
 
@@ -40,8 +41,7 @@ export default function CallToAction({ data }) {
         <S.CTATextBox>
           <S.CTAAbout>{data.about}</S.CTAAbout>
           <S.CTAOptions>
-            <Button to="/">Call to Action One</Button>
-            <Button to="/">Call to Action Two</Button>
+            <Buttons2States/>
           </S.CTAOptions>
         </S.CTATextBox>
       </S.CTAWrapper>
