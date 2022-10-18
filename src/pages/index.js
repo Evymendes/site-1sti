@@ -52,11 +52,8 @@ export default function IndexPage() {
       <CallToAction data={firsti.callToActions[0]} />
       <Services data={firsti.services[0]} />
       <Insights data={firsti.insights[0]} />
-      <Purpose data={firsti.purposes[0]} />
       <Attention data={firsti.newsletters[0]} />
       <Pioneering/>
-      <Attention data={firsti.newsletters[0]} />
-      {/* <Purpose data={firsti.purposes[0]} /> */}
       
       
     </Layout>
