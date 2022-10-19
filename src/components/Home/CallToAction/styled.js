@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const CTAContainer = styled.header`
   display: flex;
@@ -6,7 +6,6 @@ export const CTAContainer = styled.header`
   justify-content: center;
   width: 100%;
   cursor: pointer;
-  border: solid red;
 
   @media (max-width:768px) {
     font-size: .85rem;
@@ -27,6 +26,9 @@ export const BGVideo = styled.video`
   @media (max-width: 768px) {
     display: none;
   }
+  source{
+    z-index: 10;
+  }
 `;
 
 export const ImgMob = styled.img`
@@ -42,11 +44,13 @@ export const CTAWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 4.313rem;
   padding: 4rem 0;
   width: 100%;
   height: auto;
   max-width: 1440px;
+  transition: 0.4s;
+  background: transparent linear-gradient(270deg, #FFFFFF00 0%, #0B1617A8 66%, #0B1617 100%) 0% 0% no-repeat padding-box;
+  opacity: ${(p) => (p.active ? 1 : 0)};
 
   @media (max-width:1440px) {
     padding: 4rem 4rem;
@@ -58,6 +62,7 @@ export const CTAWrapper = styled.section`
 
   h1,
   h3 {
+    margin: 0 4.313rem;
     max-width: 430px;
     width: 100%;
   }

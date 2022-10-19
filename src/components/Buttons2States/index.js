@@ -3,7 +3,12 @@ import styled from 'styled-components'
 import PlayIcon from '../../assets/images/play-icon.svg'
 import PlayIconHover from '../../assets/images/play-icon-hover.svg'
 
+export const Div = styled.div`
+  margin: 0 4.313rem;
+`
+
 export const ButtonOne = styled.button`
+  
     transition: .4s;
     height: 59px;
     background-color: #FFF;
@@ -57,18 +62,17 @@ export default function Button2State(color){
     const playVideo = () => {
         const ctVideo = document.getElementById("ct-video");
     
-        if(ctVideo.paused && isDesktop) {
-          ctVideo.play(); 
-        } else {
-          ctVideo.pause();
+        if(ctVideo.play && isDesktop) {
+          ctVideo.currentTime = 0;
+          ctVideo.muted = false;
         }
       };
 
 
     return(
-        <>
+        <Div>
             <ButtonOne onClick={() => playVideo()}>Understand Deep Tech</ButtonOne>
             <ButtonTwo>Our clients</ButtonTwo>
-        </>
+        </Div>
     )
 }
