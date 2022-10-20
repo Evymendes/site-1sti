@@ -48,11 +48,9 @@ export const ImgMob = styled.img`
 `;
 
 export const CTAWrapper = styled.section`
-  margin-top: 5.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4rem 0;
   width: 100%;
   height: 100%;
   max-width: 1440px;
@@ -73,8 +71,7 @@ export const CTAWrapper = styled.section`
     }
   }
   @media (max-width:1440px) {
-    padding: 0;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   @media (max-width: 768px) {
     height: 100vh;
@@ -125,6 +122,10 @@ export const CTAAbout = styled.h3`
   
   @media (min-width: 1440px) {
     padding-bottom: 3rem;
+  }
+  @media(max-width: 950px){
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
   }
 `;
 

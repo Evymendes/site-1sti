@@ -11,7 +11,7 @@ const Title = styled.h1`
   text-shadow: 0 0 16px rgba(0,0,0,.5);
   color: ${props => props.color};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1288px) {
     padding-bottom: 1rem;
     max-width: 250px;
     font-size: 3em;

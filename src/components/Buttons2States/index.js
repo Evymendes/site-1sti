@@ -8,7 +8,6 @@ export const Div = styled.div`
 `
 
 export const ButtonOne = styled.button`
-  
     transition: .4s;
     height: 59px;
     background-color: #FFF;

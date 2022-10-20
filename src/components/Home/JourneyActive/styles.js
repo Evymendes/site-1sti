@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Journeys = styled.section`
-    margin: 10rem 4.563rem 0 4.563rem;
+    margin: 65rem 4.563rem 0 4.563rem;
     display: flex;
     justify-content: space-between;
     
@@ -13,10 +13,10 @@ export const Journeys = styled.section`
         flex-direction: column;
     }
     @media(max-width: 1024px){
-        margin-top: 28rem;
+        margin-top: 92rem;
     }
     @media(max-width: 768px){
-        margin: 54rem 1.5rem;
+        margin: 112rem 1.5rem;
     }
 `
 export const Left = styled.div`
