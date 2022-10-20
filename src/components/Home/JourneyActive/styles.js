@@ -4,6 +4,11 @@ export const Journeys = styled.section`
     margin: 10rem 4.563rem 0 4.563rem;
     display: flex;
     justify-content: space-between;
+    
+    @media(min-width: 1460px){
+        justify-content: left;
+        gap: 20rem;
+    }
     @media(max-width: 1250px){
         flex-direction: column;
     }

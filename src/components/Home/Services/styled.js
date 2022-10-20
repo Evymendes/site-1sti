@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const ContainerServices = styled.section`
+	position: absolute;
 	width: 100%;
-	background: #0B1617;
+	height: auto;
+	background-color: #0B1617;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 10;
 	@media(max-width: 768px){
 		flex-wrap: wrap;
 	}

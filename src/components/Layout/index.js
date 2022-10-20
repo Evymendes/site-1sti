@@ -13,6 +13,7 @@ const Main = styled.main`
   }
 `;
 const Container = styled.section`
+ background-color: #0B1617;
 `
 
 export default function Layout({ children, seo }) {
