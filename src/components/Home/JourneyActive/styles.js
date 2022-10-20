@@ -11,7 +11,7 @@ export const Journeys = styled.section`
         margin-top: 28rem;
     }
     @media(max-width: 768px){
-        margin: 47rem 1.5rem;
+        margin: 54rem 1.5rem;
     }
 `
 export const Left = styled.div`

@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const ContainerAttention = styled.section`
   width: 100%;
   background: #0B1617;
-
+  margin-top: 6rem;
   @media (max-width: 768px) {
     height: 80vh;
     font-size: .9em;
+    margin-top: -15rem;
   }
 `;
 

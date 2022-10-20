@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const ContainerInsights = styled.section`
 	width: 100%;
 	background: #0B1617;
+	margin-top: 15rem;
+	@media(max-width: 768px){
+		margin-top: -50rem;
+	}
 `;
 
 export const ContentContainer = styled.div`

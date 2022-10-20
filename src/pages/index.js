@@ -51,14 +51,10 @@ export default function IndexPage() {
     <Layout seo="Home">
       <CallToAction data={firsti.callToActions[0]} />
       <Services data={firsti.services[0]} />
+      <JourneysActive/>
       <Insights data={firsti.insights[0]} />
-      <Purpose data={firsti.purposes[0]} />
-      <Attention data={firsti.newsletters[0]} />
       <Pioneering/>
-      <Attention data={firsti.newsletters[0]} />
-      {/* <Purpose data={firsti.purposes[0]} /> */}
-      
-      
+      <Attention data={firsti.newsletters[0]} />  
     </Layout>
   );
 };
