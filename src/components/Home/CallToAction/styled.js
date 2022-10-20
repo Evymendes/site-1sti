@@ -11,6 +11,22 @@ export const CTAContainer = styled.header`
     font-size: .85rem;
     background: #0B1617;
   }
+
+  & .Teste1{
+    animation-name: Teste;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+    @keyframes Teste{
+      0%{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+      100%{
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+    }
+
 `;
 
 export const BGVideo = styled.video`
@@ -48,10 +64,22 @@ export const CTAWrapper = styled.section`
   width: 100%;
   height: auto;
   max-width: 1440px;
-  transition: 0.4s;
   background: transparent linear-gradient(270deg, #FFFFFF00 0%, #0B1617A8 66%, #0B1617 100%) 0% 0% no-repeat padding-box;
-  opacity: ${(p) => (p.active ? 1 : 0)};
+  
 
+  animation-name: Testee;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  @keyframes Testee{
+    0%{
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
   @media (max-width:1440px) {
     padding: 4rem 4rem;
   }
@@ -89,6 +117,7 @@ export const CTAWrapper = styled.section`
     }
   }
 `;
+
 
 export const CTATextBox = styled.div`
   display: flex;

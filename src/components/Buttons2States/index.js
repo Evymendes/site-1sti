@@ -65,6 +65,7 @@ export default function Button2State(color){
         if(ctVideo.play && isDesktop) {
           ctVideo.currentTime = 0;
           ctVideo.muted = false;
+          ctVideo.play()
         }
       };
 
