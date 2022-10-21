@@ -41,18 +41,18 @@ export const BGVideo = styled.video`
 export const ImgMob = styled.img`
   margin-top: 4.625rem;
   width: 100%;
-
   @media (min-width: 768px) {
     display: none;
   }
 `;
 
 export const CTAWrapper = styled.section`
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding-top: 3.2rem;
   width: 100%;
-  height: 100%;
+  height: 51.5vw;
   max-width: 1440px;
   background: transparent linear-gradient(270deg, #FFFFFF00 0%, #0B1617A8 66%, #0B1617 100%) 0% 0% no-repeat padding-box;
   
@@ -70,9 +70,6 @@ export const CTAWrapper = styled.section`
       opacity: 1;
     }
   }
-  @media (max-width:1440px) {
-    justify-content: space-between;
-  }
   @media (max-width: 768px) {
     height: 100vh;
   }
@@ -87,12 +84,25 @@ export const CTAWrapper = styled.section`
   @media (min-width: 1440px) {
     h1,
     h3 {
-      max-width: 35vw;
+      max-width: 45vw;
+    }
+  }
+  @media (max-width: 1200px) {
+    h1,
+    h3 {
+      max-width: 60vw;
+    }
+  }
+  @media (max-width: 1024px) {
+    padding-top: 2rem;
+
+    h1,
+    h3 {
+      max-width: 75vw;
     }
   }
 
   @media (max-width: 768px) {
-    padding: 2rem 0;
     width: 75%;
     height: auto;
 
@@ -111,18 +121,20 @@ export const CTAWrapper = styled.section`
 export const CTATextBox = styled.div`
   display: flex;
   flex-direction: column;
-`;
+  padding-top: 3rem;
+
+  @media (max-width: 1024px) {
+    padding-top: 1.5rem;
+  }
+`
+;
 
 export const CTAAbout = styled.h3`
-  padding: 2rem 0 3rem;
   font-size: 1.375em;
   font-weight: 400;
   line-height: 1.5;
   text-shadow: 0 0 12px rgba(0,0,0,.5);
   
-  @media (min-width: 1440px) {
-    padding-bottom: 3rem;
-  }
   @media(max-width: 950px){
     font-size: 1.1rem;
     padding-bottom: 0.5rem;
@@ -130,10 +142,13 @@ export const CTAAbout = styled.h3`
 `;
 
 export const CTAOptions = styled.div`
+  padding-top: 3.2rem;
   a:first-child {
     margin-right: 1.5rem;
   }
-  
+  @media (max-width: 1024px) {
+    padding-top: 2rem;
+  }
   @media (max-width: 768px) {
     a:last-child {
       display: none;

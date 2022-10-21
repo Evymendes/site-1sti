@@ -13,6 +13,7 @@ const Main = styled.main`
   }
 `;
 const Container = styled.section`
+z-index: -2;
  background-color: #0B1617;
 `
 

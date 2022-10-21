@@ -3,9 +3,12 @@ import styled from "styled-components";
 export const ContainerInsights = styled.section`
 	width: 100%;
 	background: #0B1617;
-	margin-top: 15rem;
+	margin-top: 10rem;
+	@media(max-width: 1250px){
+		margin-top: -4rem;
+	}
 	@media(max-width: 768px){
-		margin-top: -50rem;
+		margin-top: -110rem;
 	}
 `;
 
