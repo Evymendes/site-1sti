@@ -4,7 +4,16 @@ import PlayIcon from '../../assets/images/play-icon.svg'
 import PlayIconHover from '../../assets/images/play-icon-hover.svg'
 
 export const Div = styled.div`
+  width: 100%;
   margin: 0 4.313rem;
+  display: flex;
+  @media(max-width: 768px){
+    margin: 0 2rem;
+    justify-content: space-between;
+  }
+  @media(max-width: 600px){
+    margin: 0 1rem;
+  }
 `
 
 export const ButtonOne = styled.button`

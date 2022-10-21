@@ -79,6 +79,12 @@ export const CTAWrapper = styled.section`
     margin: 0 4.313rem;
     max-width: 430px;
     width: 100%;
+    @media(max-width: 768px){
+      margin: 0 2rem;
+    }
+    @media(max-width: 600px){
+      margin: 0 1rem;
+    }
   }
   
   @media (min-width: 1440px) {
@@ -153,5 +159,9 @@ export const CTAOptions = styled.div`
     a:last-child {
       display: none;
     }
+    width: 400px;
+  }
+  @media(max-width: 450px){
+    width: 300px;
   }
 `;
