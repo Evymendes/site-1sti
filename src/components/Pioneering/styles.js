@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
+    margin-top: 11rem;
     background-color: #0B1617;
     @media(max-width: 1024px){
-        margin-top: 26.5rem;
-    }
-    @media(max-width: 768px){
-        margin-top: 46rem;
+        margin-top: 0;
     }
 `
 export const PioneeringSection = styled.section`

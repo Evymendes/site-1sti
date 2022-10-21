@@ -1,17 +1,22 @@
 import styled from 'styled-components'
 
 export const Journeys = styled.section`
-    margin: 10rem 4.563rem 0 4.563rem;
+    margin: 73rem 4.563rem 0 4.563rem;
     display: flex;
     justify-content: space-between;
+    
+    @media(min-width: 1460px){
+        justify-content: left;
+        gap: 20rem;
+    }
     @media(max-width: 1250px){
         flex-direction: column;
     }
     @media(max-width: 1024px){
-        margin-top: 28rem;
+        margin-top: 100rem;
     }
     @media(max-width: 768px){
-        margin: 47rem 1.5rem;
+        margin: 112rem 1.5rem;
     }
 
 `
