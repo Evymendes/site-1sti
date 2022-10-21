@@ -11,7 +11,7 @@ export const NavBar = styled.nav`
   background-color: #ffffff95;
   backdrop-filter: blur(30px);
   border-top: 10px solid #0B1617;
-  z-index: 3;
+  z-index: 30;
 
   @media (min-width: 1440px) {
     height: 5.5rem;

@@ -27,7 +27,7 @@ export const CTAContainer = styled.header`
         opacity: 0;
       }
     }
-
+  }
 `;
 
 export const BGVideo = styled.video`
