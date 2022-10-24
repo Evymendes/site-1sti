@@ -16,18 +16,38 @@ export default function IndexPage() {
       firsti {
         callToActions {
           title
+          titlePt
+          subtitle
+          subtitlePt
           about
+          aboutPt
           video {
             url
           }
         }
         insights {
           title
+          titlePt
           paragraph
+          paragraphPt
+          cards
         }
         services {
           title
+          titlePt
           paragraph
+          paragraphPt
+          cards
+          knowMore
+          knowMorePt
+        }
+        activeJourneys {
+          title
+          titlePt
+          text
+          textPt
+          textButton
+          textButtonPt
         }
         purposes {
           title
@@ -40,7 +60,18 @@ export default function IndexPage() {
         newsletters {
           title
           paragraph
-          observation
+          titlePt
+          paragraphPt
+        }
+        pioneerings{
+          title
+          titlePt
+          text
+          textPt
+          buttonText
+          buttonTextPt
+          altImg
+          slider
         }
       }
     }
@@ -51,9 +82,9 @@ export default function IndexPage() {
     <Layout seo="Home">
       <CallToAction data={firsti.callToActions[0]} />
       <Services data={firsti.services[0]} />
-      <JourneysActive/>
+      <JourneysActive data={firsti.activeJourneys[0]}/>
       <Insights data={firsti.insights[0]} />
-      <Pioneering/>
+      <Pioneering data={firsti.pioneerings[0]}/>
       <Attention data={firsti.newsletters[0]} />  
     </Layout>
   );

@@ -13,7 +13,7 @@ import SirioImg from '../../../assets/images/sirio.png'
 import SulamericaImg from '../../../assets/images/sulamerica.png'
 import MarisaImg from '../../../assets/images/marisa.svg'
 
-export default function JourneysActive(){
+export default function JourneysActive({ data }){
 
 
     return(
@@ -21,9 +21,9 @@ export default function JourneysActive(){
             <S.Journeys>
                 <S.Left>
                     <TextLeftSections
-                    title="Active Journeys"
-                    text="Onde estamos e com quais soluções geramos impactos ampliados."
-                    textButton="Start your journey"
+                    title={data.title}
+                    text={data.text}
+                    textButton={data.textButton}
                 />
                 </S.Left>
                 <S.Right>
