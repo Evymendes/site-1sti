@@ -12,11 +12,29 @@ import Instagram from "../../assets/images/instagram_icon.svg";
 
 export default function Navigation() {
   const [isEN, setIsEN] = useState(false);
+  const [language, setLanguage] = useState('en')
   const [isOpen, setIsOpen] = useState(false);
+
+  const I18N_STORAGE_KEY = 'i18nextLng'
 
   const handleLang = () => {
     setIsEN(isEN ? false : true);
+    setLanguage('pt')
   };
+
+  const testTest = () =>{
+    if(language === 'pt'){
+      localStorage.setItem(
+        I18N_STORAGE_KEY,
+        language
+      )
+    }else if(language != 'en'){
+      localStorage.setItem(
+        I18N_STORAGE_KEY,
+        language
+      )
+    }
+  }
 
   return(
     <S.NavBar>
@@ -38,10 +56,10 @@ export default function Navigation() {
           <S.NavLink to="/services" activeClassName="active">Services</S.NavLink>
           <S.NavLink to="/insights" activeClassName="active">Insights</S.NavLink>
           <a href="http://1sti.sistemapeoplenet.com.br/rh/vagas/triagem/e5f02f31ab6b4430acb17055751007d6" target="_blank" rel="noreferrer">Careers</a>
-          <S.NavLink to="/ecosystem" activeClassName="active">Ecosystem</S.NavLink>
           <S.NavLink to="/contact" activeClassName="active">Contact</S.NavLink>
           <S.LangBtn
             onClick={() => handleLang()}
+            onChange={testTest()}
             isEN={isEN}
           >
             {isEN ? 'PT' : 'EN'}

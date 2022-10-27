@@ -1,17 +1,7 @@
-import React from "react"
-import axios from "axios"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-import Layout from "../components/Layout"
-import CallToAction from "../components/Home/CallToAction"
-import Purpose from "../components/Home/Purpose"
-import Services from "../components/Home/Services"
-import Insights from "../components/Home/Insights"
-import Attention from "../components/Home/Attention"
-import Pioneering from "../components/Pioneering"
-import JourneysActive from "../components/Home/JourneyActive"
-
-export default function IndexPage() {
+export default function ContentHygraph() {
   const query = useStaticQuery(graphql`
     {
       firsti {
@@ -64,7 +54,7 @@ export default function IndexPage() {
           titlePt
           paragraphPt
         }
-        pioneerings {
+        pioneerings{
           title
           titlePt
           text
@@ -76,16 +66,8 @@ export default function IndexPage() {
         }
       }
     }
-  `)
-  const { firsti } = query
-  return (
-    <Layout seo="Home">
-      <CallToAction data={firsti.callToActions[0]} />
-      <Services data={firsti.services[0]} />
-      <JourneysActive data={firsti.activeJourneys[0]} />
-      <Insights data={firsti.insights[0]} />
-      <Pioneering data={firsti.pioneerings[0]} />
-      <Attention data={firsti.newsletters[0]} />
-    </Layout>
-  )
-}
+  `);
+
+  const { firsti } = query;
+  const { callToAction } = firsti.callToActions 
+};
