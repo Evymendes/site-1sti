@@ -43,7 +43,6 @@ export default function Navigation() {
     }
   }, [])
 
-  console.log(i18n.language)
   return (
     <S.NavBar>
       <S.NavWrapper>
