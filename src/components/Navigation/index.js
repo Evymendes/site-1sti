@@ -6,6 +6,8 @@ import * as S from "./styled"
 // i18n
 import { i18n } from "../../translate/i18n"
 
+//i18n.language
+
 import Logo from "../../assets/images/1sti-logo.svg"
 import LogoHover from "../../assets/images/1sti-logo_hover.svg"
 import Medium from "../../assets/images/medium_icon.svg"
@@ -15,22 +17,32 @@ import Instagram from "../../assets/images/instagram_icon.svg"
 
 export default function Navigation() {
   const [isEN, setIsEN] = useState(false)
-  const [language, setLanguage] = useState("")
+  const [language, setLanguage] = useState()
   const [isOpen, setIsOpen] = useState(false)
 
   const I18N_STORAGE_KEY = "i18nextLng"
+  const Button_Language = "buttonlanguage"
 
-  const handleLang = () => {
-    setIsEN(isEN ? false : true)
-    localStorage.setItem(
-      I18N_STORAGE_KEY,
-      I18N_STORAGE_KEY === "en" ? "pt" : "en"
-      // I18N_STORAGE_KEY === "pt" ? "en" : "pt"
-    )
-    setLanguage(I18N_STORAGE_KEY)
+  const handleLangEn = () => {
+    localStorage.setItem(I18N_STORAGE_KEY, "en")
+    window.location = window.location
+    localStorage.setItem(Button_Language, false)
+  }
+
+  const handleLangPt = () => {
+    setIsEN(I18N_STORAGE_KEY === "en" ? true : false)
+    localStorage.setItem(I18N_STORAGE_KEY, "pt")
     window.location = window.location
   }
-  console.log(language)
+
+  useEffect(() => {
+    if (i18n.language === "en") {
+      setIsEN(true)
+    } else {
+      setIsEN(false)
+    }
+  }, [])
+
   return (
     <S.NavBar>
       <S.NavWrapper>
@@ -57,18 +69,30 @@ export default function Navigation() {
           <S.NavLink to="/insights" activeClassName="active">
             Insights
           </S.NavLink>
-          <a
-            href="http://1sti.sistemapeoplenet.com.br/rh/vagas/triagem/e5f02f31ab6b4430acb17055751007d6"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://1sti.solides.jobs" target="_blank" rel="noreferrer">
             Careers
           </a>
           <S.NavLink to="/contact" activeClassName="active">
             Contact
           </S.NavLink>
-          <S.LangBtn onClick={() => handleLang()} isEN={isEN}>
-            {isEN ? "PT" : "EN"}
+          <S.LangBtn isEN={isEN}>
+            {isEN ? (
+              <button
+                onClick={() => {
+                  handleLangPt()
+                }}
+              >
+                PT
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  handleLangEn()
+                }}
+              >
+                EN
+              </button>
+            )}
           </S.LangBtn>
 
           <S.SocialBox>
