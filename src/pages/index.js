@@ -1,5 +1,4 @@
 import React from "react"
-import axios from "axios"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
@@ -22,6 +21,10 @@ export default function IndexPage() {
           subtitlePt
           about
           aboutPt
+          textButtonOne
+          textButtonOnePt
+          textButtonTwo
+          textButtonTwoPt
           video {
             url
           }
@@ -32,6 +35,8 @@ export default function IndexPage() {
           paragraph
           paragraphPt
           cards
+          textButton
+          textButtonPt
         }
         services {
           title
@@ -73,6 +78,8 @@ export default function IndexPage() {
           buttonTextPt
           altImg
           slider
+          textPlaceholder
+          textPlaceholderPt
         }
       }
     }

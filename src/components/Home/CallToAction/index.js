@@ -1,17 +1,27 @@
 import React, { useState } from "react"
-
 import * as S from "./styled"
 import Header from "../../../components/Header"
 import Buttons2States from "../../../components/Buttons2States"
-
+import { graphql, useStaticQuery } from "gatsby"
 import { i18n } from "../../../translate/i18n"
-
 import ImageMobile from "../../../assets/images/Capa-Mobile-Video.jpg"
-import { ChatVideoDimensions } from "@styled-icons/fluentui-system-filled/ChatVideo"
 
 export default function CallToAction({ data }) {
-  const [isAppearing, setAppearing] = useState(false)
+  const query = useStaticQuery(graphql`
+    {
+      firsti {
+        callToActions {
+          textButtonOne
+          textButtonOnePt
+          textButtonTwo
+          textButtonTwoPt
+        }
+      }
+    }
+  `)
 
+  const [isAppearing, setAppearing] = useState(false)
+  const { firsti } = query
   const toggleClass = () => {
     setAppearing(!isAppearing)
 
@@ -25,8 +35,6 @@ export default function CallToAction({ data }) {
   i18n.addResourceBundle("en", "translations", data)
   i18n.addResourceBundle("pt", "translations", data)
 
-  console.log("key.title" + i18n.language === "pt" ? "Pt" : "")
-  console.log(i18n.language)
   return (
     <S.CTAContainer onClick={() => toggleClass()}>
       <S.BGVideo id="ct-video" autoPlay muted>
@@ -38,9 +46,11 @@ export default function CallToAction({ data }) {
         <Header title={i18n.t(i18n.language === "pt" ? "titlePt" : "title")} />
 
         <S.CTATextBox>
-          <S.CTAAbout>{data.about}</S.CTAAbout>
+          <S.CTAAbout>
+            {i18n.t(i18n.language === "pt" ? "aboutPt" : "about")}
+          </S.CTAAbout>
           <S.CTAOptions>
-            <Buttons2States />
+            <Buttons2States data={firsti.callToActions[0]} />
           </S.CTAOptions>
         </S.CTATextBox>
       </S.CTAWrapper>
