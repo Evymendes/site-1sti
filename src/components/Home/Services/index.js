@@ -1,10 +1,13 @@
-import React from "react";
+import React from "react"
 
-import * as S from "./styled";
-import Button from "../../../components/Button";
+import * as S from "./styled"
+import Button from "../../../components/Button"
+
+// i18n
+import { i18n } from "../../../translate/i18n"
 
 //images
-import IconPlus from '../../../assets/images/plus_icon.svg'
+import IconPlus from "../../../assets/images/plus_icon.svg"
 
 export default function Services(props) {
 
