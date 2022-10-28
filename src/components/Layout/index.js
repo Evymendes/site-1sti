@@ -15,7 +15,6 @@ const Main = styled.main`
   }
 `
 const Container = styled.section`
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
