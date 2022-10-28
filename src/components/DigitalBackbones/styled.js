@@ -158,7 +158,7 @@ export const Content = styled.div`
   
 `
 
-export const Teste = styled.div`
+export const BoxFirstsCard = styled.div`
   width: 100%;
 
   display: flex;

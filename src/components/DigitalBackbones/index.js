@@ -96,12 +96,12 @@ export default function DigitalBackbones() {
             </S.List>
           </S.BoxInformations>
 
-          <S.Teste>
+          <S.BoxFirstsCard>
             {cardServicesData.map(item => 
               item.id <= 2  && (
               <Services title={item.title} subscription={item.subscription}/>)
             )}
-          </S.Teste>
+          </S.BoxFirstsCard>
           
         </S.Content>
           <S.ContentListCards>
