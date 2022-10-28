@@ -15,17 +15,12 @@ const Main = styled.main`
   }
 `
 const Container = styled.section`
-<<<<<<< HEAD
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: -2;
   background-color: #0B1617;
-=======
-  z-index: -2;
-  background-color: #0b1617;
->>>>>>> bd3e389783e75d1a33bd40bb510e50d65e4d52d6
 `
 
 export default function Layout({ children, seo }) {
