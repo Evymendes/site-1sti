@@ -62,6 +62,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    height: 100vh;
+    width: 100%;
     background: #16202c;
     line-height: 1.5;
     color: #fff;

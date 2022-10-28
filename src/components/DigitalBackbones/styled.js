@@ -2,129 +2,237 @@ import styled from "styled-components";
 import BackbonesBG from "../../assets/images/bd_background.png";
 
 export const DBContainer = styled.div`
-  width: 100%;
-  position: relative;
-  background-color: #0B1617;
-  overflow: hidden;
-  z-index: 0;
-`;
-
-export const DBWrapper = styled.div`
-  margin: 0 auto;
-  padding: 4rem 0;
-  max-width: 1440px;
-  width: 100%;
-  min-height: calc(100vh - 4rem);
   height: 100%;
+  width: 100%;
+  max-width: 1440px;
 
-  @media (max-width: 1440px) {
-    padding: 4rem 3rem;
-  }
+  margin: 0 auto;
+  margin-top: 90px;
+  margin-bottom: 100px;
+  padding-block: 2px;
 
-  @media (max-width: 768px) {
-    padding: 4rem 2rem;
-  }
+
 `;
 
 export const DBHeader = styled.header`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-between;
   width: 100%;
-  min-height: 100vh;
+  
 
-  @media (max-width: 768px) {
-    padding: 0 2.5rem;
-    min-height: auto;
-    
-    h1 {
-      padding: 9rem 0 1rem;
-    }
+  @media(max-width: 1440px) {
+    padding-inline: 70px;
+  }
+
+  @media(max-width: 800px) {
+    padding-inline: 20px;
   }
 `;
 
 export const Space = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-  border: solid red;
-  margin: 1.75rem 4.563rem 0 4.563rem;
-  padding-top: 4.5rem;
-  
   width: 100%;
-  min-height: calc(100vh - 4rem);
+  margin-top: 39px;
+  display: flex;
 
-  @media (max-width: 1440px) {
-    padding: 4rem 4rem 0 4rem;
+  
+  img {
+    margin-left: 50px;
+    width: 540px;
+    height: 540px;
   }
 
-  @media (max-width: 768px) {
-    padding: 0;
-    min-height: auto;
-    
-    h1 {
-      padding: 9rem 0 1rem;
+  @media(max-width: 1030px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    img {
+      width: 480px;
+      height: 480px;
+    }
+  }
+
+  @media(max-width: 700px) {
+    img {
+      width: 250px;
+      height: 250px;
+
+      position: relative;
+      left: -30px;
     }
   }
 `;
 
+export const DBTitleBox = styled.div`
+  width: 100%;
+`;
+
+export const DBMainTitle = styled.h2`
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 60px;
+  letter-spacing: 0;
+  
+
+`;
+  
+export const DBDescription = styled.h3`
+  width: 100%;
+  max-width: 650px;
+  margin-top: 32px;
+
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #38EEFF;
+`;
+  
+export const BoxInformations = styled.div`
+  position: relative;
+  bottom: 160px;
+
+  
+  @media(max-width: 1440px) {
+    padding-left: 70px;
+  }
+
+  @media(max-width: 800px) {
+    padding-left: 20px;
+  }
+
+  @media(max-width: 1030px) {
+    position: initial;
+    margin-bottom: 32px;
+  }
+`
+
+export const TextExpirience = styled.p`
+  max-width: 360px;
+  font-size: 18px;
+  margin-bottom: 38px;
+
+  @media(max-width: 800px) {
+    font-size: 18px;
+    font-weight: 400;
+  } 
+
+`
+
+
+export const List = styled.ul`
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  strong {
+    @media(max-width: 800px) {
+      font-size: 18px;
+      font-weight: 400;
+    } 
+  }
+
+  li {
+    flex: 1;
+    line-height: 28px;
+
+    @media(max-width: 800px) {
+      font-size: 16px;
+      font-weight: 400;
+    } 
+  }
+`
+
+export const Content = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: 38px;
+
+  @media(max-width: 1030px) {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  
+
+  
+`
+
+export const Teste = styled.div`
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+  gap: 1px;
+  
+  
+  @media(max-width: 1030px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+`
+
+export const ContentListCards = styled.div`
+  width: 100%;
+  display: flex;
+  display: grid;
+
+  @media(max-width: 1030px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+`
+
+export const ListCard = styled.div`
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1px;
+  margin-top: 1px;
+
+@media(max-width: 1030px) {
+  display: flex;
+  justify-content: end;
+  gap: 1px;
+
+}
+
+;
+
+  @media(max-width: 1030px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+  }
+`;
+
+
+
 
 // Text about the service
 export const DBAbout = styled.section`
-  margin: 0 auto;
+  /* margin: 0 auto;
   width: 85%;
   font-weight: 300;
 
   p,
   ul {
     max-width: 480px;
-  }
+  } */
 `;
 
-export const DBTitleBox = styled.div`
-  & > h3 {
-    color: #00C8DB;
-  }
-
-  @media (max-width: 768px) {
-    margin: 7rem auto 0;
-    width: 100%;
-  }
-`;
-  
-export const DBMainTitle = styled.h2`
-  font-size: 4rem;
-  font-weight: bold;
-  font-family: GoshaSans;
-  @media (max-width: 768px) {
-    max-width: 250px;
-    font-size: 2.4em;
-    line-height: 1;
-  }
-`;
   
 export const DBTitle = styled.h2`
-  margin: 2.5rem 0 1rem;
+  /* margin: 2.5rem 0 1rem;
   font-size: 1.6em;
   font-weight: 600;
-  letter-spacing: .3px;
+  letter-spacing: .3px; */
 `;
-  
-export const DBDescription = styled.h3`
-  margin: 2.375rem 0 1rem;
-  font-size: 1.875rem;
-  font-weight: bold;
-  font-family: CabinetGrotesk;
-  width: 40rem;
-  @media (max-width: 768px) {
-    max-width: 240px;
-    font-size: 1.2em;
-  }
-`;
-  
+
 export const DBSubtitle = styled.h3`
   margin: 1.5rem 0 2rem;
   font-size: 1.3em;
