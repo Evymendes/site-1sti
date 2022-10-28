@@ -109,7 +109,7 @@ export const Title = styled.h2`
 export const DescriptionCard = styled.p`
 	height: 6.5rem;
 	margin-top: 2.25rem;
-	font-family: Cabinet Grotesk;
+	font-family: CabinetGrotesk;
 	font-size: 1.375rem;
 	color: #7E7E7E;
 	z-index: 1;

@@ -9,62 +9,20 @@ export default function DigitalBackbones() {
   const {
     firsti: {
       contentServices: [{ 
-        digitalBlackbones, 
-        companieOne, 
-        companieTwo, 
-        companieTree, 
-        companies, 
-        subCompanieOne, 
-        subCompanieTwo, 
-        subCompanieTree, 
-        subTitle, 
-        textWhatIs, 
-        partneringText, 
-        whatIs,
-        deepTitle,
-        deepSub,
-        visionaryTitle,
-        visionarySub,
-        imageCubo,
-        imageEstrela,
-        imageCuboMobile,
-        imageEstrelaMobile,
-        explorer
+        title,
+        titlePt,
+        subtitle,
+        subtitlePt
       }],
     },
   } = useStaticQuery(graphql`
   query MyQueryServices {
     firsti {
       contentServices {
-        digitalBlackbones
-        companieOne
-        companieTwo
-        companieTree
-        companies
-        subCompanieOne
-        subCompanieTwo
-        subCompanieTree
-        subTitle
-        textWhatIs
-        partneringText
-        whatIs
-        deepTitle
-        deepSub
-        visionaryTitle
-        visionarySub
-        imageCubo {
-          url
-        }
-        imageEstrela {
-          url
-        }
-        imageCuboMobile {
-          url
-        }
-        imageEstrelaMobile {
-          url
-        }
-        explorer
+        title
+        titlePt
+        subtitle
+        subtitlePt
       }
     }
   }
@@ -75,22 +33,20 @@ export default function DigitalBackbones() {
   return (
     <S.DBContainer>
         <S.DBHeader>
-          <S.DBBackground />
         <S.Space>
-          <Header title="Our Services" />
           <S.DBTitleBox>
             <S.DBMainTitle>
-              {digitalBlackbones}
+              {titlePt}
             </S.DBMainTitle>
             <S.DBDescription>
-              {subTitle}
+              {subtitlePt}
             </S.DBDescription>
           </S.DBTitleBox>
         </S.Space>
         </S.DBHeader>
       <S.DBWrapper>
 
-        <S.DBAbout>
+        {/* <S.DBAbout>
           <S.DBParagraph>Before embarking on a digital transformation, businesses often contend with complexities that stem from:</S.DBParagraph>
 
           <S.DBList>
@@ -147,7 +103,7 @@ export default function DigitalBackbones() {
             <Button to="/services">Read more</Button>
           </S.Service>
           <Button to="/services">Read more</Button>
-        </S.OtherServices>
+        </S.OtherServices> */}
       </S.DBWrapper>
     </S.DBContainer>
   );

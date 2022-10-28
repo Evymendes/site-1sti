@@ -7,7 +7,7 @@ export const Journeys = styled.section`
     
     @media(min-width: 1460px){
         justify-content: left;
-        gap: 20rem;
+        gap: 16rem;
     }
     @media(max-width: 1250px){
         flex-direction: column;
@@ -18,7 +18,6 @@ export const Journeys = styled.section`
     @media(max-width: 768px){
         margin: 112rem 1.5rem;
     }
-
 `
 export const Left = styled.div`
     max-width: 15rem;

@@ -50,9 +50,10 @@ export const Space = styled.div`
   justify-content: center;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 auto;
-  padding-top: 4rem;
-  max-width: 1440px;
+  border: solid red;
+  margin: 1.75rem 4.563rem 0 4.563rem;
+  padding-top: 4.5rem;
+  
   width: 100%;
   min-height: calc(100vh - 4rem);
 
@@ -70,33 +71,6 @@ export const Space = styled.div`
   }
 `;
 
-// Header's background
-export const DBBackground = styled.div`
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(${BackbonesBG});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-
-  @media (min-width: 1440px) {
-    width: 100%;
-  }
-
-  @media (min-width: 768px) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  @media (max-width: 768px) {
-    bottom: 6rem;
-    height: 38%;
-  }
-`;
 
 // Text about the service
 export const DBAbout = styled.section`
@@ -111,9 +85,6 @@ export const DBAbout = styled.section`
 `;
 
 export const DBTitleBox = styled.div`
-  margin: 0 auto;
-  width: 85%;
-
   & > h3 {
     color: #00C8DB;
   }
@@ -125,9 +96,9 @@ export const DBTitleBox = styled.div`
 `;
   
 export const DBMainTitle = styled.h2`
-  font-size: 3.5em;
-  font-weight: 600;
-
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: GoshaSans;
   @media (max-width: 768px) {
     max-width: 250px;
     font-size: 2.4em;
@@ -143,10 +114,11 @@ export const DBTitle = styled.h2`
 `;
   
 export const DBDescription = styled.h3`
-  margin: 2.5rem 0 1rem;
-  font-size: 1.8em;
-  font-weight: 400;
-
+  margin: 2.375rem 0 1rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-family: CabinetGrotesk;
+  width: 40rem;
   @media (max-width: 768px) {
     max-width: 240px;
     font-size: 1.2em;

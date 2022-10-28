@@ -123,6 +123,7 @@ export const Card = styled.div`
 `;
 
 export const ImageCard = styled.img`
+	border-radius: 50%;
 	width: 100%;
 	transition: .3s;
 `;
