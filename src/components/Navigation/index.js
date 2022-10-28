@@ -66,6 +66,7 @@ export default function Navigation() {
           <S.NavLink to="/services" activeClassName="active">
             Services
           </S.NavLink>
+          <S.NavLink to="/content-cards">Cards</S.NavLink>
           <S.NavLink to="/insights" activeClassName="active">
             Insights
           </S.NavLink>
