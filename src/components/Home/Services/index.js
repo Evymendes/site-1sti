@@ -9,21 +9,48 @@ import { i18n } from "../../../translate/i18n"
 //images
 import IconPlus from "../../../assets/images/plus_icon.svg"
 
-export default function Services(props) {
+export default function Services({ data }) {
+  i18n.addResourceBundle("en", "translations", data)
+  i18n.addResourceBundle("pt", "translations", data)
 
-	return (
-		<S.ContainerServices>
-			<S.ContentServices>
-				<div>
-					<S.TitleServices>{props.title}</S.TitleServices>
-					<S.Description>{props.subscription}</S.Description>
-				</div>
+  return (
+    <S.ContainerServices>
+      <S.ContentContainer>
+        <S.BoxText>
+          <S.Title>
+            {i18n.t(i18n.language === "pt" ? "titlePt" : "title")}
+          </S.Title>
+          <S.Description>
+            {i18n.t(i18n.language === "pt" ? "paragraphPt" : "paragraph")}
+          </S.Description>
+        </S.BoxText>
 
-				<S.LinkKnowMore>
-					<a href="#">Saiba mais</a>
-					<img src={IconPlus} alt="Ícone de um +"/>
-				</S.LinkKnowMore>
-			</S.ContentServices>
-		</S.ContainerServices>
-	);
-};
+        {i18n.language === "pt"
+          ? data.cards.cardPt.map((item, i) => (
+              <S.Card key={i} bg={item.bg}>
+                <S.Title>{item.title}</S.Title>
+                <S.DescriptionCard>{item.text}</S.DescriptionCard>
+                <S.LinkKnowMore>
+                  <a href="#">
+                    {i18n.t(i18n.language === "pt" ? "knowMorePt" : "knowMore")}
+                  </a>
+                  <img src={IconPlus} alt="Ícone de um +" />
+                </S.LinkKnowMore>
+              </S.Card>
+            ))
+          : data.cards.card.map((item, i) => (
+              <S.Card key={i} bg={item.bg}>
+                <S.Title>{item.title}</S.Title>
+                <S.DescriptionCard>{item.text}</S.DescriptionCard>
+                <S.LinkKnowMore>
+                  <a href="#">{data.knowMore}</a>
+                  <img src={IconPlus} alt="Ícone de um +" />
+                </S.LinkKnowMore>
+              </S.Card>
+            ))}
+
+        <S.DivBlack></S.DivBlack>
+      </S.ContentContainer>
+    </S.ContainerServices>
+  )
+}

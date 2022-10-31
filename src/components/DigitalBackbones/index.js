@@ -2,11 +2,11 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Imgheader from '../../assets/images/agility_img.png'
 
-import Services from '../Home/Services'
-
 import * as S from "./styled";
 import Header from "../Header";
 import Button from "../Button";
+
+import CardServices from '../CardServices'
 
 
 export default function DigitalBackbones() {
@@ -34,6 +34,10 @@ export default function DigitalBackbones() {
   }
 `)
 
+
+
+
+
   const cardServicesData = [
     {
       id: 1,
@@ -57,11 +61,6 @@ export default function DigitalBackbones() {
     },
     {
       id: 5,
-      title: 'Deep Analytics',
-      subscription: 'Amplificando análise de dados para multiplicar oportunidades' 
-    },
-    {
-      id: 6,
       title: 'Deep Analytics',
       subscription: 'Amplificando análise de dados para multiplicar oportunidades' 
     }
@@ -99,7 +98,7 @@ export default function DigitalBackbones() {
           <S.BoxFirstsCard>
             {cardServicesData.map(item => 
               item.id <= 2  && (
-              <Services title={item.title} subscription={item.subscription}/>)
+              <CardServices title={item.title} subscription={item.subscription}/>)
             )}
           </S.BoxFirstsCard>
           
@@ -108,7 +107,7 @@ export default function DigitalBackbones() {
             <S.ListCard>
             {cardServicesData.map(item => 
                 item.id > 2  && (
-                <Services title={item.title} subscription={item.subscription}/>)
+                <CardServices title={item.title} subscription={item.subscription}/>)
               )}
             </S.ListCard>
           </S.ContentListCards>
