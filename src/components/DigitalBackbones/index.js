@@ -1,116 +1,128 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import Imgheader from '../../assets/images/agility_img.png'
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Imgheader from "../../assets/images/agility_img.png"
 
-import * as S from "./styled";
-import Header from "../Header";
-import Button from "../Button";
+import * as S from "./styled"
+import Header from "../Header"
+import Button from "../Button"
 
-import CardServices from '../CardServices'
-
+import CardServices from "../CardServices"
 
 export default function DigitalBackbones() {
   const {
     firsti: {
-      contentServices: [{ 
-        title,
-        titlePt,
-        subtitle,
-        subtitlePt,
-        publishedAt
-      }],
+      contentServices: [{ title, titlePt, subtitle, subtitlePt, publishedAt }],
     },
   } = useStaticQuery(graphql`
-  query MyQueryServices {
-    firsti {
-      contentServices {
-        title
-        titlePt
-        subtitle
-        subtitlePt
-        publishedAt
+    query MyQueryServices {
+      firsti {
+        contentServices {
+          title
+          titlePt
+          subtitle
+          subtitlePt
+          publishedAt
+        }
       }
     }
-  }
-`)
-
-
-
-
+  `)
 
   const cardServicesData = [
     {
       id: 1,
-      title: 'Estratégia Digital',
-      subscription: 'A tecnologia como meio para transformações profundas'
+      title: "Estratégia Digital",
+      subscription: "A tecnologia como meio para transformações profundas",
+      link: "/social-strategy",
     },
     {
       id: 2,
-      title: 'Backbones Digitais',
-      subscription: 'Acelerando inovações com agilidade aumentada' 
+      title: "Backbones Digitais",
+      subscription: "Acelerando inovações com agilidade aumentada",
+      link: "/backbones-digitais",
     },
     {
       id: 3,
-      title: 'Plataformas Digitais',
-      subscription: 'O caminho para o presente e o futuro dos negócios' 
+      title: "Plataformas Digitais",
+      subscription: "O caminho para o presente e o futuro dos negócios",
     },
     {
       id: 4,
-      title: 'Inovação Deep Tech',
-      subscription: 'Tecnologias visionárias para inovação de alto impacto' 
+      title: "Inovação Deep Tech",
+      subscription: "Tecnologias visionárias para inovação de alto impacto",
     },
     {
       id: 5,
-      title: 'Deep Analytics',
-      subscription: 'Amplificando análise de dados para multiplicar oportunidades' 
-    }
-  ] 
-    
+      title: "Deep Analytics",
+      subscription:
+        "Amplificando análise de dados para multiplicar oportunidades",
+    },
+  ]
+
+  // função para direcionar os cards via props
+  const RenderCardServices = (card, index) => {
+    return (
+      <>
+        {cardServicesData.map((card, index) => (
+          <CardServices
+            key={index}
+            title={card.title}
+            subscription={card.subscription}
+            link={card.link}
+          />
+        ))}
+      </>
+    )
+  }
+
   return (
     <S.DBContainer>
-        <S.DBHeader>
+      <S.DBHeader>
         <S.Space>
           <S.DBTitleBox>
-            <S.DBMainTitle>
-              {titlePt}
-            </S.DBMainTitle>
-            <S.DBDescription>
-              {subtitlePt}
-            </S.DBDescription>
+            <S.DBMainTitle>{titlePt}</S.DBMainTitle>
+            <S.DBDescription>{subtitlePt}</S.DBDescription>
           </S.DBTitleBox>
-          <img src={Imgheader} alt="asdasds"/>
+          <img src={Imgheader} alt="asdasds" />
         </S.Space>
-        </S.DBHeader>
-        <S.Content>
-          <S.BoxInformations>
-            <S.TextExpirience>
-            Experiência profunda em arquitetura digital, iniciativas estratégicas e de missão crítica, sendo pioneira em Deep Tech, a 1STi está pronta para inserir sua empresa em uma jornada de tecnologia com alma e impacto, que:
-            </S.TextExpirience>
-            <S.List>
-              <li>
+      </S.DBHeader>
+      <S.Content>
+        <S.BoxInformations>
+          <S.TextExpirience>
+            Experiência profunda em arquitetura digital, iniciativas
+            estratégicas e de missão crítica, sendo pioneira em Deep Tech, a
+            1STi está pronta para inserir sua empresa em uma jornada de
+            tecnologia com alma e impacto, que:
+          </S.TextExpirience>
+          <S.List>
+            <li>
               • <strong>Eleva</strong> propostas de valor,
-              </li>
-              <li>• <strong>Escala</strong> soluções com agilidade aumentada, e</li>
-              <li>• <strong>Amplifica</strong> resultados com tecnologias emergentes e inovação profunda.</li>
-            </S.List>
-          </S.BoxInformations>
+            </li>
+            <li>
+              • <strong>Escala</strong> soluções com agilidade aumentada, e
+            </li>
+            <li>
+              • <strong>Amplifica</strong> resultados com tecnologias emergentes
+              e inovação profunda.
+            </li>
+          </S.List>
+        </S.BoxInformations>
 
-          <S.BoxFirstsCard>
-            {cardServicesData.map(item => 
+        <S.BoxFirstsCard>
+          {/* {cardServicesData.map(item => 
               item.id <= 2  && (
-              <CardServices title={item.title} subscription={item.subscription}/>)
-            )}
-          </S.BoxFirstsCard>
-          
-        </S.Content>
-          <S.ContentListCards>
-            <S.ListCard>
-            {cardServicesData.map(item => 
+              <CardServices link={item.link} title={item.title} subscription={item.subscription}/>)
+            )} */}
+        </S.BoxFirstsCard>
+      </S.Content>
+      <S.ContentListCards>
+        <S.ListCard>
+          <RenderCardServices />
+          {/* {cardServicesData.map(item => 
                 item.id > 2  && (
-                <CardServices title={item.title} subscription={item.subscription}/>)
-              )}
-            </S.ListCard>
-          </S.ContentListCards>
+                <CardServices link={item.link} title={item.title} subscription={item.subscription}/>)
+              )} */}
+        </S.ListCard>
+      </S.ContentListCards>
     </S.DBContainer>
-  );
+  )
 }
