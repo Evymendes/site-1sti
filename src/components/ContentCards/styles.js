@@ -119,9 +119,16 @@ export const DBParagraph = styled.p`
 
 export const DBImageBox = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   width: 100%;
   border: 2px solid red;
+
+  h3 {
+    color: #00c8db;
+  }
+  img {
+    width: 500px;
+  }
   @media (max-width: 768px) {
     justify-content: center;
   }

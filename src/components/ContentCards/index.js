@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import * as S from "./styles"
 
 import IconPlus from "../../assets/images/plus_icon.svg"
+import ImageStrategy from '../../assets/images/estrategia.png'
 
 export default function ContentCard() {
   const data = useStaticQuery(graphql`
@@ -38,11 +39,11 @@ export default function ContentCard() {
           <S.Space>
             <S.DBTitleBox>
               <S.DBMainTitle>{title}</S.DBMainTitle>
-              <S.DBDescription>{subtitle}</S.DBDescription>
-            </S.DBTitleBox>
             <S.DBImageBox>
-              <h1>OI</h1>
+              <S.DBDescription>{subtitle}</S.DBDescription>
+              <img src={ImageStrategy} alt='Image Strategy' />
             </S.DBImageBox>
+            </S.DBTitleBox>
             <S.DBAbout>
               <S.DBParagraph>{paragraphOne}</S.DBParagraph>
             </S.DBAbout>
