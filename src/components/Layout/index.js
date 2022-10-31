@@ -8,13 +8,18 @@ import Navigation from "../Navigation"
 import Footer from "../Footer"
 
 const Main = styled.main`
+
+  height: 100%;
   @media (min-width: 1440px) {
     font-size: 1.3rem;
   }
 `
 const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: -2;
-  background-color: #0b1617;
+  background-color: #0B1617;
 `
 
 export default function Layout({ children, seo }) {
@@ -41,9 +46,9 @@ export default function Layout({ children, seo }) {
 
   return (
     <Container>
-      <Seo title={seo} />
-
       <GlobalStyle />
+      <Seo title={seo} />
+      
       <Navigation />
       <Main>{children}</Main>
       <Footer data={firsti.footers[0]} />
