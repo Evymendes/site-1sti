@@ -24,14 +24,14 @@ export default function Navigation() {
   const Button_Language = "buttonlanguage"
 
   const handleLangEn = () => {
-    localStorage.setItem(I18N_STORAGE_KEY, "en")
+    localStorage.setItem(I18N_STORAGE_KEY, "pt")
     window.location = window.location
     localStorage.setItem(Button_Language, false)
   }
 
   const handleLangPt = () => {
-    setIsEN(I18N_STORAGE_KEY === "en" ? true : false)
-    localStorage.setItem(I18N_STORAGE_KEY, "pt")
+    setIsEN(I18N_STORAGE_KEY === "en" ? false : true)
+    localStorage.setItem(I18N_STORAGE_KEY, "en")
     window.location = window.location
   }
 
@@ -75,7 +75,7 @@ export default function Navigation() {
             Contact
           </S.NavLink>
           <S.LangBtn isEN={isEN}>
-            {isEN ? (
+            {isEN === false ? (
               <button
                 onClick={() => {
                   handleLangPt()

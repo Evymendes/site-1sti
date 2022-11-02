@@ -41,6 +41,10 @@ export const ContentServices = styled.div`
 	}
 `;
 
+export const BoxTexts = styled.div`
+	width: 100%;
+`
+
 export const TitleServices = styled.h2`
 	width: 100%;
 	max-width: 150px;
@@ -55,6 +59,11 @@ export const TitleServices = styled.h2`
 		font-size: 25px;
 		margin-bottom: 25px;
 		margin-top: 0px;
+	}
+
+	@media(max-width: 350px) {
+		font-size: 16px;
+
 	}
 `;
 

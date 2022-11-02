@@ -114,7 +114,7 @@ export const LangBtn = styled.button`
   }
 
   &:after {
-    content: "∙ ${props => (props.isEN ? "EN" : "PT")}";
+    content: "∙ ${props => (props.isEN ? "PT" : "EN")}";
     top: 3px;
     left: 150%;
     width: 3rem;
