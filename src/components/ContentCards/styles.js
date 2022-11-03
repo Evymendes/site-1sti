@@ -3,17 +3,34 @@ import BackbonesBG from "../../assets/images/bd_background.png"
 
 export const DBContainer = styled.div`
   width: 100%;
-  position: relative;
   background-color: #0b1617;
   overflow: hidden;
   z-index: 0;
 `
 
+export const DBContent = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  
+  @media(max-width: 1440px) {
+    padding-inline: 70px;
+  }
+
+  @media (max-width: 1210px) {
+    padding-inline: 40px;
+  }
+
+  @media (max-width: 800px) {
+    padding-inline: 20px;
+  }
+
+`
+
 export const DBWrapper = styled.div`
-  padding: 4rem 4rem;
   /* max-width: 1440px; */
   width: 100%;
-  min-height: calc(100vh - 4rem);
   height: 100%;
 `
 
@@ -21,7 +38,6 @@ export const DBHeader = styled.header`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 100vh;
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -31,12 +47,8 @@ export const DBHeader = styled.header`
 
 export const Space = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  /* margin: 1.75rem 4.563rem 0 4.563rem; */
-  padding-top: 4.5rem;
-  width: 100%;
-  min-height: calc(100vh - 4rem);
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     margin: 0;
@@ -44,60 +56,71 @@ export const Space = styled.div`
     justify-content: flex-start;
   }
 `
+export const BoxTexts = styled.div`
+  display: flex;
+  flex-direction: column;
 
-// Text about the cards
-export const DBAbout = styled.section`
-  padding-top: 2rem;
-  font-weight: 500;
+  position: relative;
+  gap: 32px;
 
-  p,
-  ul {
-    max-width: 480px;
-  }
+  @media (max-width: 1340px) {
+    position: inital;
+    bottom: 0;
 
-  @media (max-width: 768px) {
-    width: 85%;
+    margin-top: 64px;
   }
 `
 
+// Text about the cards
+export const DBAbout = styled.section`
+  font-weight: 500;
+
+  p,ul {
+    width: 100%;
+    max-width: 480px;
+  }
+
+`
+
 export const DBTitleBox = styled.div`
+  width: 100%;
+  max-width: 500px;
+
+  @media (max-width: 1340px) {
+    margin-bottom: 32px;
+  }
+
   & > h3 {
     color: #00c8db;
   }
 
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & > h3 {
-      font-size: 1.5rem;
-    }
-  }
 `
 
 export const DBMainTitle = styled.h2`
   font-size: 4rem;
   font-weight: bold;
   font-family: GoshaSans;
+  width: 100%;
   max-width: 300px;
+
   @media (max-width: 768px) {
     line-height: 4rem;
-    font-size: 3.625rem;
+    font-size: 2.5rem;
   }
 `
 
 export const DBDescription = styled.h3`
-  margin: 2.375rem 0 1rem;
+  margin: 2.375rem 0 5rem 0;
   font-size: 1.875rem;
-  font-weight: bold;
+  font-weight: 600;
   font-family: CabinetGrotesk;
+  width: 100%;
   max-width: 500px;
 
   @media (max-width: 768px) {
-    max-width: 300px;
-    width: 40rem;
     margin: 0;
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
   }
 `
 
@@ -110,7 +133,6 @@ export const DBSubtitle = styled.h3`
 export const DBParagraph = styled.p`
   display: flex;
   flex-direction: column;
-  /* font-size: 1em; */
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -118,19 +140,25 @@ export const DBParagraph = styled.p`
 `
 
 export const DBImageBox = styled.div`
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  border: 2px solid red;
+  max-width: 627px;
+  margin-top: 106px;
 
-  h3 {
-    color: #00c8db;
-  }
   img {
-    width: 500px;
+    width: 100%;
+    height: 439px;
   }
-  @media (max-width: 768px) {
-    justify-content: center;
+
+  @media (max-width: 1340px) {
+    margin-top: 0;
+  }
+  
+  @media (max-width: 600px) {
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 `
 export const DBContentContactUs = styled.div`
@@ -219,6 +247,9 @@ export const Card = styled.div`
       height: 5.719rem;
     }
   }
+  img {
+    display: none;
+  }
   &:hover {
     p {
       color: #38eeff;
@@ -230,8 +261,8 @@ export const Card = styled.div`
     a {
       color: #af39e6;
     }
-    svg {
-      color: #af39e6;
+    img {
+      display: block;
     }
   }
   @media (max-width: 768px) {
