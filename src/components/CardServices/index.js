@@ -6,18 +6,18 @@ import * as S from "./styles.js"
 import IconPlus from "../../assets/images/plus_icon.svg"
 import { Link } from "gatsby";
 
-export default function Services({title, subscription, link, onClick}) {
+export default function Services({title, subscription}) {
 
 	return (
 		<S.ContainerServices>
 			<S.ContentServices>
-				<div>
+				<S.BoxTexts>
 					<S.TitleServices>{title}</S.TitleServices>
 					<S.Description>{subscription}</S.Description>
-				</div>
+				</S.BoxTexts>
 
 				<S.LinkKnowMore>
-					<Link onClick={onClick} to={link}>Saiba mais</Link>
+					<Link to="/">Saiba mais</Link>
 					<img src={IconPlus} alt="Ícone de um +"/>
 				</S.LinkKnowMore>
 			</S.ContentServices>

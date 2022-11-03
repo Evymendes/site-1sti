@@ -119,18 +119,13 @@ export const TextExpirience = styled.p`
 
 
 export const List = styled.ul`
+  width: 100%;
+  max-width: 420px;
   font-size: 18px;
 
   display: flex;
   flex-direction: column;
   gap: 5px;
-
-  strong {
-    @media(max-width: 800px) {
-      font-size: 18px;
-      font-weight: 400;
-    } 
-  }
 
   li {
     flex: 1;

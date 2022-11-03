@@ -1,31 +1,37 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Imgheader from "../../assets/images/agility_img.png"
-
+import { i18n } from "../../translate/i18n"
 import * as S from "./styled"
 import Header from "../Header"
 import Button from "../Button"
 
 import CardServices from "../CardServices"
 
-export default function DigitalBackbones() {
+export default function DigitalBackbones({data}) {
   const {
     firsti: {
-      contentServices: [{ title, titlePt, subtitle, subtitlePt, publishedAt }],
+      contentServices: [{ titleService, titleServicePt, subtitle, subtitlePt, descriptionProposals, descriptionProposalsPt, proposals, proposalsPt
+      }],
     },
   } = useStaticQuery(graphql`
     query MyQueryServices {
       firsti {
         contentServices {
-          title
-          titlePt
+          titleService
+          titleServicePt
           subtitle
           subtitlePt
-          publishedAt
-        }
+          descriptionProposals
+          descriptionProposalsPt
+          proposals
+          proposalsPt
+        },
+      
       }
     }
   `)
+
 
   const cardServicesData = [
     {
@@ -62,11 +68,11 @@ export default function DigitalBackbones() {
   const RenderCardServices = (card, index) => {
     return (
       <>
-        {cardServicesData.map((card, index) => (
+        {data.cards.card.map((card, index) => (
           <CardServices
             key={index}
             title={card.title}
-            subscription={card.subscription}
+            subscription={card.text}
             link={card.link}
           />
         ))}
@@ -74,13 +80,16 @@ export default function DigitalBackbones() {
     )
   }
 
+  i18n.addResourceBundle("en", "translations", data)
+  i18n.addResourceBundle("pt", "translations", data)
+
   return (
     <S.DBContainer>
       <S.DBHeader>
         <S.Space>
           <S.DBTitleBox>
-            <S.DBMainTitle>{titlePt}</S.DBMainTitle>
-            <S.DBDescription>{subtitlePt}</S.DBDescription>
+            <S.DBMainTitle>{i18n.language === 'pt' ? titleServicePt : titleService}</S.DBMainTitle>
+            <S.DBDescription>{i18n.language === 'pt' ? subtitlePt : subtitle}</S.DBDescription>
           </S.DBTitleBox>
           <img src={Imgheader} alt="asdasds" />
         </S.Space>
@@ -88,39 +97,34 @@ export default function DigitalBackbones() {
       <S.Content>
         <S.BoxInformations>
           <S.TextExpirience>
-            Experiência profunda em arquitetura digital, iniciativas
-            estratégicas e de missão crítica, sendo pioneira em Deep Tech, a
-            1STi está pronta para inserir sua empresa em uma jornada de
-            tecnologia com alma e impacto, que:
+            {i18n.language === 'pt' ? descriptionProposalsPt : descriptionProposals}
           </S.TextExpirience>
           <S.List>
-            <li>
-              • <strong>Eleva</strong> propostas de valor,
-            </li>
-            <li>
-              • <strong>Escala</strong> soluções com agilidade aumentada, e
-            </li>
-            <li>
-              • <strong>Amplifica</strong> resultados com tecnologias emergentes
-              e inovação profunda.
-            </li>
+          {i18n.language === "pt" ? proposalsPt.proposals.map(item => (
+            <li>{item.text}</li>
+          )) : proposals.proposals.map(item => (
+            <li>{item.text}</li>
+          ))}
           </S.List>
         </S.BoxInformations>
-
-        <S.BoxFirstsCard>
-          {/* {cardServicesData.map(item => 
-              item.id <= 2  && (
-              <CardServices link={item.link} title={item.title} subscription={item.subscription}/>)
-            )} */}
-        </S.BoxFirstsCard>
       </S.Content>
       <S.ContentListCards>
         <S.ListCard>
-          <RenderCardServices />
-          {/* {cardServicesData.map(item => 
-                item.id > 2  && (
-                <CardServices link={item.link} title={item.title} subscription={item.subscription}/>)
-              )} */}
+          {i18n.language === "pt"
+          ? data.cards.cardPt.map((item, i) => (
+            <CardServices
+              key={i}
+              title={item.title}
+              subscription={item.text}
+            />
+            ))
+          : data.cards.card.map((item, i) => (
+            <CardServices
+              key={i}
+              title={item.title}
+              subscription={item.text}
+            />
+            ))}
         </S.ListCard>
       </S.ContentListCards>
     </S.DBContainer>
