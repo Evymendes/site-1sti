@@ -56,84 +56,90 @@ export default function SocialStrategy({ datas }) {
 
   return (
     <S.DBContainer>
-      <S.DBHeader>
-        <S.DBWrapper>
-          <S.Space>
-            <S.DBTitleBox>
-              <S.DBMainTitle>
-                {i18n.language === "pt" ? titlePt : title}
-              </S.DBMainTitle>
-              <S.DBDescription>
-                {i18n.language === "pt" ? subtitlePt : subtitle}
-              </S.DBDescription>
-            </S.DBTitleBox>
-            <S.DBAbout>
-              <S.DBParagraph>
-                {i18n.language === "pt" ? descriptionPt : description}
-              </S.DBParagraph>
-            </S.DBAbout>
-            <S.DBAbout>
-              <S.DBParagraph>
-                {i18n.language === "pt" ? descriptionTwoPt : descriptionTwo}
-              </S.DBParagraph>
-            </S.DBAbout>
-          </S.Space>
-        </S.DBWrapper>
-        <S.DBImageBox>
-          <img src={ImageStrategy} alt="Image Strategy" />
-        </S.DBImageBox>
-      </S.DBHeader>
-      <S.DBContentContactUs>
-        <S.DBContentContactUsWrapper>
-          <S.DBContentContactUsTitle>
-            <h2>
-              {i18n.language === "pt" ? titleContactUsPt : titleContactUs}
-            </h2>
-          </S.DBContentContactUsTitle>
-          <button>
-            {i18n.language === "pt"
-              ? textButtonContactUsPt
-              : textButtonContactUs}
-          </button>
-        </S.DBContentContactUsWrapper>
-        <S.ContentListCards>
-          <S.ListCard>
-            {i18n.language === "pt"
-              ? datas.cards.cardPt.map((item, i) => {
-                  return (
-                    <>
-                      {url !== item.link && (
-                        <S.Card key={i}>
-                          <S.Title>{item.title}</S.Title>
-                          <S.DescriptionCard>{item.text}</S.DescriptionCard>
-                          <S.LinkKnowMore>
-                            <a href={item.link}>{datas.knowMorePt}</a>
-                            <img src={IconPlus} alt="Icon Plus" />
-                          </S.LinkKnowMore>
-                        </S.Card>
-                      )}
-                    </>
-                  )
-                })
-              : datas.cards.card.map((item, i) => {
-                  return (
-                    <>
-                      {url !== item.link && (
-                        <S.Card key={i}>
-                          <S.Title>{item.title}</S.Title>
-                          <S.DescriptionCard>{item.text}</S.DescriptionCard>
-                          <S.LinkKnowMore>
-                            <a href={item.link}>{datas.knowMore}</a>
-                            <img src={IconPlus} alt="Icon Plus" />
-                          </S.LinkKnowMore>
-                        </S.Card>
-                      )}
-                    </>
-                  )
-                })}
-          </S.ListCard>
-        </S.ContentListCards>
-      </S.DBContentContactUs>
+      <S.DBContent>
+        <S.DBHeader>
+          <S.DBWrapper>
+            <S.Space>
+              <S.DBTitleBox>
+                <S.DBMainTitle>
+                  {i18n.language === "pt" ? titlePt : title}
+                </S.DBMainTitle>
+                <S.DBDescription>
+                  {i18n.language === "pt" ? subtitlePt : subtitle}
+                </S.DBDescription>
+              </S.DBTitleBox>
+              <S.DBImageBox>
+                <img src={ImageStrategy} alt="Image Strategy" />
+              </S.DBImageBox>
+            </S.Space>
+              <S.BoxTexts>
+                <S.DBAbout>
+                  <S.DBParagraph>
+                    {i18n.language === "pt" ? descriptionPt : description}
+                  </S.DBParagraph>
+                </S.DBAbout>
+                <S.DBAbout>
+                  <S.DBParagraph>
+                    {i18n.language === "pt" ? descriptionTwoPt : descriptionTwo}
+                  </S.DBParagraph>
+                </S.DBAbout>
+              </S.BoxTexts>
+          </S.DBWrapper>
+          
+
+        </S.DBHeader>
+        <S.DBContentContactUs>
+          <S.DBContentContactUsWrapper>
+            <S.DBContentContactUsTitle>
+              <h2>
+                {i18n.language === "pt" ? titleContactUsPt : titleContactUs}
+              </h2>
+            </S.DBContentContactUsTitle>
+            <button>
+              {i18n.language === "pt"
+                ? textButtonContactUsPt
+                : textButtonContactUs}
+            </button>
+          </S.DBContentContactUsWrapper>
+          <S.ContentListCards>
+            <S.ListCard>
+              {i18n.language === "pt"
+                ? datas.cards.cardPt.map((item, i) => {
+                    return (
+                      <>
+                        {url !== item.link && (
+                          <S.Card key={i}>
+                            <S.Title>{item.title}</S.Title>
+                            <S.DescriptionCard>{item.text}</S.DescriptionCard>
+                            <S.LinkKnowMore>
+                              <a href={item.link}>{datas.knowMorePt}</a>
+                              <img src={IconPlus} alt="Icon Plus" />
+                            </S.LinkKnowMore>
+                          </S.Card>
+                        )}
+                      </>
+                    )
+                  })
+                : datas.cards.card.map((item, i) => {
+                    return (
+                      <>
+                        {url !== item.link && (
+                          <S.Card key={i}>
+                            <S.Title>{item.title}</S.Title>
+                            <S.DescriptionCard>{item.text}</S.DescriptionCard>
+                            <S.LinkKnowMore>
+                              <a href={item.link}>{datas.knowMore}</a>
+                              <img src={IconPlus} alt="Icon Plus" />
+                            </S.LinkKnowMore>
+                          </S.Card>
+                        )}
+                      </>
+                    )
+                  })}
+            </S.ListCard>
+          </S.ContentListCards>
+        </S.DBContentContactUs>
+      </S.DBContent>
     </S.DBContainer>
   )
 }
