@@ -1,12 +1,27 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { useStaticQuery, graphql } from "gatsby"
 
-import ContentCards from "../components/ContentCards"
+import ContentCard from "../components/ContentCard"
 
-const ContentCardsPage = () => (
-  <Layout seo="Content Cards">
-    <ContentCards />
-  </Layout>
-)
+const ContentCardsPage = () => {
+  const query = useStaticQuery(graphql`
+    {
+      firsti {
+        services {
+          cards
+          knowMore
+          knowMorePt
+        }
+      }
+    }
+  `)
+  const { firsti } = query
+  return (
+    <Layout seo="Content Card">
+      <ContentCard datas={firsti.services[0]} />
+    </Layout>
+  )
+}
 
 export default ContentCardsPage

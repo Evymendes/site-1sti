@@ -8,11 +8,21 @@ import Button from "../Button"
 
 import CardServices from "../CardServices"
 
-export default function DigitalBackbones({data}) {
+export default function DigitalBackbones({ data }) {
   const {
     firsti: {
-      contentServices: [{ titleService, titleServicePt, subtitle, subtitlePt, descriptionProposals, descriptionProposalsPt, proposals, proposalsPt
-      }],
+      contentServices: [
+        {
+          titleService,
+          titleServicePt,
+          subtitle,
+          subtitlePt,
+          descriptionProposals,
+          descriptionProposalsPt,
+          proposals,
+          proposalsPt,
+        },
+      ],
     },
   } = useStaticQuery(graphql`
     query MyQueryServices {
@@ -26,12 +36,10 @@ export default function DigitalBackbones({data}) {
           descriptionProposalsPt
           proposals
           proposalsPt
-        },
-      
+        }
       }
     }
   `)
-
 
   const cardServicesData = [
     {
@@ -88,8 +96,12 @@ export default function DigitalBackbones({data}) {
       <S.DBHeader>
         <S.Space>
           <S.DBTitleBox>
-            <S.DBMainTitle>{i18n.language === 'pt' ? titleServicePt : titleService}</S.DBMainTitle>
-            <S.DBDescription>{i18n.language === 'pt' ? subtitlePt : subtitle}</S.DBDescription>
+            <S.DBMainTitle>
+              {i18n.language === "pt" ? titleServicePt : titleService}
+            </S.DBMainTitle>
+            <S.DBDescription>
+              {i18n.language === "pt" ? subtitlePt : subtitle}
+            </S.DBDescription>
           </S.DBTitleBox>
           <img src={Imgheader} alt="asdasds" />
         </S.Space>
@@ -97,34 +109,36 @@ export default function DigitalBackbones({data}) {
       <S.Content>
         <S.BoxInformations>
           <S.TextExpirience>
-            {i18n.language === 'pt' ? descriptionProposalsPt : descriptionProposals}
+            {i18n.language === "pt"
+              ? descriptionProposalsPt
+              : descriptionProposals}
           </S.TextExpirience>
           <S.List>
-          {i18n.language === "pt" ? proposalsPt.proposals.map(item => (
-            <li>{item.text}</li>
-          )) : proposals.proposals.map(item => (
-            <li>{item.text}</li>
-          ))}
+            {i18n.language === "pt"
+              ? proposalsPt.proposals.map(item => <li>{item.text}</li>)
+              : proposals.proposals.map(item => <li>{item.text}</li>)}
           </S.List>
         </S.BoxInformations>
       </S.Content>
       <S.ContentListCards>
         <S.ListCard>
           {i18n.language === "pt"
-          ? data.cards.cardPt.map((item, i) => (
-            <CardServices
-              key={i}
-              title={item.title}
-              subscription={item.text}
-            />
-            ))
-          : data.cards.card.map((item, i) => (
-            <CardServices
-              key={i}
-              title={item.title}
-              subscription={item.text}
-            />
-            ))}
+            ? data.cards.cardPt.map((item, i) => (
+                <CardServices
+                  key={i}
+                  title={item.title}
+                  subscription={item.text}
+                  link={item.link}
+                />
+              ))
+            : data.cards.card.map((item, i) => (
+                <CardServices
+                  key={i}
+                  title={item.title}
+                  subscription={item.text}
+                  link={item.link}
+                />
+              ))}
         </S.ListCard>
       </S.ContentListCards>
     </S.DBContainer>
