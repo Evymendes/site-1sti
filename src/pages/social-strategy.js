@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { useStaticQuery, graphql } from "gatsby"
 
-import ContentCard from "../components/ContentCard"
+import SocialStrategy from "../components/ContentCards/SocialStrategy"
 
 const ContentCardsPage = () => {
   const query = useStaticQuery(graphql`
@@ -19,7 +19,7 @@ const ContentCardsPage = () => {
   const { firsti } = query
   return (
     <Layout seo="Content Card">
-      <ContentCard datas={firsti.services[0]} />
+      <SocialStrategy datas={firsti.services[0]} />
     </Layout>
   )
 }

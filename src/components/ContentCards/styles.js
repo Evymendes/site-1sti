@@ -87,7 +87,7 @@ export const DBMainTitle = styled.h2`
 `
 
 export const DBDescription = styled.h3`
-  margin: 2.375rem 0 1rem;
+  margin: 2.375rem 0 5rem 0;
   font-size: 1.875rem;
   font-weight: bold;
   font-family: CabinetGrotesk;
@@ -110,7 +110,6 @@ export const DBSubtitle = styled.h3`
 export const DBParagraph = styled.p`
   display: flex;
   flex-direction: column;
-  /* font-size: 1em; */
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -119,15 +118,13 @@ export const DBParagraph = styled.p`
 
 export const DBImageBox = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  border: 2px solid red;
-
-  h3 {
-    color: #00c8db;
-  }
   img {
-    width: 500px;
+    width: 100%;
+    max-width: 700px;
+    height: 540px;
   }
   @media (max-width: 768px) {
     justify-content: center;
@@ -219,6 +216,9 @@ export const Card = styled.div`
       height: 5.719rem;
     }
   }
+  img {
+    display: none;
+  }
   &:hover {
     p {
       color: #38eeff;
@@ -230,8 +230,8 @@ export const Card = styled.div`
     a {
       color: #af39e6;
     }
-    svg {
-      color: #af39e6;
+    img {
+      display: block;
     }
   }
   @media (max-width: 768px) {

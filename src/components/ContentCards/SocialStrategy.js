@@ -7,14 +7,11 @@ import * as S from "./styles"
 // i18n
 import { i18n } from "../../translate/i18n"
 
-// components
-import CardServices from "../CardServices"
-
 // assets
 import IconPlus from "../../assets/images/plus_icon.svg"
 import ImageStrategy from "../../assets/images/estrategia.png"
 
-export default function ContentCard({ datas }) {
+export default function SocialStrategy({ datas }) {
   const data = useStaticQuery(graphql`
     query {
       firsti {
@@ -66,12 +63,9 @@ export default function ContentCard({ datas }) {
               <S.DBMainTitle>
                 {i18n.language === "pt" ? titlePt : title}
               </S.DBMainTitle>
-              <S.DBImageBox>
-                <S.DBDescription>
-                  {i18n.language === "pt" ? subtitlePt : subtitle}
-                </S.DBDescription>
-                <img src={ImageStrategy} alt="Image Strategy" />
-              </S.DBImageBox>
+              <S.DBDescription>
+                {i18n.language === "pt" ? subtitlePt : subtitle}
+              </S.DBDescription>
             </S.DBTitleBox>
             <S.DBAbout>
               <S.DBParagraph>
@@ -85,6 +79,9 @@ export default function ContentCard({ datas }) {
             </S.DBAbout>
           </S.Space>
         </S.DBWrapper>
+        <S.DBImageBox>
+          <img src={ImageStrategy} alt="Image Strategy" />
+        </S.DBImageBox>
       </S.DBHeader>
       <S.DBContentContactUs>
         <S.DBContentContactUsWrapper>
@@ -110,13 +107,7 @@ export default function ContentCard({ datas }) {
                           <S.Title>{item.title}</S.Title>
                           <S.DescriptionCard>{item.text}</S.DescriptionCard>
                           <S.LinkKnowMore>
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Saiba mais
-                            </a>
+                            <a href={item.link}>{datas.knowMorePt}</a>
                             <img src={IconPlus} alt="Icon Plus" />
                           </S.LinkKnowMore>
                         </S.Card>
@@ -132,13 +123,7 @@ export default function ContentCard({ datas }) {
                           <S.Title>{item.title}</S.Title>
                           <S.DescriptionCard>{item.text}</S.DescriptionCard>
                           <S.LinkKnowMore>
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Saiba mais
-                            </a>
+                            <a href={item.link}>{datas.knowMore}</a>
                             <img src={IconPlus} alt="Icon Plus" />
                           </S.LinkKnowMore>
                         </S.Card>
