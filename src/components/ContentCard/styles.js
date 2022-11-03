@@ -203,11 +203,9 @@ export const ContentContainer = styled.div`
 
 export const Card = styled.div`
   background-color: #000000;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+
   padding: 3.813rem 4.5rem;
-  width: 33.22%;
-  height: 455px;
   transition: 0.4s;
   h2 {
     font-size: 1.875rem;
@@ -302,5 +300,35 @@ export const LinkKnowMore = styled.div`
   }
   @media (max-width: 768px) {
     margin-top: 1.75rem;
+  }
+`
+export const ContentListCards = styled.div`
+  width: 100%;
+  display: flex;
+  display: grid;
+
+  @media (max-width: 1030px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+`
+export const ListCard = styled.div`
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  margin-top: 1px;
+
+  @media (max-width: 1030px) {
+    display: flex;
+    justify-content: end;
+    gap: 1px;
+  }
+
+  @media (max-width: 1030px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `
