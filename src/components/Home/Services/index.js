@@ -43,7 +43,7 @@ export default function Services({ data }) {
                 <S.Title>{item.title}</S.Title>
                 <S.DescriptionCard>{item.text}</S.DescriptionCard>
                 <S.LinkKnowMore>
-                  <a href="#">{data.knowMore}</a>
+                  <a href={item.link}>{data.knowMore}</a>
                   <img src={IconPlus} alt="Ícone de um +" />
                 </S.LinkKnowMore>
               </S.Card>
