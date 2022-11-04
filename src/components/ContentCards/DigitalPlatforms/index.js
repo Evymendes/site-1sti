@@ -67,6 +67,7 @@ export default function DigitalPlatform({ datas }) {
                 {i18n.language === "pt" ? subtitlePt : subtitle}
               </S.DBDescription>
             </S.DBTitleBox>
+            <S.ImageMobile src={ImagePlatform} alt="Image Strategy" />
             <S.DBAbout>
               <S.DBParagraph>
                 {i18n.language === "pt" ? descriptionPt : description}
