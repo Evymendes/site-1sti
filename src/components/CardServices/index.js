@@ -6,7 +6,7 @@ import * as S from "./styles.js"
 import IconPlus from "../../assets/images/plus_icon.svg"
 import { Link } from "gatsby"
 
-export default function Services({ title, subscription, link }) {
+export default function Services({ title, subscription, link, knowMorePt }) {
   return (
     <S.ContainerServices>
       <S.ContentServices>
@@ -16,7 +16,7 @@ export default function Services({ title, subscription, link }) {
         </S.BoxTexts>
 
         <S.LinkKnowMore>
-          <Link to={link}>Saiba mais</Link>
+          <Link to={link}>{knowMorePt ? knowMorePt : 'Saiba mais'}</Link>
           <img src={IconPlus} alt="Ícone de um +" />
         </S.LinkKnowMore>
       </S.ContentServices>

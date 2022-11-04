@@ -338,7 +338,7 @@ export const ContentListCards = styled.div`
   display: flex;
   display: grid;
 
-  @media (max-width: 1030px) {
+  @media(max-width: 1030px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
