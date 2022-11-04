@@ -1,41 +1,31 @@
 import styled from "styled-components"
-import BackbonesBG from "../../assets/images/bd_background.png"
 
 export const DBContainer = styled.div`
   width: 100%;
+  position: relative;
   background-color: #0b1617;
   overflow: hidden;
   z-index: 0;
-`
-
-export const DBContent = styled.div`
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  margin-top: 6rem;
+  padding-bottom: 4rem;
 `
 
 export const DBWrapper = styled.div`
+  padding: 4rem 4rem;
   /* max-width: 1440px; */
   width: 100%;
+  min-height: calc(100vh - 4rem);
   height: 100%;
+  display: flex;
+  align-items: center;
 `
 
 export const DBHeader = styled.header`
   display: flex;
   justify-content: space-between;
   width: 100%;
-
-  @media (max-width: 1440px) {
-    padding-inline: 70px;
-  }
-
-  @media (max-width: 1210px) {
-    padding-inline: 40px;
-  }
-
-  @media (max-width: 800px) {
-    padding-inline: 20px;
+  min-height: 100vh;
+  padding-bottom: 11rem;
+  @media (max-width: 768px) {
     justify-content: center;
     align-items: center;
   }
@@ -43,8 +33,12 @@ export const DBHeader = styled.header`
 
 export const Space = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* margin: 1.75rem 4.563rem 0 4.563rem; */
+  padding-top: 4.5rem;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
 
   @media (max-width: 768px) {
     margin: 0;
@@ -52,42 +46,35 @@ export const Space = styled.div`
     justify-content: flex-start;
   }
 `
-export const BoxTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  position: relative;
-  gap: 32px;
-
-  @media (max-width: 1340px) {
-    position: inital;
-    bottom: 0;
-
-    margin-top: 64px;
-  }
-`
 
 // Text about the cards
 export const DBAbout = styled.section`
+  padding-top: 2rem;
   font-weight: 500;
 
   p,
   ul {
-    width: 100%;
     max-width: 480px;
+  }
+
+  @media (max-width: 768px) {
+    width: 85%;
   }
 `
 
 export const DBTitleBox = styled.div`
-  width: 100%;
-  max-width: 500px;
-
-  @media (max-width: 1340px) {
-    margin-bottom: 32px;
-  }
-
+  padding-bottom: 5rem;
   & > h3 {
     color: #00c8db;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > h3 {
+      font-size: 1.5rem;
+    }
   }
 `
 
@@ -95,27 +82,25 @@ export const DBMainTitle = styled.h2`
   font-size: 4rem;
   font-weight: bold;
   font-family: GoshaSans;
-  width: 100%;
   max-width: 300px;
-
   @media (max-width: 768px) {
     line-height: 4rem;
-    font-size: 2.5rem;
+    font-size: 3.625rem;
   }
 `
 
 export const DBDescription = styled.h3`
-  margin: 2.375rem 0 5rem 0;
+  margin: 2.375rem 0 1rem;
   font-size: 1.875rem;
-  font-weight: 600;
+  font-weight: bold;
   font-family: CabinetGrotesk;
-  width: 100%;
   max-width: 500px;
 
   @media (max-width: 768px) {
+    max-width: 300px;
+    width: 40rem;
     margin: 0;
-    margin-top: 0.5rem;
-    font-size: 1.3rem;
+    padding-top: 0.5rem;
   }
 `
 
@@ -128,6 +113,7 @@ export const DBSubtitle = styled.h3`
 export const DBParagraph = styled.p`
   display: flex;
   flex-direction: column;
+  /* font-size: 1em; */
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -135,24 +121,17 @@ export const DBParagraph = styled.p`
 `
 
 export const DBImageBox = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  max-width: 627px;
-  margin-top: 106px;
-
+  h3 {
+    color: #00c8db;
+  }
   img {
-    width: 100%;
-    height: 439px;
+    width: 500px;
   }
-
-  @media (max-width: 1340px) {
-    margin-top: 0;
-  }
-
-  @media (max-width: 600px) {
-    img {
-      width: 100%;
-      height: auto;
-    }
+  @media (max-width: 768px) {
+    justify-content: center;
   }
 `
 export const DBContentContactUs = styled.div`
@@ -163,7 +142,7 @@ export const DBContentContactUsWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 0 3rem 0;
 
   button {
     background-color: #fff;
@@ -191,7 +170,7 @@ export const DBContentContactUsWrapper = styled.div`
 export const DBContentContactUsTitle = styled.section`
   h2 {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 600;
     width: 40rem;
 
     @media (max-width: 768px) {
@@ -333,7 +312,7 @@ export const ContentListCards = styled.div`
   width: 100%;
   display: grid;
 
-  @media(max-width: 1030px) {
+  @media (max-width: 1030px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
