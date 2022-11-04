@@ -107,13 +107,7 @@ export default function DigitalPlatform({ datas }) {
                           <S.Title>{item.title}</S.Title>
                           <S.DescriptionCard>{item.text}</S.DescriptionCard>
                           <S.LinkKnowMore>
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Saiba mais
-                            </a>
+                            <a href={item.link}>{datas.knowMorePt}</a>
                             <img src={IconPlus} alt="Icon Plus" />
                           </S.LinkKnowMore>
                         </S.Card>
@@ -129,13 +123,7 @@ export default function DigitalPlatform({ datas }) {
                           <S.Title>{item.title}</S.Title>
                           <S.DescriptionCard>{item.text}</S.DescriptionCard>
                           <S.LinkKnowMore>
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Saiba mais
-                            </a>
+                            <a href={item.link}>{datas.knowMore}</a>
                             <img src={IconPlus} alt="Icon Plus" />
                           </S.LinkKnowMore>
                         </S.Card>

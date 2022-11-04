@@ -220,6 +220,9 @@ export const Card = styled.div`
       height: 5.719rem;
     }
   }
+  img {
+    display: none;
+  }
   &:hover {
     p {
       color: #38eeff;
@@ -231,15 +234,15 @@ export const Card = styled.div`
     a {
       color: #af39e6;
     }
-    svg {
-      color: #af39e6;
+    img {
+      display: block;
     }
   }
   @media (max-width: 768px) {
     padding: 3rem 2rem;
   }
   @media (max-width: 1024px) {
-    width: 49.9%;
+    width: 100%;
     height: 445px;
     border-bottom: solid 2px #0b1617;
   }
@@ -248,7 +251,9 @@ export const Card = styled.div`
     padding: 2rem 1rem;
   }
   @media (max-width: 375px) {
-    width: 49.7%;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
   }
 `
 
@@ -305,7 +310,6 @@ export const LinkKnowMore = styled.div`
 `
 export const ContentListCards = styled.div`
   width: 100%;
-  display: flex;
   display: grid;
 
   @media (max-width: 1030px) {
@@ -322,13 +326,12 @@ export const ListCard = styled.div`
   grid-gap: 1px;
   margin-top: 1px;
 
-  @media (max-width: 1030px) {
-    display: flex;
-    justify-content: end;
-    gap: 1px;
+  @media (max-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media (max-width: 1030px) {
+    gap: 1px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

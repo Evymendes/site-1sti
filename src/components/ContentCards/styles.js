@@ -13,19 +13,6 @@ export const DBContent = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   margin-top: 6rem;
-  
-  @media(max-width: 1440px) {
-    padding-inline: 70px;
-  }
-
-  @media (max-width: 1210px) {
-    padding-inline: 40px;
-  }
-
-  @media (max-width: 800px) {
-    padding-inline: 20px;
-  }
-
 `
 
 export const DBWrapper = styled.div`
@@ -39,7 +26,16 @@ export const DBHeader = styled.header`
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1440px) {
+    padding-inline: 70px;
+  }
+
+  @media (max-width: 1210px) {
+    padding-inline: 40px;
+  }
+
+  @media (max-width: 800px) {
+    padding-inline: 20px;
     justify-content: center;
     align-items: center;
   }
@@ -75,11 +71,11 @@ export const BoxTexts = styled.div`
 export const DBAbout = styled.section`
   font-weight: 500;
 
-  p,ul {
+  p,
+  ul {
     width: 100%;
     max-width: 480px;
   }
-
 `
 
 export const DBTitleBox = styled.div`
@@ -93,7 +89,6 @@ export const DBTitleBox = styled.div`
   & > h3 {
     color: #00c8db;
   }
-
 `
 
 export const DBMainTitle = styled.h2`
@@ -152,9 +147,8 @@ export const DBImageBox = styled.div`
   @media (max-width: 1340px) {
     margin-top: 0;
   }
-  
+
   @media (max-width: 600px) {
-    
     img {
       width: 100%;
       height: auto;
@@ -269,7 +263,7 @@ export const Card = styled.div`
     padding: 3rem 2rem;
   }
   @media (max-width: 1024px) {
-    width: 49.9%;
+    width: 100%;
     height: 445px;
     border-bottom: solid 2px #0b1617;
   }
@@ -278,7 +272,9 @@ export const Card = styled.div`
     padding: 2rem 1rem;
   }
   @media (max-width: 375px) {
-    width: 49.7%;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
   }
 `
 
@@ -335,7 +331,6 @@ export const LinkKnowMore = styled.div`
 `
 export const ContentListCards = styled.div`
   width: 100%;
-  display: flex;
   display: grid;
 
   @media (max-width: 1030px) {
@@ -352,13 +347,12 @@ export const ListCard = styled.div`
   grid-gap: 1px;
   margin-top: 1px;
 
-  @media (max-width: 1030px) {
-    display: flex;
-    justify-content: end;
-    gap: 1px;
+  @media (max-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media (max-width: 1030px) {
+    gap: 1px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
