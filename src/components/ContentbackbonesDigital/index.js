@@ -16,12 +16,23 @@ export function ContentBackbonesDigitais({datas}) {
   const data = useStaticQuery(graphql`
     query {
       firsti {
+        pageBackbones {
+          titlePt
+          title
+          subTitle
+          subTitlePt
+          decriptionOne
+          decriptionOnePt
+          decriptionTwo
+          decriptionTwoPt
+        }
         contentCard {
           titleContactUs
           titleContactUsPt
           textButtonContactUs
           textButtonContactUsPt
         }
+
       }
     }
   `)
@@ -30,8 +41,20 @@ export function ContentBackbonesDigitais({datas}) {
     titleContactUs,
     titleContactUsPt,
     textButtonContactUs,
-    textButtonContactUsPt
+    textButtonContactUsPt,
+    
   } = data.firsti.contentCard[0]
+
+  const {
+    titlePt,
+    title,
+    subTitle,
+    subTitlePt,
+    decriptionOne,
+    decriptionOnePt,
+    decriptionTwo,
+    decriptionTwoPt
+  } = data.firsti.pageBackbones[0]
 
   i18n.addResourceBundle("en", "translations", data)
   i18n.addResourceBundle("pt", "translations", data)
@@ -42,14 +65,14 @@ export function ContentBackbonesDigitais({datas}) {
     <S.Container>
       <S.Content>
         <EstructurePageCards
-          title="Backbones Digitais" 
-          titlePt="Backbones Digitais" 
-          subtitle="Acelerando inovações com agilidade aumentada" 
-          subtitlePt="Acelerando inovações com agilidade aumentada" 
-          description="Agilize a inserção e garanta a continuidade de sua empresa na economia digital, com uma fundação tecnológica escalável e flexível que viabiliza inovações e criação de novas capacidades na velocidade necessária para adaptação a mudanças e aproveitamento de oportunidades de mercado."
-          descriptionPt="Agilize a inserção e garanta a continuidade de sua empresa na economia digital, com uma fundação tecnológica escalável e flexível que viabiliza inovações e criação de novas capacidades na velocidade necessária para adaptação a mudanças e aproveitamento de oportunidades de mercado."
-          descriptionTwo="Os Backbones Digitais construídos pela 1STi implementam uma espinha dorsal de tecnologia de missão crítica com interoperabilidade, escalabilidade e integridade costuradas em seu DNA, abrindo caminho para que sua equipe desenvolva plataformas digitais que geram inovações profundas."
-          descriptionTwoPt="Os Backbones Digitais construídos pela 1STi implementam uma espinha dorsal de tecnologia de missão crítica com interoperabilidade, escalabilidade e integridade costuradas em seu DNA, abrindo caminho para que sua equipe desenvolva plataformas digitais que geram inovações profundas."
+          title={title} 
+          titlePt={titlePt} 
+          subtitle={subTitle} 
+          subtitlePt={subTitlePt}
+          description={decriptionOne}
+          descriptionPt={decriptionOnePt}
+          descriptionTwo={decriptionTwo}
+          descriptionTwoPt={decriptionTwoPt}
         >
           <S.DBImageBox>
             <img src={ImgBackBones} alt="Image Strategy" />

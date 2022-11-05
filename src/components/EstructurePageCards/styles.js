@@ -34,7 +34,7 @@ export const DBMainTitle = styled.h2`
   font-weight: bold;
   font-family: GoshaSans;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   
 
   @media (max-width: 768px) {
