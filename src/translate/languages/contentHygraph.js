@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 export default function ContentHygraph() {
   const query = useStaticQuery(graphql`
@@ -19,9 +19,6 @@ export default function ContentHygraph() {
         insights {
           title
           titlePt
-          paragraph
-          paragraphPt
-          cards
         }
         services {
           title
@@ -54,7 +51,7 @@ export default function ContentHygraph() {
           titlePt
           paragraphPt
         }
-        pioneerings{
+        pioneerings {
           title
           titlePt
           text
@@ -66,8 +63,8 @@ export default function ContentHygraph() {
         }
       }
     }
-  `);
+  `)
 
-  const { firsti } = query;
-  const { callToAction } = firsti.callToActions 
-};
+  const { firsti } = query
+  const { callToAction } = firsti.callToActions
+}
