@@ -31,7 +31,7 @@ export default function Services({ data }) {
                 <S.Title>{item.title}</S.Title>
                 <S.DescriptionCard>{item.text}</S.DescriptionCard>
                 <S.LinkKnowMore>
-                  <a href="#">
+                  <a href={item.link}>
                     {i18n.t(i18n.language === "pt" ? "knowMorePt" : "knowMore")}
                   </a>
                   <img src={IconPlus} alt="Ícone de um +" />
