@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { useStaticQuery, graphql } from "gatsby"
 
+// components
 import SocialStrategy from "../components/ContentCards/SocialStrategy"
 
 const ContentCardsPage = () => {

@@ -1,36 +1,36 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-import * as S from './styled'
- 
+import * as S from "./styled"
+
 const Cards = () => {
   const {
     firsti: {
-      blogs: [{ article, visualEssay, backboneText, digitalText, subvertingText, technology }],
+      blogs: [
+        { article, backboneText, digitalText, subvertingText, technology },
+      ],
     },
   } = useStaticQuery(graphql`
-  query MyInsights{
-    firsti {
-      blogs{
-        article
-        visualEssay
-        digitalText
-        backboneText
-        technology
-        subvertingText
+    query MyInsights {
+      firsti {
+        blogs {
+          article
+          digitalText
+          backboneText
+          technology
+          subvertingText
+        }
       }
     }
-  }
-`)
-    
-  return (
+  `)
 
+  return (
     <S.Container>
       <S.Wrapper>
         <S.BoxCard>
           <S.Card to="/">
-            <StaticImage 
+            <StaticImage
               src={"https://media.graphassets.com/O2nvA8MQRMS0ghKPgIoy"}
               alt="Imagem Ideia"
               layout="fixed"
@@ -43,7 +43,7 @@ const Cards = () => {
             </span>
           </S.Card>
           <S.Card to="/">
-            <StaticImage 
+            <StaticImage
               src={"https://media.graphassets.com/9ffhV6BJQnSGKqDqMZno"}
               alt="Imagem Ideia"
               layout="fixed"
@@ -51,12 +51,12 @@ const Cards = () => {
               height={264}
             />
             <span>
-              <p>{visualEssay}</p>
+              {/* <p>{visualEssay}</p> */}
               <h1>{digitalText}</h1>
             </span>
           </S.Card>
           <S.Card to="/">
-            <StaticImage 
+            <StaticImage
               src={"https://media.graphassets.com/R67n5C2SSMCiX5mZnm2f"}
               alt="Imagem Ideia"
               layout="fixed"
@@ -69,7 +69,7 @@ const Cards = () => {
             </span>
           </S.Card>
           <S.Card to="/">
-            <StaticImage 
+            <StaticImage
               src={"https://media.graphassets.com/hyw8uayDSsGvrQMQQeW8"}
               alt="Imagem Ideia"
               layout="fixed"
