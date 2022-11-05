@@ -333,7 +333,7 @@ export const ContentListCards = styled.div`
   width: 100%;
   display: grid;
 
-  @media(max-width: 1030px) {
+  @media (max-width: 1030px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -346,10 +346,6 @@ export const ListCard = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1px;
   margin-top: 1px;
-
-  @media (max-width: 1440px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
   @media (max-width: 1030px) {
     gap: 1px;

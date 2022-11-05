@@ -31,8 +31,6 @@ export default function IndexPage() {
         insights {
           title
           titlePt
-          paragraph
-          paragraphPt
           cards
           textButton
           textButtonPt

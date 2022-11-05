@@ -8,11 +8,6 @@ import Button from "../../../components/Button"
 //i18n
 import { i18n } from "../../../translate/i18n"
 
-// images
-import AgilityImg from "../../../assets/images/agility_img.png"
-import EducationImg from "../../../assets/images/education_img.svg"
-import HorizonImg from "../../../assets/images/horizon_img.png"
-
 export default function Insights({ data }) {
   i18n.addResourceBundle("en", "translations", data)
   i18n.addResourceBundle("pt", "translations", data)
@@ -38,15 +33,15 @@ export default function Insights({ data }) {
               ? data.cards.cardPt.map((insight, i) => (
                   <S.Card key={i}>
                     <S.ImageCard src={insight.img} alt="" />
-                    <S.DescriptionCard>{insight.description}</S.DescriptionCard>
-                    <S.TitleCard>{insight.title}</S.TitleCard>
+                    <S.DescriptionCard>{insight.title}</S.DescriptionCard>
+                    <S.TitleCard>{insight.description}</S.TitleCard>
                   </S.Card>
                 ))
               : data.cards.card.map((insight, i) => (
                   <S.Card key={i}>
                     <S.ImageCard src={insight.img} alt="" />
-                    <S.DescriptionCard>{insight.description}</S.DescriptionCard>
-                    <S.TitleCard>{insight.title}</S.TitleCard>
+                    <S.DescriptionCard>{insight.title}</S.DescriptionCard>
+                    <S.TitleCard>{insight.description}</S.TitleCard>
                   </S.Card>
                 ))}
           </S.CardsBox>

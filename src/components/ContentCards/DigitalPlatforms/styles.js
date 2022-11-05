@@ -17,6 +17,9 @@ export const DBWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 2.063rem 2.063rem;
+  }
 `
 
 export const DBHeader = styled.header`
@@ -41,9 +44,6 @@ export const Space = styled.div`
   min-height: calc(100vh - 4rem);
 
   @media (max-width: 768px) {
-    margin: 0;
-    align-items: center;
-    justify-content: flex-start;
   }
 `
 
@@ -69,9 +69,6 @@ export const DBTitleBox = styled.div`
   }
 
   @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     & > h3 {
       font-size: 1.5rem;
     }
@@ -130,12 +127,17 @@ export const DBImageBox = styled.div`
   img {
     width: 500px;
   }
-  @media (max-width: 768px) {
-    justify-content: center;
+  @media (max-width: 1024px) {
+    display: none;
   }
 `
 export const DBContentContactUs = styled.div`
   border-top: 1px solid #742698;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
 export const DBContentContactUsWrapper = styled.div`
@@ -326,13 +328,24 @@ export const ListCard = styled.div`
   grid-gap: 1px;
   margin-top: 1px;
 
-  @media (max-width: 1440px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   @media (max-width: 1030px) {
     gap: 1px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+`
+// imagem mobile
+
+export const ImageMobile = styled.img`
+  width: 50%;
+  display: none;
+  @media (max-width: 1024px) {
+    display: block;
+  }
+  @media (max-width: 600px) {
+    width: 65%;
+  }
+  @media (max-width: 400px) {
+    width: 100%;
   }
 `
