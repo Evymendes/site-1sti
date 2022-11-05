@@ -1,84 +1,124 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
+// styles
 import * as S from "./styled"
 
-const Cards = () => {
-  const {
-    firsti: {
-      blogs: [
-        { article, backboneText, digitalText, subvertingText, technology },
-      ],
-    },
-  } = useStaticQuery(graphql`
-    query MyInsights {
+// i18n
+import { i18n } from "../../translate/i18n"
+
+const Cards = ({ datas }) => {
+  const data = useStaticQuery(graphql`
+    query {
       firsti {
         blogs {
           article
-          digitalText
+          articlePt
+          imageBackbone {
+            url
+          }
           backboneText
-          technology
+          backboneTextPt
+          imageDigital {
+            url
+          }
+          digitalText
+          digitalTextPt
+          imageSubverting {
+            url
+          }
           subvertingText
+          subvertingTextPt
+          imageTechnology {
+            url
+          }
+          technology
+          technologyTextPt
+          visualEssay
+          visualEssayPt
         }
       }
     }
   `)
 
+  const {
+    article,
+    articlePt,
+    imageBackbone,
+    backboneText,
+    backboneTextPt,
+    imageDigital,
+    digitalText,
+    digitalTextPt,
+    imageSubverting,
+    subvertingText,
+    subvertingTextPt,
+    imageTechnology,
+    technology,
+    technologyTextPt,
+    visualEssay,
+    visualEssayPt,
+  } = data.firsti.blogs[0]
+
+  i18n.addResourceBundle("en", "translations", data)
+  i18n.addResourceBundle("pt", "translations", data)
+
   return (
     <S.Container>
       <S.Wrapper>
         <S.BoxCard>
-          <S.Card to="/">
-            <StaticImage
-              src={"https://media.graphassets.com/O2nvA8MQRMS0ghKPgIoy"}
+          <S.Card to={data.link}>
+            <img
+              src={imageBackbone.url}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
               height={264}
             />
             <span>
-              <p>{article}</p>
-              <h1>{backboneText}</h1>
+              <p>{i18n.language === "en" ? article : articlePt}</p>
+              <h1>{i18n.language === "en" ? backboneText : backboneTextPt}</h1>
             </span>
           </S.Card>
-          <S.Card to="/">
-            <StaticImage
-              src={"https://media.graphassets.com/9ffhV6BJQnSGKqDqMZno"}
+          <S.Card to={data.link}>
+            <img
+              src={imageDigital.url}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
               height={264}
             />
             <span>
-              {/* <p>{visualEssay}</p> */}
-              <h1>{digitalText}</h1>
+              <p>{i18n.language === "en" ? visualEssay : visualEssayPt}</p>
+              <h1>{i18n.language === "en" ? digitalText : digitalTextPt}</h1>
             </span>
           </S.Card>
-          <S.Card to="/">
-            <StaticImage
-              src={"https://media.graphassets.com/R67n5C2SSMCiX5mZnm2f"}
+          <S.Card to={data.link}>
+            <img
+              src={imageSubverting.url}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
               height={264}
             />
             <span>
-              <p>{article}</p>
-              <h1>{subvertingText}</h1>
+              <p>{i18n.language === "en" ? article : articlePt}</p>
+              <h1>
+                {i18n.language === "en" ? subvertingText : subvertingTextPt}
+              </h1>
             </span>
           </S.Card>
-          <S.Card to="/">
-            <StaticImage
-              src={"https://media.graphassets.com/hyw8uayDSsGvrQMQQeW8"}
+          <S.Card to="/editorial-by-igor">
+            <img
+              src={imageTechnology.url}
               alt="Imagem Ideia"
               layout="fixed"
               width={293}
               height={264}
             />
             <span>
-              <p>{article}</p>
-              <h1>{technology}</h1>
+              <p>{i18n.language === "en" ? article : articlePt}</p>
+              <h1>{i18n.language === "en" ? technology : technologyTextPt}</h1>
             </span>
           </S.Card>
         </S.BoxCard>
