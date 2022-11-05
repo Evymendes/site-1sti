@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import ImgBackBones from '../../assets/images/backbones.png'
+import styled from "styled-components"
 
 export const Container = styled.div`
   width: 100%;
@@ -8,6 +7,8 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 100%;
   max-width: 1440px;
+
+  display: flex;
 
   margin: 0 auto;
   margin-top: 4.625rem;
@@ -33,32 +34,23 @@ export const Content = styled.div`
   }
 `
 
+export const BoxHeander = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`
+
 export const DBImageBox = styled.div`
-  width: 1700px;
-  position: absolute;
-  top: -170px;
-  right: -460px;
+  display: ${props => props.isResponsive ? 'none' : 'block'};
 
-  img {
-    width: 100%;
-    max-width: 1700px;
+  width: 100%;
+  max-width: 620px;
+  margin-top: ${props => props.isResponsive ? '32px' : '136px'};
+
+  @media(max-width: 1024px) {
+    display: ${props => props.isResponsive ? 'block' : 'none'};
   }
   
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    position: initial;
-    top: 0;
-    right: 0;
-  }
-  
-  @media (max-width: 600px) {
-    
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
 `
 
 export const DBContentContactUsWrapper = styled.div`
@@ -72,7 +64,6 @@ export const DBContentContactUsWrapper = styled.div`
 
   padding: 2rem 0;
   margin-inline: auto;
-  margin-top: 80px;
 
   button {
     background-color: #fff;
@@ -115,7 +106,6 @@ export const DBContentContactUsWrapper = styled.div`
   }
 
 `
-
 
 export const ContentListCards = styled.div`
   width: 100%;
