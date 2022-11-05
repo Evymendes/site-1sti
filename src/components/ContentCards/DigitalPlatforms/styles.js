@@ -328,10 +328,6 @@ export const ListCard = styled.div`
   grid-gap: 1px;
   margin-top: 1px;
 
-  @media (max-width: 1440px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   @media (max-width: 1030px) {
     gap: 1px;
     display: grid;
