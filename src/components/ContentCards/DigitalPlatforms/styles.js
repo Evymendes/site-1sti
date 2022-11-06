@@ -89,7 +89,7 @@ export const DBMainTitle = styled.h2`
 export const DBDescription = styled.h3`
   margin: 2.375rem 0 1rem;
   font-size: 1.875rem;
-  font-weight: bold;
+  font-weight: 600;
   font-family: CabinetGrotesk;
   max-width: 500px;
 
@@ -112,6 +112,9 @@ export const DBParagraph = styled.p`
   flex-direction: column;
   /* font-size: 1em; */
 
+  span {
+    font-weight: 200;
+  }
   @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -142,29 +145,30 @@ export const DBContentContactUs = styled.div`
 
 export const DBContentContactUsWrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  gap: 92px;
   padding: 2rem 0 3rem 0;
 
   button {
+    height: 59px;
+    width: 144px;
     background-color: #fff;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    padding: 2rem;
     font-size: 1.2rem;
   }
 
   button:hover {
-    background-color: #000;
+    background-color: #0b1617;
     color: #fff;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
-
+    gap: 12px;
+    text-align: center;
     button {
       font-size: 1rem;
-      padding: 1.5rem;
     }
   }
 `
@@ -172,7 +176,7 @@ export const DBContentContactUsWrapper = styled.div`
 export const DBContentContactUsTitle = styled.section`
   h2 {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 400;
     width: 40rem;
 
     @media (max-width: 768px) {
