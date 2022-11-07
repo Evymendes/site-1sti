@@ -72,21 +72,19 @@ export default function SocialStrategy({ datas }) {
                 <img src={ImageStrategy} alt="Image Strategy" />
               </S.DBImageBox>
             </S.Space>
-              <S.BoxTexts>
-                <S.DBAbout>
-                  <S.DBParagraph>
-                    {i18n.language === "pt" ? descriptionPt : description}
-                  </S.DBParagraph>
-                </S.DBAbout>
-                <S.DBAbout>
-                  <S.DBParagraph>
-                    {i18n.language === "pt" ? descriptionTwoPt : descriptionTwo}
-                  </S.DBParagraph>
-                </S.DBAbout>
-              </S.BoxTexts>
+            <S.BoxTexts>
+              <S.DBAbout>
+                <S.DBParagraph>
+                  {i18n.language === "pt" ? descriptionPt : description}
+                </S.DBParagraph>
+              </S.DBAbout>
+              <S.DBAbout>
+                <S.DBParagraph>
+                  {i18n.language === "pt" ? descriptionTwoPt : descriptionTwo}
+                </S.DBParagraph>
+              </S.DBAbout>
+            </S.BoxTexts>
           </S.DBWrapper>
-          
-
         </S.DBHeader>
         <S.DBContentContactUs>
           <S.DBContentContactUsWrapper>
