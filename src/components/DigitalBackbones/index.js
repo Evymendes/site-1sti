@@ -73,24 +73,65 @@ export default function DigitalBackbones({ data }) {
         </S.BoxInformations>
       </S.Content>
       <S.ContentListCards>
+        <S.BoxFirstsCard>
+          {i18n.language === "pt" &&
+            data.cards.cardPt.map((item, i) => {
+              if (item.id <= 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.BoxFirstsCard>
         <S.ListCard>
-          {i18n.language === "pt"
-            ? data.cards.cardPt.map((item, i) => (
-                <CardServices
-                  key={i}
-                  title={item.title}
-                  subscription={item.text}
-                  link={item.link}
-                />
-              ))
-            : data.cards.card.map((item, i) => (
-                <CardServices
-                  key={i}
-                  title={item.title}
-                  subscription={item.text}
-                  link={item.link}
-                />
-              ))}
+          {i18n.language === "pt" &&
+            data.cards.card.map((item, i) => {
+              if (item.id > 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.ListCard>
+        <S.BoxFirstsCard>
+          {i18n.language === "en" &&
+            data.cards.cardPt.map((item, i) => {
+              if (item.id <= 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.BoxFirstsCard>
+        <S.ListCard>
+          {i18n.language === "en" &&
+            data.cards.card.map((item, i) => {
+              if (item.id > 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
         </S.ListCard>
       </S.ContentListCards>
     </S.DBContainer>
