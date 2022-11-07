@@ -75,6 +75,7 @@ export const DBAbout = styled.section`
   ul {
     width: 100%;
     max-width: 480px;
+    padding-bottom: 2rem;
   }
 `
 
@@ -197,8 +198,9 @@ export const DBContentContactUsTitle = styled.section`
     @media (max-width: 768px) {
       font-size: 1.5rem;
       padding-bottom: 1rem;
-      width: 15rem;
-      padding-left: 1.5rem;
+      width: 100%;
+      max-width: 370px;
+      text-align: center;
     }
   }
 `
@@ -224,6 +226,7 @@ export const ContentContainer = styled.div`
 `
 
 export const Card = styled.div`
+  width: 100%;
   background-color: #000000;
   display: grid;
   /* border-right: 2px solid red; */
@@ -234,12 +237,8 @@ export const Card = styled.div`
     font-size: 1.875rem;
     font-weight: 500;
     @media (max-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 18px;
       width: 100%;
-      height: 3.813rem;
-    }
-    @media (max-width: 452px) {
-      height: 5.719rem;
     }
   }
   img {
@@ -261,21 +260,7 @@ export const Card = styled.div`
     }
   }
   @media (max-width: 768px) {
-    padding: 3rem 2rem;
-  }
-  @media (max-width: 1024px) {
-    width: 100%;
-    height: 445px;
-    border-bottom: solid 2px #0b1617;
-  }
-  @media (max-width: 600px) {
-    height: 319px;
-    padding: 2rem 1rem;
-  }
-  @media (max-width: 375px) {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 1rem;
+    padding-inline: 16px;
   }
 `
 
@@ -297,9 +282,6 @@ export const DescriptionCard = styled.p`
   @media (max-width: 768px) {
     margin-top: 0.625rem;
     font-size: 1.2rem;
-  }
-  @media (max-width: 452px) {
-    height: 8.75rem;
   }
 `
 

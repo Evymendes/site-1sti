@@ -17,7 +17,6 @@ import Instagram from "../../assets/images/instagram_icon.svg"
 
 export default function Navigation() {
   const [isEN, setIsEN] = useState(false)
-  const [language, setLanguage] = useState()
   const [isOpen, setIsOpen] = useState(false)
 
   const I18N_STORAGE_KEY = "i18nextLng"

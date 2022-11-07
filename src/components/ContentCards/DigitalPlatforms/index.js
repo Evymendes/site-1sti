@@ -75,7 +75,9 @@ export default function DigitalPlatform({ datas }) {
             </S.DBAbout>
             <S.DBAbout>
               <S.DBParagraph>
-                {i18n.language === "pt" ? descriptionTwoPt : descriptionTwo}
+                <span>
+                  {i18n.language === "pt" ? descriptionTwoPt : descriptionTwo}
+                </span>
               </S.DBParagraph>
             </S.DBAbout>
           </S.Space>

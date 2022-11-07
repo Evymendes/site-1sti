@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import PlayIcon from "../../assets/images/play-icon.svg"
 import PlayIconHover from "../../assets/images/play-icon-hover.svg"
