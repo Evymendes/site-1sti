@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   width: 100%;
-  `
+`
 
 export const Content = styled.div`
   width: 100%;
@@ -18,10 +18,8 @@ export const Content = styled.div`
 
   position: relative;
   overflow: hidden;
- 
-  
 
-  @media(max-width: 1440px) {
+  @media (max-width: 1440px) {
     padding-inline: 70px;
   }
 
@@ -43,17 +41,16 @@ export const BoxHeander = styled.div`
 `
 
 export const DBImageBox = styled.div`
-  display: ${props => props.isResponsive ? 'none' : 'block'};
+  display: ${props => (props.isResponsive ? "none" : "block")};
 
   width: 100%;
   max-width: 620px;
-  margin-top: ${props => props.isResponsive ? '32px' : '136px'};
+  margin-top: ${props => (props.isResponsive ? "32px" : "136px")};
   object-fit: cover;
 
-  @media(max-width: 1024px) {
-    display: ${props => props.isResponsive ? 'block' : 'none'};
+  @media (max-width: 1024px) {
+    display: ${props => (props.isResponsive ? "block" : "none")};
   }
-  
 `
 
 export const DBContentContactUsWrapper = styled.div`
@@ -77,7 +74,7 @@ export const DBContentContactUsWrapper = styled.div`
   }
 
   button:hover {
-    background-color: #0B1617;
+    background-color: #0b1617;
     color: #fff;
   }
 
@@ -87,14 +84,12 @@ export const DBContentContactUsWrapper = styled.div`
     font-size: 30px;
   }
 
-
-  @media(max-width: 1440px) {
+  @media (max-width: 1440px) {
     padding-inline: 70px;
   }
 
   @media (max-width: 1210px) {
     padding-inline: 40px;
-
   }
 
   @media (max-width: 800px) {
@@ -107,7 +102,6 @@ export const DBContentContactUsWrapper = styled.div`
       text-align: center;
     }
   }
-
 `
 
 export const ContentListCards = styled.div`
@@ -117,9 +111,8 @@ export const ContentListCards = styled.div`
   margin-bottom: 60px;
 
   display: flex;
-  
 
-  @media(max-width: 1030px) {
+  @media (max-width: 1030px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -130,20 +123,19 @@ export const ListCard = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1px;
+  grid-gap: 2px;
   margin-top: 1px;
 
-  @media(max-width: 1030px) {
-  display: flex;
-  justify-content: end;
-  gap: 1px;
+  @media (max-width: 1030px) {
+    display: flex;
+    justify-content: end;
+    gap: 1px;
+  }
 
-};
-
-@media(max-width: 1290px) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+  @media (max-width: 1290px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 `
 
 export const Card = styled.div`
@@ -182,7 +174,6 @@ export const Card = styled.div`
   @media (max-width: 768px) {
     padding-inline: 16px;
   }
-
 `
 
 export const Title = styled.h2`
@@ -191,7 +182,6 @@ export const Title = styled.h2`
   font-size: 2.875rem;
   font-weight: bold;
   line-height: 1.2;
-  
 `
 
 export const DescriptionCard = styled.p`

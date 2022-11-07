@@ -1,7 +1,6 @@
 import React from "react"
 
 import * as S from "./styled"
-import Button from "../../../components/Button"
 
 // i18n
 import { i18n } from "../../../translate/i18n"

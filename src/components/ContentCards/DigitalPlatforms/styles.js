@@ -10,12 +10,12 @@ export const DBContainer = styled.div`
 `
 
 export const DBWrapper = styled.div`
-  padding: 4rem 4rem;
-  /* max-width: 1440px; */
+  max-width: 1440px;
   width: 100%;
-  min-height: calc(100vh - 4rem);
   height: 100%;
+  padding-top: 60px;
   display: flex;
+  margin: 0 auto;
   align-items: center;
   @media (max-width: 768px) {
     padding: 2.063rem 2.063rem;
@@ -27,7 +27,6 @@ export const DBHeader = styled.header`
   justify-content: space-between;
   width: 100%;
   min-height: 100vh;
-  padding-bottom: 11rem;
   @media (max-width: 768px) {
     justify-content: center;
     align-items: center;
@@ -68,9 +67,14 @@ export const DBTitleBox = styled.div`
     color: #00c8db;
   }
 
+  @media (min-width: 1920px) {
+    padding-bottom: 0;
+  }
+
   @media (max-width: 768px) {
+    padding-bottom: 2rem;
     & > h3 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 `
@@ -82,14 +86,14 @@ export const DBMainTitle = styled.h2`
   max-width: 300px;
   @media (max-width: 768px) {
     line-height: 4rem;
-    font-size: 3.625rem;
+    font-size: 2.5rem;
   }
 `
 
 export const DBDescription = styled.h3`
   margin: 2.375rem 0 1rem;
   font-size: 1.875rem;
-  font-weight: bold;
+  font-weight: 600;
   font-family: CabinetGrotesk;
   max-width: 500px;
 
@@ -112,6 +116,9 @@ export const DBParagraph = styled.p`
   flex-direction: column;
   /* font-size: 1em; */
 
+  span {
+    font-weight: 200;
+  }
   @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -142,29 +149,30 @@ export const DBContentContactUs = styled.div`
 
 export const DBContentContactUsWrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  gap: 92px;
   padding: 2rem 0 3rem 0;
 
   button {
+    height: 59px;
+    width: 144px;
     background-color: #fff;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    padding: 2rem;
     font-size: 1.2rem;
   }
 
   button:hover {
-    background-color: #000;
+    background-color: #0b1617;
     color: #fff;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
-
+    gap: 12px;
+    text-align: center;
     button {
       font-size: 1rem;
-      padding: 1.5rem;
     }
   }
 `
@@ -172,14 +180,15 @@ export const DBContentContactUsWrapper = styled.div`
 export const DBContentContactUsTitle = styled.section`
   h2 {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 400;
     width: 40rem;
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
       padding-bottom: 1rem;
-      width: 15rem;
-      padding-left: 1.5rem;
+      width: 100%;
+      max-width: 358px;
+      text-align: center;
     }
   }
 `
@@ -204,7 +213,50 @@ export const ContentContainer = styled.div`
   padding: 2rem;
 `
 
+export const ContentListCards = styled.div`
+  width: 100%;
+  display: grid;
+
+  @media (max-width: 1030px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+`
+
+// imagem mobile
+
+export const ImageMobile = styled.img`
+  width: 50%;
+  display: none;
+  @media (max-width: 1024px) {
+    display: block;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+`
+export const ListCard = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  margin-top: 1px;
+
+  @media (max-width: 1030px) {
+    display: flex;
+    justify-content: end;
+    gap: 1px;
+  }
+
+  @media (max-width: 1290px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+`
+
 export const Card = styled.div`
+  width: 100%;
   background-color: #000000;
   display: grid;
 
@@ -214,12 +266,8 @@ export const Card = styled.div`
     font-size: 1.875rem;
     font-weight: 500;
     @media (max-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 18px;
       width: 100%;
-      height: 3.813rem;
-    }
-    @media (max-width: 452px) {
-      height: 5.719rem;
     }
   }
   img {
@@ -241,21 +289,7 @@ export const Card = styled.div`
     }
   }
   @media (max-width: 768px) {
-    padding: 3rem 2rem;
-  }
-  @media (max-width: 1024px) {
-    width: 100%;
-    height: 445px;
-    border-bottom: solid 2px #0b1617;
-  }
-  @media (max-width: 600px) {
-    height: 319px;
-    padding: 2rem 1rem;
-  }
-  @media (max-width: 375px) {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 1rem;
+    padding-inline: 16px;
   }
 `
 
@@ -277,9 +311,6 @@ export const DescriptionCard = styled.p`
   @media (max-width: 768px) {
     margin-top: 0.625rem;
     font-size: 1.2rem;
-  }
-  @media (max-width: 452px) {
-    height: 8.75rem;
   }
 `
 
@@ -308,44 +339,5 @@ export const LinkKnowMore = styled.div`
   }
   @media (max-width: 768px) {
     margin-top: 1.75rem;
-  }
-`
-export const ContentListCards = styled.div`
-  width: 100%;
-  display: grid;
-
-  @media (max-width: 1030px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-`
-export const ListCard = styled.div`
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1px;
-  margin-top: 1px;
-
-  @media (max-width: 1030px) {
-    gap: 1px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-`
-// imagem mobile
-
-export const ImageMobile = styled.img`
-  width: 50%;
-  display: none;
-  @media (max-width: 1024px) {
-    display: block;
-  }
-  @media (max-width: 600px) {
-    width: 65%;
-  }
-  @media (max-width: 400px) {
-    width: 100%;
   }
 `

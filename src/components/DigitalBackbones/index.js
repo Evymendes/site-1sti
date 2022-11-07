@@ -4,7 +4,6 @@ import Imgheader from "../../assets/images/agility_img.png"
 import { i18n } from "../../translate/i18n"
 import * as S from "./styled"
 import Header from "../Header"
-import Button from "../Button"
 
 import CardServices from "../CardServices"
 
@@ -41,53 +40,6 @@ export default function DigitalBackbones({ data }) {
     }
   `)
 
-  const cardServicesData = [
-    {
-      id: 1,
-      title: "Estratégia Digital",
-      subscription: "A tecnologia como meio para transformações profundas",
-      link: "/social-strategy",
-    },
-    {
-      id: 2,
-      title: "Backbones Digitais",
-      subscription: "Acelerando inovações com agilidade aumentada",
-      link: "/backbones-digitais",
-    },
-    {
-      id: 3,
-      title: "Plataformas Digitais",
-      subscription: "O caminho para o presente e o futuro dos negócios",
-    },
-    {
-      id: 4,
-      title: "Inovação Deep Tech",
-      subscription: "Tecnologias visionárias para inovação de alto impacto",
-    },
-    {
-      id: 5,
-      title: "Deep Analytics",
-      subscription:
-        "Amplificando análise de dados para multiplicar oportunidades",
-    },
-  ]
-
-  // função para direcionar os cards via props
-  const RenderCardServices = (card, index) => {
-    return (
-      <>
-        {data.cards.card.map((card, index) => (
-          <CardServices
-            key={index}
-            title={card.title}
-            subscription={card.text}
-            link={card.link}
-          />
-        ))}
-      </>
-    )
-  }
-
   i18n.addResourceBundle("en", "translations", data)
   i18n.addResourceBundle("pt", "translations", data)
 
@@ -121,24 +73,65 @@ export default function DigitalBackbones({ data }) {
         </S.BoxInformations>
       </S.Content>
       <S.ContentListCards>
+        <S.BoxFirstsCard>
+          {i18n.language === "pt" &&
+            data.cards.cardPt.map((item, i) => {
+              if (item.id <= 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.BoxFirstsCard>
         <S.ListCard>
-          {i18n.language === "pt"
-            ? data.cards.cardPt.map((item, i) => (
-                <CardServices
-                  key={i}
-                  title={item.title}
-                  subscription={item.text}
-                  link={item.link}
-                />
-              ))
-            : data.cards.card.map((item, i) => (
-                <CardServices
-                  key={i}
-                  title={item.title}
-                  subscription={item.text}
-                  link={item.link}
-                />
-              ))}
+          {i18n.language === "pt" &&
+            data.cards.card.map((item, i) => {
+              if (item.id > 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.ListCard>
+        <S.BoxFirstsCard>
+          {i18n.language === "en" &&
+            data.cards.cardPt.map((item, i) => {
+              if (item.id <= 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.BoxFirstsCard>
+        <S.ListCard>
+          {i18n.language === "en" &&
+            data.cards.card.map((item, i) => {
+              if (item.id > 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
         </S.ListCard>
       </S.ContentListCards>
     </S.DBContainer>
