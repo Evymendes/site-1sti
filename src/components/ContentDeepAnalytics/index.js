@@ -1,23 +1,24 @@
 import React from 'react'
-import * as S from './styles'
 import {useStaticQuery, graphql} from 'gatsby'
+import * as S from './styles'
+
 // Components
 import {EstructurePageCards} from '../EstructurePageCards'
 
-// i18n
-import {i18n} from '../../translate/i18n'
+// i18
+import { i18n } from "../../translate/i18n"
 
 // Assets
-import ImgDeepTech from '../../assets/images/inovacao_deep_tech.png'
+import ImgDeepAnalystics from '../../assets/images/deep_analystics.png'
 import IconPlus from '../../assets/images/plus_icon.svg'
-import ModeloDeepAnalytics from '../../assets/images/modelos.png'
-import inovacaoDt from '../../assets/images/inovacao_dt.png'
 
-export function ContentDeepTechInovation({datas}) {
+
+
+export function ContentDeepAnalytics({datas}) {
   const data = useStaticQuery(graphql`
   query {
     firsti {
-      pageDeepTechInovations {
+      pageDeepAnalytics {
         titlePt
         title
         subTitle
@@ -56,9 +57,9 @@ const {
   decriptionOnePt,
   decriptionTwo,
   decriptionTwoPt
-} = data.firsti.pageDeepTechInovations[0]
+} = data.firsti.pageDeepAnalytics[0]
 
-  i18n.addResourceBundle("en", "translations", data)
+i18n.addResourceBundle("en", "translations", data)
   i18n.addResourceBundle("pt", "translations", data)
 
   const url = typeof window !== "undefined" ? window.location.pathname : ""
@@ -77,17 +78,14 @@ const {
             descriptionTwo={decriptionTwo}
             descriptionTwoPt={decriptionTwoPt}
           >
-          <S.DBImageBox isResponsive={true}>
-            <img src={inovacaoDt} alt="Image Strategy" />
-          </S.DBImageBox>
+            <S.DBImageBox isResponsive>
+              <img src={ImgDeepAnalystics}/>
+            </S.DBImageBox>
         </EstructurePageCards>
-          <S.DBImageBox>
-            <img src={ImgDeepTech} alt="Image Strategy" />
-          </S.DBImageBox>
+            <S.DBImageBox >
+              <img src={ImgDeepAnalystics}/>
+            </S.DBImageBox>
         </S.BoxHeander>
-          <S.DBImageBox isResponsive>
-            <img src={ModeloDeepAnalytics} alt="Image Strategy" />
-          </S.DBImageBox>
       </S.Content>
       <div>
         <S.DBContentContactUsWrapper>

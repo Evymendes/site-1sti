@@ -20,7 +20,7 @@ export default function DeepTechInovation() {
 const { firsti } = query
 
   return (
-    <Layout seo="Deep Analytics">
+    <Layout seo="Deep Tech Innovation">
       <ContentDeepTechInovation datas={firsti.services[0]}/>
     </Layout>
   )

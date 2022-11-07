@@ -5,16 +5,16 @@ import * as S from "./styles"
 
 // i18n
 import { i18n } from "../../translate/i18n"
-import ImageStrategy from '../../assets/images/estrategia.png'
 
 
-export function EstructurePageCards({title, titlePt, subtitlePt, subtitle, descriptionPt, description, descriptionTwo, descriptionTwoPt,children}) {
+
+export function EstructurePageCards({title, titlePt, subtitlePt, subtitle, descriptionPt, description, descriptionTwo, descriptionTwoPt,children,}) {
 
   i18n.addResourceBundle("en", "translations")
   i18n.addResourceBundle("pt", "translations")
 
   return (
-    <S.Space>
+    <S.Space >
       <S.DBTitleBox>
         <S.DBMainTitle>
           {i18n.language === "pt" ? titlePt : title}
