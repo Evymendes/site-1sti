@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import BackbonesBG from "../../assets/images/bd_background.png"
 
 export const DBContainer = styled.div`
   height: 100%;
@@ -186,23 +185,9 @@ export const ListCard = styled.div`
 `
 
 // Text about the service
-export const DBAbout = styled.section`
-  /* margin: 0 auto;
-  width: 85%;
-  font-weight: 300;
+export const DBAbout = styled.section``
 
-  p,
-  ul {
-    max-width: 480px;
-  } */
-`
-
-export const DBTitle = styled.h2`
-  /* margin: 2.5rem 0 1rem;
-  font-size: 1.6em;
-  font-weight: 600;
-  letter-spacing: .3px; */
-`
+export const DBTitle = styled.h2``
 
 export const DBSubtitle = styled.h3`
   margin: 1.5rem 0 2rem;

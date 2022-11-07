@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import BackbonesBG from "../../assets/images/bd_background.png"
 
 export const DBContainer = styled.div`
   width: 100%;

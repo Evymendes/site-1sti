@@ -341,5 +341,3 @@ export const LinkKnowMore = styled.div`
     margin-top: 1.75rem;
   }
 `
-
-// imagem mobile
