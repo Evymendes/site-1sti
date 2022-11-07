@@ -325,7 +325,7 @@ export const ListCard = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1px;
+  grid-gap: 2px;
   margin-top: 1px;
 
   @media (max-width: 1030px) {

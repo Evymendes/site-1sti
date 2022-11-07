@@ -226,6 +226,7 @@ export const ContentContainer = styled.div`
 export const Card = styled.div`
   background-color: #000000;
   display: grid;
+  /* border-right: 2px solid red; */
 
   padding: 3.813rem 4.5rem;
   transition: 0.4s;
@@ -344,7 +345,7 @@ export const ListCard = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1px;
+  grid-gap: 2px;
   margin-top: 1px;
 
   @media (max-width: 1030px) {
