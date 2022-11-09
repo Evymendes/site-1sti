@@ -30,10 +30,7 @@ export const NavWrapper = styled.section`
   height: 100%;
   border-bottom: 2px solid #504d50;
 
-  @media (max-width: 768px) {
-    padding: 0 2rem;
-    width: 100%;
-  }
+  
 `
 
 export const MenuBtn = styled.button`

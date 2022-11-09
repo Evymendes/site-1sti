@@ -1,4 +1,26 @@
 import styled, { keyframes } from "styled-components"
+import Buttons2States from "../../../components/Buttons2States"
+import Wrapper from "../../../components/Wrapper"
+
+export const Buttons = styled(Buttons2States)`
+  width: 100%;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  button {
+    margin: 0;
+    @media(max-width: 400px) {
+      button {
+        max-width: 100px;
+      
+      }
+    }
+  }
+
+` 
 
 export const CTAContainer = styled.header`
   display: flex;
@@ -47,13 +69,10 @@ export const ImgMob = styled.img`
 `
 
 export const CTAWrapper = styled.section`
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  padding-top: 3.2rem;
   width: 100%;
+  margin-top: 5rem;
+  padding-top: 3.2rem;
   height: 51.5vw;
-  max-width: 1440px;
   background: transparent
     linear-gradient(270deg, #ffffff00 0%, #0b1617a8 66%, #0b1617 100%) 0% 0%
     no-repeat padding-box;
@@ -77,15 +96,8 @@ export const CTAWrapper = styled.section`
 
   h1,
   h3 {
-    margin: 0 4.313rem;
     max-width: 430px;
     width: 100%;
-    @media (max-width: 768px) {
-      margin: 0 2rem;
-    }
-    @media (max-width: 600px) {
-      margin: 0 1rem;
-    }
   }
 
   @media (min-width: 1440px) {
@@ -124,6 +136,13 @@ export const CTAWrapper = styled.section`
   }
 `
 
+export const CTAContent = styled(Wrapper)`
+  display: flex;
+  flex-direction: column;
+  
+  
+`
+
 export const CTATextBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -147,6 +166,7 @@ export const CTAAbout = styled.h3`
 `
 
 export const CTAOptions = styled.div`
+
   padding-top: 3.2rem;
   a:first-child {
     margin-right: 1.5rem;

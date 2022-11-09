@@ -1,22 +1,21 @@
 import styled from "styled-components";
+import Button from "../../Button";
+
 
 export const ContainerInsights = styled.section`
 	width: 100%;
 	background: #0B1617;
 	margin-top: 10rem;
 	@media(max-width: 1250px){
-		margin-top: -4rem;
+		margin-top: 4rem;
 	}
-	@media(max-width: 768px){
-		margin-top: -110rem;
-	}
+	
 `;
 
 export const ContentContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 5rem 0 4.563rem;
 	height: 100%;
 	padding: 7rem 0;
 	& > a {
@@ -45,7 +44,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const BoxText = styled.div`
-	width: 18%;
+	width: 30%;
 	align-self: start;
 
 	@media (max-width: 768px) {

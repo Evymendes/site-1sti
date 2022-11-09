@@ -1,6 +1,7 @@
 import React from "react"
 
-import styled from "styled-components"
+import styled from "styled-components" 
+import Wrapper from "../Wrapper"
 
 const Title = styled.h1`
   display: flex;
@@ -25,15 +26,15 @@ const Title = styled.h1`
 `
 
 const Header = ({ title, color, positionText, positionTextMob }) => (
-  <Title
-    positionText={positionText}
-    positionTextMob={positionTextMob}
-    color={color}
-  >
-    {Array.isArray(title)
-      ? title.map((title, i) => <span key={i}>{title}</span>)
-      : title}
-  </Title>
+    <Title
+      positionText={positionText}
+      positionTextMob={positionTextMob}
+      color={color}
+    >
+      {Array.isArray(title)
+        ? title.map((title, i) => <span key={i}>{title}</span>)
+        : title}
+    </Title>
 )
 
 export default Header

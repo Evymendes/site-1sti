@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerServices = styled.section`
-	position: absolute;
 	width: 100%;
 	height: auto;
 	background-color: #0B1617;
@@ -66,7 +65,6 @@ export const ContentContainer = styled.div`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 100%;
-	height: 914px;
 `;
 
 export const BoxText = styled.div`
