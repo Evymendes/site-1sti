@@ -50,7 +50,7 @@ export const Text = styled.p`
   }
 `
 export const ImageBook = styled.img`
-  width: 250px;
+  width: 400px;
   height: auto;
   /* margin-left: 9.063rem; */
   box-shadow: 0px 0px 10px #00c8dbcc;
@@ -68,7 +68,8 @@ export const ImageBook = styled.img`
 export const Right = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
+  gap: 40px;
   padding-inline: 10px;
  
   @media(max-width: 960px) {

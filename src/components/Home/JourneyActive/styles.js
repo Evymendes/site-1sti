@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Journeys = styled.section`
     display: flex;
     justify-content: space-between;
+    margin-top: 120px;
 
     @media(max-width: 880px) {
         flex-direction: column;
