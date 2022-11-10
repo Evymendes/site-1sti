@@ -43,16 +43,19 @@ export default function CallToAction({ data }) {
       <S.ImgMob src={ImageMobile} alt="" />
 
       <S.CTAWrapper className={isAppearing ? "Teste1" : null}>
-        <Header title={i18n.t(i18n.language === "pt" ? "titlePt" : "title")} />
+        <S.CTAContent>
+          <Header title={i18n.t(i18n.language === "pt" ? "titlePt" : "title")} />
 
-        <S.CTATextBox>
-          <S.CTAAbout>
-            {i18n.t(i18n.language === "pt" ? "aboutPt" : "about")}
-          </S.CTAAbout>
-          <S.CTAOptions>
-            <Buttons2States data={firsti.callToActions[0]} />
-          </S.CTAOptions>
-        </S.CTATextBox>
+          <S.CTATextBox>
+            <S.CTAAbout>
+              {i18n.t(i18n.language === "pt" ? "aboutPt" : "about")}
+            </S.CTAAbout>
+            <S.CTAOptions>
+              <S.Buttons data={firsti.callToActions[0]} />
+            </S.CTAOptions>
+
+          </S.CTATextBox>
+        </S.CTAContent>
       </S.CTAWrapper>
     </S.CTAContainer>
   )

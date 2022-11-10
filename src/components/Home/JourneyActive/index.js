@@ -3,6 +3,7 @@ import * as S from "./styles"
 
 //components
 import TextLeftSections from "../../TextLeftSections/index"
+import Wrapper from "../../Wrapper"
 
 //i18n
 import { i18n } from "../../../translate/i18n"
@@ -21,7 +22,7 @@ export default function JourneysActive({ data }) {
   i18n.addResourceBundle("pt", "translations", data)
 
   return (
-    <>
+    <Wrapper>
       <S.Journeys>
         <S.Left>
           <TextLeftSections
@@ -63,6 +64,6 @@ export default function JourneysActive({ data }) {
           </S.InstitutionsTwo>
         </S.Right>
       </S.Journeys>
-    </>
+    </Wrapper>
   )
 }

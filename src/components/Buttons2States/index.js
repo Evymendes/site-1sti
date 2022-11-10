@@ -66,7 +66,7 @@ export const isDesktop = () => {
   return window.innerWidth > 768
 }
 
-export default function Button2State({ data }) {
+export default function Button2State({ data, className }) {
   const playVideo = () => {
     const ctVideo = document.getElementById("ct-video")
 
@@ -81,7 +81,7 @@ export default function Button2State({ data }) {
   i18n.addResourceBundle("pt", "translations", data)
 
   return (
-    <Div>
+    <Div className={className}>
       <ButtonOne onClick={() => playVideo()}>
         {i18n.t(i18n.language === "pt" ? "textButtonOnePt" : "textButtonOne")}
       </ButtonOne>

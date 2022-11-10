@@ -1,46 +1,36 @@
 import styled from "styled-components"
+import Wrapper from "../Wrapper"
 
 export const Container = styled.section`
+  width: 100%;
   margin-top: 11rem;
   background-color: #0b1617;
   @media (max-width: 1024px) {
     margin-top: 0;
   }
 `
-export const PioneeringSection = styled.section`
-  padding-left: 7.5rem;
+export const PioneeringSection = styled(Wrapper)`
   display: flex;
-  /* gap: 145px; */
-  @media (min-width: 1920px) {
-    /* gap: 500px; */
+  justify-content: space-between;
+
+  gap: 50px;
+
+  @media(max-width: 960px) {
+    flex-wrap: wrap;
   }
-  @media (max-width: 1570px) {
-    gap: 0;
-  }
-  @media (max-width: 1024px) {
-    flex-direction: column;
-  }
-  @media (max-width: 768px) {
-    margin: 0 2.125rem 0 2.125rem;
-  }
-  @media (max-width: 600px) {
-    margin: 0 1rem 0 1rem;
-  }
+  
 `
 export const Left = styled.div`
   /* max-width: 18.688rem; */
-  padding: 2rem;
-  padding-right: 4rem;
+  max-width: 310px;
+
   button {
     margin-top: 3.375rem;
     @media (max-width: 1024px) {
       margin-top: 2.5rem;
     }
   }
-  @media (max-width: 1024px) {
-    margin-top: 10rem;
-    max-width: 80%;
-  }
+  
 `
 export const Title = styled.h2`
   font-size: 2.875rem;
@@ -50,7 +40,6 @@ export const Title = styled.h2`
   }
 `
 export const Text = styled.p`
-  width: 22rem;
   line-height: 2rem;
   margin-top: 2.25rem;
   font-size: 1.125rem;
@@ -61,37 +50,36 @@ export const Text = styled.p`
   }
 `
 export const ImageBook = styled.img`
-  width: 500px;
-  height: 700px;
+  width: 400px;
+  height: auto;
   /* margin-left: 9.063rem; */
-  box-shadow: 0px 0px 99px #00c8dbcc;
+  box-shadow: 0px 0px 10px #00c8dbcc;
   border-radius: 5px;
   @media (max-width: 1440px) {
-    width: 20.813rem;
-    height: 31.188rem;
+    max-width: 400px;
+    height: 400px;
   }
   @media (max-width: 1266px) {
-    margin-left: 4rem;
-    width: 18rem;
-    height: 27rem;
+    width: 250px;
+
   }
-  @media (max-width: 1024px) {
-    width: 300px;
-    margin: 60px 0;
-  }
+ 
 `
 export const Right = styled.div`
+  width: 100%;
   display: flex;
-  @media (max-width: 1024px) {
-    flex-direction: column;
+  justify-content: center; 
+  gap: 40px;
+  padding-inline: 10px;
+ 
+  @media(max-width: 960px) {
+    flex-wrap: wrap;
   }
-  @media (max-width: 350px) {
-    width: 290px;
-  }
+
 `
 export const Slider = styled.div`
   display: flex;
-  margin: 6rem 3.125rem;
+
   width: 18.9rem;
   overflow: hidden;
   transition: 0.4s;
@@ -100,6 +88,8 @@ export const Slider = styled.div`
     font-family: CabinetGrotesk;
     font-weight: 200;
     width: 18.9rem;
+    letter-spacing: 0;
+    line-height: 19px;
     span {
       color: #7e7e7e;
     }
@@ -110,6 +100,8 @@ export const Slider = styled.div`
     @media (max-width: 1024px) {
       font-size: 1rem;
       width: 17.8rem;
+
+
     }
     @media (max-width: 350px) {
       width: 15.8rem;
@@ -121,7 +113,6 @@ export const Slider = styled.div`
   }
   @media (max-width: 1024px) {
     width: 17.8rem;
-    margin: 5.625rem 0;
     border-radius: 5px;
     width: 285px;
     height: 484px;
@@ -148,9 +139,7 @@ export const ButtonSlide = styled.div`
 `
 export const SlideOne = styled.div`
   transition: 0.4s;
-  section {
-    height: 300px;
-  }
+  
   p {
     /* 19rem; */
   }
