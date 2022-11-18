@@ -1,11 +1,12 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const blogPostTemplate = require.resolve(`./src/components/Articles/index.js`);
+  const blogPostTemplate = require.resolve(`./src/components/Articles/index.js`)
 
   const resultPt = await graphql(`
     query {
       firsti {
         posts {
+          locale
           slug
           author
           textOne {
@@ -46,18 +47,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const postsPt = resultPt.data.firsti.posts;
+  const postsPt = resultPt.data.firsti.posts
 
   postsPt.forEach(post => {
-    console.log(post.slug);
+    console.log(post.slug)
     createPage({
       path: `blog/${post.slug}`,
       component: blogPostTemplate,
       context: {
-        id: post.id,
-        title: post.title,
-        coverImage: post.coverImage,
-      }
+        ...post,
+      },
     })
   })
-};
+}

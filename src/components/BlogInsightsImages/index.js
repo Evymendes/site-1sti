@@ -53,7 +53,7 @@ const BlockImages = () => {
   return (
     <S.Container>
       <S.Wrapper>
-        <S.BlockLink to={whatIsLink}>
+        <S.BlockLink>
           <S.Block
             style={{
               backgroundImage: `url(${imageWhatIs.url})`,
@@ -68,7 +68,7 @@ const BlockImages = () => {
             </span>
           </S.Block>
         </S.BlockLink>
-        <S.BlockLink to={deepTechLink}>
+        <S.BlockLink>
           <S.Block
             style={{
               backgroundImage: `url(${imageDeeptech.url})`,
