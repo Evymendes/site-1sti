@@ -1,57 +1,55 @@
-import React from "react";
+import React from "react"
 
-import * as S from "./styled";
-import Button from "../../../components/Button";
+import * as S from "./styled"
 
-import Backbones from "../../../assets/images/ScreenShot2021-09-15at19.29.36.png";
-import Platforms from "../../../assets/images/ScreenShot2021-09-15at18.32.12.png";
-import Technologies from "../../../assets/images/ScreenShot2021-09-15at18.32.21.png";
+// i18n
+import { i18n } from "../../../translate/i18n"
+
+//images
+import IconPlus from "../../../assets/images/plus_icon.svg"
 
 export default function Services({ data }) {
-	const servicesList = [
-		{
-			bg: Backbones,
-			title: 'Digital Backbones',
-			description: 'The Foundation of Scalable Digital Platforms',
-		},
-		{
-			bg: Platforms,
-			title: 'Deep Tech Platforms',
-			description: 'Elevation, Scaling and Amplification',
-		},
-		{
-			bg: Technologies,
-			title: 'Visionary Technologies',
-			description: 'Fit for the future, now',
-		},
-		{
-			bg: Technologies,
-			title: 'Digital Intelligence',
-			description: 'Tagline here',
-		}
-	];
+  i18n.addResourceBundle("en", "translations", data)
+  i18n.addResourceBundle("pt", "translations", data)
 
-	return (
-		<S.ContainerServices>
-			<S.ContentContainer>
-				<S.BoxText>
-					<S.Title>{data.title}</S.Title>
-					<S.Description>{data.paragraph}</S.Description>
-					<Button to=''>See more</Button>
-				</S.BoxText>
+  return (
+    <S.ContainerServices>
+      <S.ContentContainer>
+        <S.BoxText>
+          <S.Title>
+            {i18n.t(i18n.language === "pt" ? "titlePt" : "title")}
+          </S.Title>
+          <S.Description>
+            {i18n.t(i18n.language === "pt" ? "paragraphPt" : "paragraph")}
+          </S.Description>
+        </S.BoxText>
 
-				<S.CardsContainer>
-					{servicesList.map((service, i) => (
-						<S.Card key={i} bg={service.bg}>
-							<S.Title>{service.title}</S.Title>
-							<S.DescriptionCard>{service.description}</S.DescriptionCard>
-							<S.Title id="card-id">0{i + 1}</S.Title>
-						</S.Card>
-					))}
-				</S.CardsContainer>
-					
-				<Button to=''>See more</Button>
-			</S.ContentContainer>
-		</S.ContainerServices>
-	);
-};
+        {i18n.language === "pt"
+          ? data.cards.cardPt.map((item, i) => (
+              <S.Card key={i} bg={item.bg}>
+                <S.Title>{item.title}</S.Title>
+                <S.DescriptionCard>{item.text}</S.DescriptionCard>
+                <S.LinkKnowMore>
+                  <a href={item.link}>
+                    {i18n.t(i18n.language === "pt" ? "knowMorePt" : "knowMore")}
+                  </a>
+                  <img src={IconPlus} alt="Ícone de um +" />
+                </S.LinkKnowMore>
+              </S.Card>
+            ))
+          : data.cards.card.map((item, i) => (
+              <S.Card key={i} bg={item.bg}>
+                <S.Title>{item.title}</S.Title>
+                <S.DescriptionCard>{item.text}</S.DescriptionCard>
+                <S.LinkKnowMore>
+                  <a href={item.link}>{data.knowMore}</a>
+                  <img src={IconPlus} alt="Ícone de um +" />
+                </S.LinkKnowMore>
+              </S.Card>
+            ))}
+
+        <S.DivBlack></S.DivBlack>
+      </S.ContentContainer>
+    </S.ContainerServices>
+  )
+}

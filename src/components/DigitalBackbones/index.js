@@ -1,154 +1,139 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Imgheader from "../../assets/images/agility_img.png"
+import { i18n } from "../../translate/i18n"
+import * as S from "./styled"
+import Header from "../Header"
 
-import * as S from "./styled";
-import Header from "../Header";
-import Button from "../Button";
+import CardServices from "../CardServices"
 
-export default function DigitalBackbones() {
+export default function DigitalBackbones({ data }) {
   const {
     firsti: {
-      contentServices: [{ 
-        digitalBlackbones, 
-        companieOne, 
-        companieTwo, 
-        companieTree, 
-        companies, 
-        subCompanieOne, 
-        subCompanieTwo, 
-        subCompanieTree, 
-        subTitle, 
-        textWhatIs, 
-        partneringText, 
-        whatIs,
-        deepTitle,
-        deepSub,
-        visionaryTitle,
-        visionarySub,
-        imageCubo,
-        imageEstrela,
-        imageCuboMobile,
-        imageEstrelaMobile,
-        explorer
-      }],
+      contentServices: [
+        {
+          titleService,
+          titleServicePt,
+          subtitle,
+          subtitlePt,
+          descriptionProposals,
+          descriptionProposalsPt,
+          proposals,
+          proposalsPt,
+        },
+      ],
     },
   } = useStaticQuery(graphql`
-  query MyQueryServices {
-    firsti {
-      contentServices {
-        digitalBlackbones
-        companieOne
-        companieTwo
-        companieTree
-        companies
-        subCompanieOne
-        subCompanieTwo
-        subCompanieTree
-        subTitle
-        textWhatIs
-        partneringText
-        whatIs
-        deepTitle
-        deepSub
-        visionaryTitle
-        visionarySub
-        imageCubo {
-          url
+    query MyQueryServices {
+      firsti {
+        contentServices {
+          titleService
+          titleServicePt
+          subtitle
+          subtitlePt
+          descriptionProposals
+          descriptionProposalsPt
+          proposals
+          proposalsPt
         }
-        imageEstrela {
-          url
-        }
-        imageCuboMobile {
-          url
-        }
-        imageEstrelaMobile {
-          url
-        }
-        explorer
       }
     }
-  }
-`)
-  
+  `)
 
-    
+  i18n.addResourceBundle("en", "translations", data)
+  i18n.addResourceBundle("pt", "translations", data)
+
   return (
     <S.DBContainer>
-        <S.DBHeader>
-          <S.DBBackground />
+      <S.DBHeader>
         <S.Space>
-          <Header title="Our Services" />
           <S.DBTitleBox>
             <S.DBMainTitle>
-              {digitalBlackbones}
+              {i18n.language === "pt" ? titleServicePt : titleService}
             </S.DBMainTitle>
             <S.DBDescription>
-              {subTitle}
+              {i18n.language === "pt" ? subtitlePt : subtitle}
             </S.DBDescription>
           </S.DBTitleBox>
+          <img src={Imgheader} alt="asdasds" />
         </S.Space>
-        </S.DBHeader>
-      <S.DBWrapper>
-
-        <S.DBAbout>
-          <S.DBParagraph>Before embarking on a digital transformation, businesses often contend with complexities that stem from:</S.DBParagraph>
-
-          <S.DBList>
-            <S.DBListItem>Data that lives in siloed systems that do not communicate</S.DBListItem>
-            <S.DBListItem>Teams that function alongside one another without effective collaboration</S.DBListItem>
-            <S.DBListItem>Structural complexities that appear to threaten the possibility of truly digitising</S.DBListItem>
-          </S.DBList>
-
-          <S.DBParagraph>To overcome these complexities and achieve a successful digital transformation, businesses need a strong digital backbone.</S.DBParagraph>
-          <S.DBTitle>{whatIs}</S.DBTitle>
-          <S.DBParagraph>{textWhatIs}</S.DBParagraph>
-          <S.DBSubtitle>{companies}</S.DBSubtitle>
-
-          <S.DBAdvantages>
-            <S.DBStatistic>
-              <S.DBValue>{companieOne}</S.DBValue>
-              <S.DBParagraph>{subCompanieOne}</S.DBParagraph>
-            </S.DBStatistic>
-            <S.DBStatistic>
-              <S.DBValue>{companieTwo}</S.DBValue>
-              <S.DBParagraph>{subCompanieTwo}</S.DBParagraph>
-            </S.DBStatistic>
-            <S.DBStatistic>
-              <S.DBValue>{companieTree}</S.DBValue>
-              <S.DBParagraph>{subCompanieTree}</S.DBParagraph>
-            </S.DBStatistic>
-          </S.DBAdvantages>
-        </S.DBAbout>
-
-        <S.DBPartnering>
-          <S.DBPartneringWrapper>
-            {partneringText}
-            <S.DBPartneringBox>
-              <Button>Download One Page</Button>
-              <Button>Read Case Study</Button>
-            </S.DBPartneringBox>
-          </S.DBPartneringWrapper>
-        </S.DBPartnering>
-
-        <S.OtherServices>
-          <S.ExploreText>
-            {explorer}
-          </S.ExploreText>
-          <S.Service bg={imageEstrela.url} mobileBg={imageEstrelaMobile.url}>
-            <S.DBMainTitle>{deepTitle}</S.DBMainTitle>
-            <S.DBDescription>{deepSub}</S.DBDescription>
-            <Button to="/services">Read more</Button>
-          </S.Service>
-          <Button to="/services">Read more</Button>
-
-          <S.Service bg={imageCubo.url} mobileBg={imageCuboMobile.url}>
-            <S.DBMainTitle>{visionaryTitle}</S.DBMainTitle>
-            <S.DBDescription>{visionarySub}</S.DBDescription>
-            <Button to="/services">Read more</Button>
-          </S.Service>
-          <Button to="/services">Read more</Button>
-        </S.OtherServices>
-      </S.DBWrapper>
+      </S.DBHeader>
+      <S.Content>
+        <S.BoxInformations>
+          <S.TextExpirience>
+            {i18n.language === "pt"
+              ? descriptionProposalsPt
+              : descriptionProposals}
+          </S.TextExpirience>
+          <S.List>
+            {i18n.language === "pt"
+              ? proposalsPt.proposals.map(item => <li>{item.text}</li>)
+              : proposals.proposals.map(item => <li>{item.text}</li>)}
+          </S.List>
+        </S.BoxInformations>
+      </S.Content>
+      <S.ContentListCards>
+        <S.BoxFirstsCard>
+          {i18n.language === "pt" &&
+            data.cards.cardPt.map((item, i) => {
+              if (item.id <= 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.BoxFirstsCard>
+        <S.ListCard>
+          {i18n.language === "pt" &&
+            data.cards.card.map((item, i) => {
+              if (item.id > 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.ListCard>
+        <S.BoxFirstsCard>
+          {i18n.language === "en" &&
+            data.cards.cardPt.map((item, i) => {
+              if (item.id <= 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.BoxFirstsCard>
+        <S.ListCard>
+          {i18n.language === "en" &&
+            data.cards.card.map((item, i) => {
+              if (item.id > 2) {
+                return (
+                  <CardServices
+                    key={i}
+                    title={item.title}
+                    subscription={item.text}
+                    link={item.link}
+                  />
+                )
+              }
+            })}
+        </S.ListCard>
+      </S.ContentListCards>
     </S.DBContainer>
-  );
+  )
 }

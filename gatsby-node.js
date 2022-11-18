@@ -1,9 +1,62 @@
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = `
-    type AuthorJson implements Node {
-      joinedAt: Date
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
+  const blogPostTemplate = require.resolve(`./src/components/Articles/index.js`)
+
+  const resultPt = await graphql(`
+    query {
+      firsti {
+        posts {
+          locale
+          slug
+          author
+          textOne {
+            html
+          }
+          imageCardOne {
+            url
+          }
+          imageCardTwo {
+            url
+          }
+          imageCover {
+            url
+          }
+          textTwo
+          subtitle
+          textThree
+          textFor {
+            html
+          }
+          linkLinkedin
+          editorial
+          deepTechTitle
+          imageDeeptech {
+            url
+          }
+        }
+      }
     }
-  `
-  createTypes(typeDefs)
+  `)
+
+  console.log({
+    resultPt,
+  })
+  // Handle errors
+  if (resultPt.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const postsPt = resultPt.data.firsti.posts
+
+  postsPt.forEach(post => {
+    console.log(post.slug)
+    createPage({
+      path: `blog/${post.slug}`,
+      component: blogPostTemplate,
+      context: {
+        ...post,
+      },
+    })
+  })
 }

@@ -9,7 +9,7 @@ const Btn = styled.button`
   border: 1px solid #fff;
   border-radius: 6px;
   background: #fff;
-  transition: .1s;
+  transition: .4s;
   cursor: pointer;
   user-select: none;
 
@@ -19,9 +19,9 @@ const Btn = styled.button`
   }
 `;
 
-export default function Button({ children, to }) {
+export default function Button({ children, to, className }) {
   return (
-    <Link to={to || ""}>
+    <Link to={to || ""} className={className}>
       <Btn>{children}</Btn>
     </Link>
   );

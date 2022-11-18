@@ -1,50 +1,62 @@
-import React from "react";
-
-import * as S from "./styled";
-import Header from "../../../components/Header";
-import Button from "../../../components/Button";
-
-import ImageMobile from "../../../assets/images/Capa-Mobile-Video.jpg";
-
-const isBrowser = typeof window !== "undefined";
-
-export const isDesktop = () => {
-  if (!isBrowser) {
-    return;
-  }
-
-  return window.innerWidth > 768;
-};
+import React, { useState } from "react"
+import * as S from "./styled"
+import Header from "../../../components/Header"
+import Buttons2States from "../../../components/Buttons2States"
+import { graphql, useStaticQuery } from "gatsby"
+import { i18n } from "../../../translate/i18n"
+import ImageMobile from "../../../assets/images/Capa-Mobile-Video.jpg"
 
 export default function CallToAction({ data }) {
-  const playVideo = () => {
-    const ctVideo = document.getElementById("ct-video");
-
-    if(ctVideo.paused && isDesktop) {
-      ctVideo.play(); 
-    } else {
-      ctVideo.pause();
+  const query = useStaticQuery(graphql`
+    {
+      firsti {
+        callToActions {
+          textButtonOne
+          textButtonOnePt
+          textButtonTwo
+          textButtonTwoPt
+        }
+      }
     }
-  };
+  `)
+
+  const [isAppearing, setAppearing] = useState(false)
+  const { firsti } = query
+  const toggleClass = () => {
+    setAppearing(!isAppearing)
+
+    const ctVideo = document.getElementById("ct-video")
+
+    if (ctVideo.muted === false && isAppearing === true) {
+      ctVideo.pause()
+    }
+  }
+
+  i18n.addResourceBundle("en", "translations", data)
+  i18n.addResourceBundle("pt", "translations", data)
 
   return (
-    <S.CTAContainer onClick={() => playVideo()}>
-      <S.BGVideo id="ct-video">
+    <S.CTAContainer onClick={() => toggleClass()}>
+      <S.BGVideo id="ct-video" autoPlay muted>
         <source src={data.video.url} type="video/mp4" />
       </S.BGVideo>
       <S.ImgMob src={ImageMobile} alt="" />
-  
-      <S.CTAWrapper>
-        <Header title={data.title} />
-  
-        <S.CTATextBox>
-          <S.CTAAbout>{data.about}</S.CTAAbout>
-          <S.CTAOptions>
-            <Button to="/">Call to Action One</Button>
-            <Button to="/">Call to Action Two</Button>
-          </S.CTAOptions>
-        </S.CTATextBox>
+
+      <S.CTAWrapper className={isAppearing ? "Teste1" : null}>
+        <S.CTAContent>
+          <Header title={i18n.t(i18n.language === "pt" ? "titlePt" : "title")} />
+
+          <S.CTATextBox>
+            <S.CTAAbout>
+              {i18n.t(i18n.language === "pt" ? "aboutPt" : "about")}
+            </S.CTAAbout>
+            <S.CTAOptions>
+              <S.Buttons data={firsti.callToActions[0]} />
+            </S.CTAOptions>
+
+          </S.CTATextBox>
+        </S.CTAContent>
       </S.CTAWrapper>
     </S.CTAContainer>
-  );
-};
+  )
+}

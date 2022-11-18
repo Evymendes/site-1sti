@@ -1,20 +1,23 @@
 import styled from "styled-components";
+import Button from "../../Button";
+
 
 export const ContainerInsights = styled.section`
 	width: 100%;
 	background: #0B1617;
+	margin-top: 10rem;
+	@media(max-width: 1250px){
+		margin-top: 4rem;
+	}
+	
 `;
 
 export const ContentContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto;
-	max-width: 1440px;
-	width: 90%;
 	height: 100%;
 	padding: 7rem 0;
-
 	& > a {
 		padding-top: 1.5rem;
 
@@ -22,7 +25,6 @@ export const ContentContainer = styled.div`
 			display: none;
 		}
 	}
-
 	@media (max-width: 1024px) {
 		flex-direction: column;
 		font-size: .8rem;
@@ -31,15 +33,18 @@ export const ContentContainer = styled.div`
 			display: none;
 		}
 	}
-
 	@media (max-width: 768px) {
+		margin-left: 1.5rem;
 		padding: 2rem 0;
-		width: 75%;
+		width: 85%;
+	}
+	@media(min-width: 1600px){
+		max-width: 100%;
 	}
 `;
 
 export const BoxText = styled.div`
-	width: 18%;
+	width: 30%;
 	align-self: start;
 
 	@media (max-width: 768px) {
@@ -61,19 +66,22 @@ export const Description = styled.p`
 `;
 
 export const CardsContainer = styled.div`
-	width: 80%;
-
+	width: 100%;
+	position: relative;
 	@media (max-width: 1024px) {
 		width: 100%;
 	}
-
 	@media (max-width: 768px) {
-		min-width: 100vw;
+		min-width: 128%;
 		overflow-x: scroll;
+	}
+	@media (max-width: 400px){
+		min-width: 118%;
 	}
 `;
 
 export const CardsBox = styled.div`
+	over-flow: hidden;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 5rem;
@@ -86,7 +94,6 @@ export const CardsBox = styled.div`
 `;
 
 export const Card = styled.div`
-	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -106,15 +113,16 @@ export const Card = styled.div`
 
 	@media (max-width: 768px) {
 		margin-right: 1rem;
-		min-width: 50vw;
+		min-width: 55%;
 	}
 
 	@media (max-width: 400px) {
-		min-width: 75vw;
+		min-width: 98%;
 	}
 `;
 
 export const ImageCard = styled.img`
+	border-radius: 50%;
 	width: 100%;
 	transition: .3s;
 `;
@@ -137,4 +145,3 @@ export const TitleCard = styled.h2`
 	color: #FFFFFF;
 	font-weight: bold;
 `;
-

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link as GatsbyLink } from "gatsby";
+import styled from "styled-components"
+import { Link as GatsbyLink } from "gatsby"
 
 export const NavBar = styled.nav`
   position: fixed;
@@ -10,14 +10,14 @@ export const NavBar = styled.nav`
   font-size: 1em;
   background-color: #ffffff95;
   backdrop-filter: blur(30px);
-  border-top: 10px solid #0B1617;
-  z-index: 3;
+  border-top: 10px solid #0b1617;
+  z-index: 30;
 
   @media (min-width: 1440px) {
     height: 5.5rem;
     font-size: 1.2rem;
   }
-`;
+`
 
 export const NavWrapper = styled.section`
   position: relative;
@@ -30,11 +30,8 @@ export const NavWrapper = styled.section`
   height: 100%;
   border-bottom: 2px solid #504d50;
 
-  @media (max-width: 768px) {
-    padding: 0 2rem;
-    width: 100%;
-  }
-`;
+  
+`
 
 export const MenuBtn = styled.button`
   position: relative;
@@ -42,41 +39,41 @@ export const MenuBtn = styled.button`
   background: none;
   width: 2.5rem;
   height: 2.5px;
-  background: ${props => props.isOpen ? 'none' :'#0B1617'};
-  transition: .3s;
+  background: ${props => (props.isOpen ? "none" : "#0B1617")};
+  transition: 0.3s;
 
   &:before,
   &:after {
     position: absolute;
-    content: '';
+    content: "";
     width: 2.5rem;
     height: 2.5px;
-    background: #0B1617;
-    transition: .3s;
+    background: #0b1617;
+    transition: 0.3s;
   }
 
   &:before {
-    top: ${props => props.isOpen ? '0' : '-9px'};
+    top: ${props => (props.isOpen ? "0" : "-9px")};
     right: 0;
-    transform: rotate(${props => props.isOpen ? '45' :'0'}deg);
+    transform: rotate(${props => (props.isOpen ? "45" : "0")}deg);
   }
 
   &:after {
     right: 0;
-    bottom: ${props => props.isOpen ? '0' : '-9px'};
-    transform: rotate(${props => props.isOpen ? '-45' :'0'}deg);
+    bottom: ${props => (props.isOpen ? "0" : "-9px")};
+    transform: rotate(${props => (props.isOpen ? "-45" : "0")}deg);
   }
 
   @media (min-width: 768px) {
     display: none;
   }
-`;
+`
 
 export const NavLogoBox = styled.div`
   display: flex;
 
   img {
-    transition: .2s;
+    transition: 0.2s;
   }
 
   @media (min-width: 768px) {
@@ -94,7 +91,7 @@ export const NavLogoBox = styled.div`
     justify-content: end;
     width: calc(50vw - 3rem + 2.5rem);
   }
-`;
+`
 
 export const LangBtn = styled.button`
   position: relative;
@@ -106,7 +103,7 @@ export const LangBtn = styled.button`
   cursor: pointer;
 
   &:before {
-    content: '';
+    content: "";
     bottom: 1px;
     width: 100%;
     height: 2px;
@@ -114,9 +111,9 @@ export const LangBtn = styled.button`
   }
 
   &:after {
-    content: '∙ ${props => props.isEN ? 'EN' : 'PT'}';
-    top: 0;
-    left: 90%;
+    content: "∙ ${props => (props.isEN ? "PT" : "EN")}";
+    top: 3px;
+    left: 150%;
     width: 3rem;
   }
 
@@ -125,7 +122,7 @@ export const LangBtn = styled.button`
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &:hover {
@@ -135,16 +132,23 @@ export const LangBtn = styled.button`
       visibility: visible;
     }
   }
-`;
+
+  button {
+    font-size: 1.1em;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+`
 
 export const NavLogo = styled.img`
   cursor: pointer;
   max-width: 3rem;
-`;
+`
 
 export const NavLogoHover = styled.img`
   display: none;
-`;
+`
 
 export const NavLinkBox = styled.div`
   a {
@@ -165,18 +169,18 @@ export const NavLinkBox = styled.div`
     position: absolute;
     top: calc(4.625rem - 10px);
     left: 0;
-    display: ${props => props.isOpen ? 'flex' : 'none'};
+    display: ${props => (props.isOpen ? "flex" : "none")};
     flex-direction: column;
     padding: 4rem 3rem 1rem;
     width: 100vw;
     height: calc(100vh - 4.625rem);
     font-size: 2em;
     background: #16202c;
-    transition: .3s;
+    transition: 0.3s;
 
     a,
     button {
-      margin: .8rem 0;
+      margin: 0.8rem 0;
       color: #fff;
       font-size: 1em;
 
@@ -197,11 +201,11 @@ export const NavLinkBox = styled.div`
       }
     }
   }
-`;
+`
 
 export const NavLink = styled(GatsbyLink)`
   position: relative;
-`;
+`
 
 export const SocialBox = styled.figure`
   display: flex;
@@ -218,4 +222,4 @@ export const SocialBox = styled.figure`
   @media (min-width: 768px) {
     display: none;
   }
-`;
+`
