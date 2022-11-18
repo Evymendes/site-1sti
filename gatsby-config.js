@@ -22,7 +22,7 @@ module.exports = {
       options: {
         typeName: "firsti",
         fieldName: "firsti",
-        url: "https://api-us-west-2.graphcms.com/v2/ckaimzl7406vh01ut3wc68cw6/master"
+        url: "https://api-us-west-2.hygraph.com/v2/ckaimzl7406vh01ut3wc68cw6/master"
       }
     },
     `gatsby-transformer-sharp`,

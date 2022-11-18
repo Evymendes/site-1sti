@@ -12,6 +12,7 @@ const Cards = ({ datas }) => {
     query {
       firsti {
         blogs {
+          slug
           article
           articlePt
           imageBackbone {
@@ -42,6 +43,7 @@ const Cards = ({ datas }) => {
   `)
 
   const {
+    slug,
     article,
     articlePt,
     imageBackbone,
@@ -108,7 +110,7 @@ const Cards = ({ datas }) => {
               </h1>
             </span>
           </S.Card>
-          <S.Card to="/editorial-by-igor">
+          <S.Card to={`/blog/${slug}`}>
             <img
               src={imageTechnology.url}
               alt="Imagem Ideia"
